@@ -1,0 +1,21 @@
+Curriculum Component,In Current Plan,Literature Support (2023-2025),Priority,Key Citation
+Python/Scripting Foundation,Yes,Strong,Critical,Zakeri 2025
+EnergyPlus Automation (eppy/besos),Yes,Limited,Critical,No direct evidence
+Domain Knowledge First,Yes,Very Strong,Critical,Jiang 2024
+Physics-Informed Neural Networks,Partial,Strong,High,Multiple 2024
+Modular Neural Networks (ModNN),Yes,Very Strong,High,Jiang 2024
+Physics-Informed RL,Yes,Strong,High,Multiple 2024
+Component-Based ML,Yes,Strong,Medium,Chen 2024
+Physics-Informed GNNs,No,Strong,High,Shan 2025
+Neuro-Symbolic AI (KAN),No,Strong,High,Chen 2024
+Co-Simulation Frameworks,No,Strong,Medium,Ashayeri 2024
+LLM Code Assistance,Yes,Strong,High,Zakeri 2025
+Prompt Engineering Curriculum,No,Strong,High,Alphinas 2024
+AI Testing & Validation,No,Strong,Critical,Zakeri 2025
+Human-in-the-Loop Design,No,Strong,High,Alphinas 2024
+Foundation Model Safety,No,Moderate,High,Multiple 2024
+Constraint Validation Exercises,No,Very Strong,Critical,Jiang 2024
+Physics-Violation Detection,No,Very Strong,Critical,Jiang 2024
+Mandatory Checkpoints,Partial,Strong,Critical,Zakeri 2025
+Project-Based Learning,Yes,Strong,Medium,Maalek 2024
+Generative AI Integration,Yes,Strong,High,Multiple 2024

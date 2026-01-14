@@ -1,0 +1,102 @@
+name: CD - Deploy to Production
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - production
+          - canary
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}/bps-api
+
+jobs:
+  deploy-production:
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment }}
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Configure kubectl
+      run: |
+        mkdir -p $HOME/.kube
+        echo "${{ secrets.KUBE_CONFIG_PROD }}" | base64 -d > $HOME/.kube/config
+        chmod 600 $HOME/.kube/config
+    
+    - name: Get latest staging image
+      id: image
+      run: |
+        # Get image from staging
+        IMAGE=$(kubectl get deployment/bps-api -n bps-staging \
+          -o jsonpath='{.spec.template.spec.containers[0].image}')
+        echo "image=$IMAGE" >> $GITHUB_OUTPUT
+        echo "Promoting image: $IMAGE"
+    
+    - name: Blue-Green Deployment
+      if: github.event.inputs.environment == 'production'
+      run: |
+        # Update production with new image
+        kubectl set image deployment/bps-api \
+          api=${{ steps.image.outputs.image }} \
+          -n bps-prod --record
+        
+        # Wait for rollout
+        kubectl rollout status deployment/bps-api -n bps-prod --timeout=15m
+        
+        echo "✅ Blue-Green deployment complete"
+    
+    - name: Canary Deployment
+      if: github.event.inputs.environment == 'canary'
+      run: |
+        # Deploy canary using Flagger
+        kubectl apply -f k8s/strategies/canary.yaml -n bps-prod
+        
+        # Update deployment image
+        kubectl set image deployment/bps-api \
+          api=${{ steps.image.outputs.image }} \
+          -n bps-prod --record
+        
+        # Wait for canary analysis
+        kubectl wait --for=condition=promoted \
+          canary/bps-api -n bps-prod --timeout=30m || true
+        
+        echo "✅ Canary deployment started"
+    
+    - name: Post-Deployment Verification
+      run: |
+        echo "Running health checks..."
+        kubectl port-forward -n bps-prod svc/bps-api 8000:8000 &
+        sleep 5
+        
+        # Health check
+        curl -f http://localhost:8000/health || exit 1
+        
+        # Readiness check
+        curl -f http://localhost:8000/health/ready || exit 1
+        
+        echo "✅ Production deployment verified"
+    
+    - name: Notify Slack (optional)
+      if: always()
+      run: |
+        WEBHOOK=${{ secrets.SLACK_WEBHOOK }}
+        if [ -n "$WEBHOOK" ]; then
+          curl -X POST "$WEBHOOK" \
+            -H 'Content-Type: application/json' \
+            -d "{
+              \"text\": \"Deployment ${{ job.status }}\",
+              \"blocks\": [{
+                \"type\": \"section\",
+                \"text\": {
+                  \"type\": \"mrkdwn\",
+                  \"text\": \"*Production Deployment* - ${{ job.status }}\n*Environment*: ${{ github.event.inputs.environment }}\n*Image*: ${{ steps.image.outputs.image }}\"
+                }
+              }]
+            }"
+        fi

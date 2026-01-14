@@ -1,0 +1,59 @@
+apiVersion: flagger.app/v1beta1
+kind: Canary
+metadata:
+  name: bps-api
+  namespace: bps-prod
+spec:
+  targetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: bps-api
+  service:
+    port: 8000
+    portName: http
+  analysis:
+    interval: 30s
+    threshold: 5
+    metrics:
+    - name: request-success-rate
+      thresholdRange:
+        min: 99
+      interval: 1m
+    - name: request-duration
+      thresholdRange:
+        max: 500
+      interval: 30s
+  skipAnalysis: false
+  maxWeight: 50
+  stepWeight: 10
+---
+apiVersion: flagger.app/v1beta1
+kind: MetricTemplate
+metadata:
+  name: request-success-rate
+  namespace: bps-prod
+spec:
+  provider:
+    name: prometheus
+    address: http://prometheus:9090
+  query: |
+    100 - (
+      sum(rate(http_requests_total{namespace="{{ .Namespace }}",job="{{ .Name }}",status!~"2.."}[{{ .Interval }}]))
+      /
+      sum(rate(http_requests_total{namespace="{{ .Namespace }}",job="{{ .Name }}"}[{{ .Interval }}]))
+    ) * 100
+---
+apiVersion: flagger.app/v1beta1
+kind: MetricTemplate
+metadata:
+  name: request-duration
+  namespace: bps-prod
+spec:
+  provider:
+    name: prometheus
+    address: http://prometheus:9090
+  query: |
+    histogram_quantile(
+      0.95,
+      sum(rate(http_request_duration_seconds_bucket{namespace="{{ .Namespace }}",job="{{ .Name }}"}[{{ .Interval }}])) by (le)
+    ) * 1000

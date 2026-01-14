@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: bps-production
+  namespace: argocd
+spec:
+  description: Production project with strict controls
+  sourceRepos:
+  - 'https://github.com/your-org/bps-api'
+  destinations:
+  - namespace: bps-prod
+    server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+  - group: ''
+    kind: Namespace
+  namespaceResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  namespaceResourceBlacklist:
+  - group: ''
+    kind: ResourceQuota
+  - group: ''
+    kind: LimitRange
+  orphanedResources:
+    warn: true

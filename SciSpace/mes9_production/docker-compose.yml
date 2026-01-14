@@ -1,0 +1,74 @@
+# Docker Compose for Development Environment
+# Week 1 Exercise 1.2: Docker Compose dev
+
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bps-api-dev
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:devpass@db:5432/bps_dev
+      - REDIS_URL=redis://cache:6379/0
+      - ENVIRONMENT=development
+      - LOG_LEVEL=DEBUG
+    depends_on:
+      db:
+        condition: service_healthy
+      cache:
+        condition: service_healthy
+    volumes:
+      - ./app:/app/app
+      - ./tests:/app/tests
+    networks:
+      - bps-network
+    restart: unless-stopped
+
+  db:
+    image: postgres:15-alpine
+    container_name: bps-postgres-dev
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: devpass
+      POSTGRES_DB: bps_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init_db.sql:/docker-entrypoint-initdb.d/01-init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - bps-network
+    restart: unless-stopped
+
+  cache:
+    image: redis:7-alpine
+    container_name: bps-redis-dev
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - bps-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  bps-network:
+    driver: bridge
