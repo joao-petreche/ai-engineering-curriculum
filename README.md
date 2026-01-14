@@ -4,6 +4,19 @@
 
 ---
 
+## ⚠️ AVISO IMPORTANTE - VISUALIZAÇÃO APENAS
+
+> 🔒 Este repositório é **disponibilizado apenas para visualização e estudo pessoal**.
+>
+> ✅ **Você pode:** Visualizar, estudar e fazer referência ao material em trabalhos acadêmicos  
+> ❌ **Você NÃO pode:** Fazer fork, clonar, modificar ou usar comercialmente
+>
+> Para uso profissional ou comercial, entre em contato: **petreche@usp.br**
+>
+> Veja [LICENSE](LICENSE) para mais detalhes.
+
+---
+
 ## 📚 Quick Navigation
 
 | **Resource** | **Purpose** | **Location** |
