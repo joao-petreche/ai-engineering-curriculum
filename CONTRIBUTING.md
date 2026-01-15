@@ -71,11 +71,11 @@ Help future learners:
 
 ```bash
 # Fork this repository on GitHub, then:
-git clone https://github.com/YOUR-USERNAME/scientific-ai-curriculum.git
-cd scientific-ai-curriculum
+git clone https://github.com/YOUR-USERNAME/ai-engineering-curriculum.git
+cd ai-engineering-curriculum
 
 # Add upstream remote
-git remote add upstream https://github.com/ORIGINAL-REPO/scientific-ai-curriculum.git
+git remote add upstream https://github.com/joao-petreche/ai-engineering-curriculum.git
 ```
 
 ### **2. Create a Branch**
