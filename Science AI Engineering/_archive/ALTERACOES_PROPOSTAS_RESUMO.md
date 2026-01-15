@@ -306,5 +306,5 @@ Human-in-Loop (Mês 11)
 **Prepared by:** AI Engineering Curriculum Alignment Task  
 **Date:** 13 de Janeiro de 2026  
 **Files Modified:** 
-- `Plano Mestre Integrado_ Scientific AI Engineering & BPS (12 Meses).md` (4 edições)
+- `Scientific_AI_Engineering_Curriculum.md` (4 edições)
 - `curriculum_alignment_matrix.md` (referência)

@@ -74,10 +74,9 @@ This is a **production-ready, open-source curriculum** developed for advanced tr
 | **Resource** | **Purpose** | **Location** |
 |------------|----------|-----------|
 | 📋 **Main Curriculum Index** | Navigate all 12 months | [Science AI Engineering/CURRICULUM_INDEX.md](Science%20AI%20Engineering/CURRICULUM_INDEX.md) |
-| 🎯 **Master Plan** | Overall structure & phases | [Plano Mestre Integrado_...md](Plano%20Mestre%20Integrado_%20Scientific%20AI%20Engineering%20%26%20BPS%20%2812%20Meses%29.md) |
+| 🎯 **Master Plan** | Overall structure & phases | [Scientific_AI_Engineering_Curriculum.md](Scientific_AI_Engineering_Curriculum.md) |
 | 📊 **Literature Alignment** | Scientific references (95% coverage) | [Science AI Engineering/curriculum_alignment_matrix.md](Science%20AI%20Engineering/curriculum_alignment_matrix.md) |
-| 💾 **Backup Guide** | Version control & backup strategy | [BACKUP_AND_VERSION_CONTROL_GUIDE.md](BACKUP_AND_VERSION_CONTROL_GUIDE.md) |
-| 🚀 **Quick Setup Script** | Automated backup & Git setup | [ARCHIVED_FILES/QUICK_BACKUP_SETUP.ps1](ARCHIVED_FILES/QUICK_BACKUP_SETUP.ps1) |
+| � **Contributing Guide** | How to contribute & collaborate | [CONTRIBUTING.md](CONTRIBUTING.md) |
 
 ---
 
@@ -244,7 +243,7 @@ Copy-Item -Path "C:\Users\joaop\Downloads\FAPESP\Training_12Meses" `
 
 ```
 AI Engineering/
-├── Plano Mestre Integrado_...md       (Master plan & phases)
+├── Scientific_AI_Engineering_Curriculum.md       (Master plan & phases)
 ├── BACKUP_AND_VERSION_CONTROL_GUIDE.md (This backup guide)
 ├── ARCHIVED_FILES/QUICK_BACKUP_SETUP.ps1 (Automated setup script)
 ├── README.md                          (This file)
