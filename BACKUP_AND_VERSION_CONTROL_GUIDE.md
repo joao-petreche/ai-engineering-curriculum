@@ -232,7 +232,7 @@ Total: 122 files, ~3.9 MB
 
 ---
 
-## 🛡️ Recommended Backup Strategy: 3-2-1 Rule
+## 🛡️ Recommended Backup Strategy: 2-1 Rule
 
 **Best Practice for Critical Projects:**
 
@@ -240,24 +240,20 @@ Total: 122 files, ~3.9 MB
 |-----------|------------|---------|---------------------|
 | **Copy 1** | Local Computer | Live working directory | Continuous (auto-save) |
 | **Copy 2** | GitHub | Version control remote | Weekly (manual push) |
-| **Copy 3A** | Google Drive | Cloud backup | Monthly (zip upload) |
-| **Copy 3B** | External Drive | Offline backup | Monthly (copy to drive) |
+| **Copy 3** | External Drive | Offline backup | Monthly (copy to drive) |
 
 **Why this works:**
 - ✅ Copy 1: Working version always available
 - ✅ Copy 2: Version history + disaster recovery
-- ✅ Copy 3A: Protection against local hardware failure
-- ✅ Copy 3B: Protection against cloud service outages
+- ✅ Copy 3: Protection against local hardware failure
 
 ---
 
 ## 🚀 Implementation Checklist
 
 - [ ] **Week 1:** Initialize Git repo and push to GitHub
-- [ ] **Week 1:** Create first backup zip to Google Drive
 - [ ] **Week 2:** Copy to external drive
 - [ ] **Ongoing:** Weekly `git push` to GitHub
-- [ ] **Monthly:** Update Google Drive backup (replace old zip)
 - [ ] **Monthly:** Update external drive backup
 - [ ] **Quarterly:** Review .gitignore and update if needed
 - [ ] **Quarterly:** Test restore from backup (verify integrity)
