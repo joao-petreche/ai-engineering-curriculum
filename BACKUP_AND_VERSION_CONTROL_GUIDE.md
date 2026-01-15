@@ -225,7 +225,7 @@ AI Engineering/
 │   ├── scripts/                          (Utility scripts)
 │   ├── tests/                            (Test suites)
 │   └── _archive/                         (18 historical files)
-└── README_BACKUPS.md                     (This file)
+└── BACKUP_AND_VERSION_CONTROL_GUIDE.md   (This file)
 
 Total: 122 files, ~3.9 MB
 ```

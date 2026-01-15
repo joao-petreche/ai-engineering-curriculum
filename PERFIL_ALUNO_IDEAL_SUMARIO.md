@@ -349,7 +349,7 @@ Exemplo semanal:
 - [ ] Ative GitHub Copilot e Google Cloud
 
 ### Passo 4: Comece Mês 0 (Obrigatório)
-- [ ] Siga [Exercicios_Fase_0_Infraestrutura.md](Training_12Meses/Science%20AI%20Engineering/Exercicios_Fase_0_Infraestrutura.md)
+- [ ] Siga [Exercicios_Fase_0_Infraestrutura.md](Science%20AI%20Engineering/Exercicios_Fase_0_Infraestrutura.md)
 - [ ] Complete todas as checkpoints
 - [ ] Não pule para Mês 1 até terminar
 

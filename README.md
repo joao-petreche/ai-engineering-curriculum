@@ -77,7 +77,7 @@ This is a **production-ready, open-source curriculum** developed for advanced tr
 | 🎯 **Master Plan** | Overall structure & phases | [Plano Mestre Integrado_...md](Plano%20Mestre%20Integrado_%20Scientific%20AI%20Engineering%20%26%20BPS%20%2812%20Meses%29.md) |
 | 📊 **Literature Alignment** | Scientific references (95% coverage) | [Science AI Engineering/curriculum_alignment_matrix.md](Science%20AI%20Engineering/curriculum_alignment_matrix.md) |
 | 💾 **Backup Guide** | Version control & backup strategy | [BACKUP_AND_VERSION_CONTROL_GUIDE.md](BACKUP_AND_VERSION_CONTROL_GUIDE.md) |
-| 🚀 **Quick Setup Script** | Automated backup & Git setup | [QUICK_BACKUP_SETUP.ps1](QUICK_BACKUP_SETUP.ps1) |
+| 🚀 **Quick Setup Script** | Automated backup & Git setup | [ARCHIVED_FILES/QUICK_BACKUP_SETUP.ps1](ARCHIVED_FILES/QUICK_BACKUP_SETUP.ps1) |
 
 ---
 
@@ -89,7 +89,7 @@ This is a **production-ready, open-source curriculum** developed for advanced tr
 - **Mês 5-8:** AI integration & optimization (GenAI, RAG, web UI, KAN networks)
 - **Mês 9:** Production deployment (Docker, Kubernetes, CI/CD, observability)
 
-📁 **Location:** [Science AI Engineering/Exercicios_Mes_0-9.md](Science%20AI%20Engineering/)
+📁 **Location:** [Science AI Engineering/](Science%20AI%20Engineering/)
 
 ### ✅ Months 10-12: Advanced Systems & Capstone
 
@@ -246,7 +246,7 @@ Copy-Item -Path "C:\Users\joaop\Downloads\FAPESP\Training_12Meses" `
 AI Engineering/
 ├── Plano Mestre Integrado_...md       (Master plan & phases)
 ├── BACKUP_AND_VERSION_CONTROL_GUIDE.md (This backup guide)
-├── QUICK_BACKUP_SETUP.ps1             (Automated setup script)
+├── ARCHIVED_FILES/QUICK_BACKUP_SETUP.ps1 (Automated setup script)
 ├── README.md                          (This file)
 └── Science AI Engineering/
     ├── CURRICULUM_INDEX.md            ⭐ Main navigation
@@ -277,7 +277,7 @@ AI Engineering/
 
 1. **This Week:**
    - [ ] Review [BACKUP_AND_VERSION_CONTROL_GUIDE.md](BACKUP_AND_VERSION_CONTROL_GUIDE.md)
-   - [ ] Run `QUICK_BACKUP_SETUP.ps1` to initialize Git
+  - [ ] Run `ARCHIVED_FILES/QUICK_BACKUP_SETUP.ps1` to initialize Git
    - [ ] Push to GitHub (create repo at github.com/new)
 
 2. **This Month:**
@@ -396,4 +396,4 @@ GitHub: [joao-petreche](https://github.com/joao-petreche)
 
 **Ready to save and continue development!** 🚀
 
-Start with: `.\QUICK_BACKUP_SETUP.ps1` or read [BACKUP_AND_VERSION_CONTROL_GUIDE.md](BACKUP_AND_VERSION_CONTROL_GUIDE.md)
+Start with: `.\ARCHIVED_FILES\QUICK_BACKUP_SETUP.ps1` or read [BACKUP_AND_VERSION_CONTROL_GUIDE.md](BACKUP_AND_VERSION_CONTROL_GUIDE.md)
