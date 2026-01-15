@@ -1,8 +1,9 @@
 # 🎓 Scientific AI Engineering Curriculum (12 Months - 100% Complete)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)]() 
-[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-blue.svg)]()
+[![GitHub stars](https://img.shields.io/github/stars/joao-petreche/ai-engineering-curriculum?style=social)](https://github.com/joao-petreche/ai-engineering-curriculum/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/joao-petreche/ai-engineering-curriculum?style=social)](https://github.com/joao-petreche/ai-engineering-curriculum/network/members)
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 > **Open Educational Resource:** A comprehensive 600-700 hour curriculum covering Building Performance Simulation, Machine Learning, GenAI, and Production Deployment.
 > 
