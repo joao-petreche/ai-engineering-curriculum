@@ -1,19 +1,31 @@
 # 🎓 Scientific AI Engineering Curriculum (12 Months - 100% Complete)
 
-**Status:** ✅ **FULLY SCAFFOLDED (January 14, 2026)**
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)]() 
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-blue.svg)]()
+
+> **Open Educational Resource:** A comprehensive 600-700 hour curriculum covering Building Performance Simulation, Machine Learning, GenAI, and Production Deployment.
+> 
+> 🌟 **Free to use, modify, and share** - Perfect for researchers, students, and professionals
 
 ---
 
-## ⚠️ AVISO IMPORTANTE - VISUALIZAÇÃO APENAS
+## 📖 About This Project
 
-> 🔒 Este repositório é **disponibilizado apenas para visualização e estudo pessoal**.
->
-> ✅ **Você pode:** Visualizar, estudar e fazer referência ao material em trabalhos acadêmicos  
-> ❌ **Você NÃO pode:** Fazer fork, clonar, modificar ou usar comercialmente
->
-> Para uso profissional ou comercial, entre em contato: **petreche@usp.br**
->
-> Veja [LICENSE](LICENSE) para mais detalhes.
+This is a **production-ready, open-source curriculum** developed for advanced training in Scientific AI Engineering applied to Building Performance Simulation (BPS). The material is freely available under the MIT License for educational, research, and commercial use.
+
+**Who is this for?**
+- 🎓 Graduate students in Engineering, Architecture, or Computer Science
+- 🔬 Researchers working with building simulation and AI
+- 💼 Professionals transitioning to AI-powered engineering
+- 🏢 Organizations training teams in scientific computing
+
+**What you'll learn:**
+- Physics-Informed Machine Learning (PIML) for building simulation
+- Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG)
+- Production deployment with Docker, Kubernetes, and GCP
+- Advanced optimization and federated learning
+- Real-world capstone project from problem to publication
 
 ---
 
@@ -86,18 +98,30 @@
 
 ---
 
-## 🛡️ Save & Backup Your Work
+## � How to Use This Curriculum
 
-### **Option 1: Git + GitHub (RECOMMENDED)**
-Initialize version control and push to GitHub:
+### **For Students/Self-Study:**
+1. Fork this repository to your GitHub account
+2. Follow the month-by-month progression (Mês 0 → Mês 12)
+3. Complete exercises and projects at your own pace
+4. Share your implementations and improvements!
+
+### **For Instructors/Institutions:**
+1. Clone and adapt to your specific needs
+2. Use as foundation for your own courses
+3. Contributions and improvements are welcome
+4. Attribution appreciated (see Citation below)
+
+### **Getting Started:**
 
 ```powershell
-# Run the automated setup script
-.\QUICK_BACKUP_SETUP.ps1
+# Clone the repository
+git clone https://github.com/YOUR-USERNAME/scientific-ai-curriculum.git
+cd scientific-ai-curriculum
 
-# Or manually:
-cd "C:\Users\joaop\Downloads\AI Engineering"
-git init
+# Start with Month 0 (Setup)
+cd "Science AI Engineering"
+code Exercicios_Mes_0_Setup.md
 git add .
 git commit -m "Initial commit: 12-month curriculum (100% scaffolded)"
 git remote add origin https://github.com/YOUR_USERNAME/ai-engineering-curriculum.git
@@ -251,20 +275,67 @@ AI Engineering/
 
 ---
 
-## 📞 Troubleshooting
+## � Citation
 
-**Git issues?** → See [BACKUP_AND_VERSION_CONTROL_GUIDE.md](BACKUP_AND_VERSION_CONTROL_GUIDE.md#troubleshooting)
+If you use this curriculum in your research, teaching, or projects, please cite:
 
-**Curriculum questions?** → Check [CURRICULUM_INDEX.md](SciSpace/CURRICULUM_INDEX.md)
-
-**DevOps/Production help?** → See [mes9_production/TROUBLESHOOTING.md](SciSpace/mes9_production/TROUBLESHOOTING.md)
+```bibtex
+@misc{petreche2026scientific,
+  author = {Petrêche, João},
+  title = {Scientific AI Engineering Curriculum: Building Performance Simulation with Machine Learning},
+  year = {2026},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/YOUR-USERNAME/scientific-ai-curriculum}}
+}
+```
 
 ---
 
-## 📈 Project Status
+## 🤝 Contributing
 
-| **Component** | **Status** | **Lines** | **Exercises** |
-|-------------|---------|---------|-------------|
+Contributions are welcome! Whether it's:
+- 🐛 Bug fixes in code examples
+- 📝 Improvements to documentation
+- 🆕 New exercises or case studies
+- 🌍 Translations to other languages
+
+Please open an issue or pull request. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** - see [LICENSE](LICENSE) file for details.
+
+**Summary:** You are free to use, modify, and distribute this material for any purpose, including commercial use, as long as you include the original copyright notice.
+
+---
+
+## 🙏 Acknowledgments
+
+This curriculum was developed as part of a FAPESP research project at the University of São Paulo (USP), integrating insights from 40+ scientific papers published between 2023-2025.
+
+**Key References:**
+- Jiang et al. (2025) - Physics-informed ML for BPS
+- Zakeri et al. (2025) - Surrogate modeling
+- Ma et al. (2024) - LLM integration in engineering
+
+See [curriculum_alignment_matrix.md](Science%20AI%20Engineering/curriculum_alignment_matrix.md) for complete bibliography.
+
+---
+
+## 📞 Contact
+
+**João Petrêche**  
+University of São Paulo (USP)  
+Email: petreche@usp.br  
+GitHub: [@YOUR-USERNAME](https://github.com/YOUR-USERNAME)
+
+---
+
+**⭐ If you find this curriculum useful, please consider starring the repository!**
+
 | Mês 0-9 | ✅ Complete | 20,000+ | 60+ |
 | Mês 10 | ✅ Complete | 5,000+ | 15 |
 | Mês 11 | ✅ Complete | 5,000+ | 15 |

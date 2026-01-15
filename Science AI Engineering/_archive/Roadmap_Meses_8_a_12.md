@@ -5,7 +5,7 @@
 This roadmap outlines the final 5 months of the "Scientific AI Engineering & BPS" curriculum, building upon the foundation established in Months 1-7.
 
 **Total Hours:** 300-360 hours (60h/month average)
-**Target Completion:** May 2026
+**Duration:** Months 8-12 (5 consecutive months)
 
 ---
 

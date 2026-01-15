@@ -1,30 +1,36 @@
-Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+MIT License
 
-AVISO IMPORTANTE: Este repositório é disponibilizado APENAS para visualização e estudo pessoal.
+Copyright (c) 2026 João Petrêche, University of São Paulo (USP)
 
-================================
-VOCÊ PODE:
-✅ Visualizar o conteúdo
-✅ Estudar e aprender com o material
-✅ Fazer referência ao material em trabalhos acadêmicos (com atribuição)
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-VOCÊ NÃO PODE:
-❌ Fazer fork do repositório
-❌ Clonar para uso comercial
-❌ Modificar ou criar derivados
-❌ Compartilhar cópias do código sem autorização
-❌ Usar comercialmente ou lucrar com o material
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-================================
-PARA USO PROFISSIONAL:
-Se você deseja utilizar este material em contexto profissional, comercial ou para pesquisa avançada, 
-por favor entre em contato com o autor:
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-João Petrêche
-Email: petreche@usp.br
+---
 
-================================
-Este material foi desenvolvido como parte de um programa de formação em Engenharia de IA 
-e é protegido por direitos autorais. 
+EDUCATIONAL USE NOTE:
 
-Ao acessar este repositório, você concorda em respeitar estas restrições.
+This curriculum was developed as part of a FAPESP (São Paulo Research Foundation) 
+research project at the University of São Paulo. The material is made freely 
+available to support education and research in Scientific AI Engineering.
+
+While commercial use is permitted under the MIT License, we kindly request that:
+- Academic citations include proper attribution (see README.md)
+- Improvements and adaptations be shared with the community
+- Large-scale commercial deployments consider acknowledging the source
+
+For questions or collaboration opportunities, contact: petreche@usp.br
