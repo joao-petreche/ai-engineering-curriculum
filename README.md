@@ -30,46 +30,46 @@ This is a **production-ready, open-source curriculum** developed for advanced tr
 
 ---
 
-## � ANTES DE COMEÇAR: Verifique Seus Pré-Requisitos
+## ✅ Before You Start: Check Your Prereqs
 
-**⚠️ NÃO comece o treinamento sem verificar se está pronto!**
+**⚠️ Do not start the training until you confirm you are ready.**
 
-### Sua Lista de Verificação Rápida (5 minutos):
+### Quick 5-minute checklist
 
-👉 **[PERFIL_ALUNO_IDEAL_SUMARIO.md](PERFIL_ALUNO_IDEAL_SUMARIO.md)** ⭐ **LEIA PRIMEIRO**
-- Teste de prontidão automático (14 questões)
-- Descubra seu cenário (A=pronto agora, E=precisa bootcamp)
-- Recursos de preparação recomendados
-- Checklist de hardware e software
+👉 **[PERFIL_ALUNO_IDEAL_SUMARIO.md](PERFIL_ALUNO_IDEAL_SUMARIO.md)** ⭐ **READ FIRST**
+- 14-question readiness self-test
+- Identify your scenario (A = ready now, E = needs bootcamp)
+- Recommended prep resources
+- Hardware and software checklist
 
-📚 **[PREREQUISITOS_MINIMOS_FORMACAO.md](PREREQUISITOS_MINIMOS_FORMACAO.md)** - Análise Técnica Completa
-- Formações acadêmicas ideais (Engenharia, Computação, etc.)
-- Conhecimentos por nível (crítico, recomendado, desejável)
-- Roadmaps detalhados para cada gap
-- 40+ recursos gratuitos e pagos para preparação
+📚 **[PREREQUISITOS_MINIMOS_FORMACAO.md](PREREQUISITOS_MINIMOS_FORMACAO.md)** — Technical prerequisites
+- Ideal academic backgrounds (Engineering, CS, etc.)
+- Required vs. recommended knowledge by level
+- Detailed roadmaps to close gaps
+- 40+ free and paid prep resources
 
-### ✅ Público-Alvo Direto (Pode Começar Agora):
-- 🎓 Mestrandos/Doutorandos em Engenharia
-- 💼 Engenheiros com 2-5 anos experiência
-- 🔬 Pesquisadores em Building Performance Simulation
-- 🖥️ Programadores competentes aprendendo ML
-- 📊 Cientistas de dados em transição para domínio
+### ✅ Who can start immediately
+- 🎓 Engineering master’s/PhD students
+- 💼 Engineers with 2-5 years of experience
+- 🔬 Researchers in Building Performance Simulation
+- 🖥️ Proficient programmers learning ML
+- 📊 Data scientists transitioning to this domain
 
-### ⏱️ Tempo de Preparação por Cenário:
+### ⏱️ Prep time by scenario
 
-| Seu Perfil | Tempo de Prep | Próximo Passo |
+| Your Profile | Prep Time | Next Step |
 |-----------|--------------|---------------|
-| Tenho Python, Matemática e Física | 0-1 semana | Comece Mês 0 |
-| Tenho código, falta ML/Física | 4-6 semanas | Estude então comece |
-| Tenho Physics, falta código | 6-8 semanas | Bootcamp Python |
-| Tenho pouco de tudo | 10-12 semanas | Bootcamp estruturado |
-| Sem formação STEM | 2-3 meses | Considere outro caminho |
+| Strong in Python, Math, Physics | 0-1 week | Start Month 0 |
+| Code-ready, need ML/Physics | 4-6 weeks | Study then start |
+| Physics-strong, code-light | 6-8 weeks | Python bootcamp |
+| Light in all areas | 10-12 weeks | Structured bootcamp |
+| No STEM background | 2-3 months | Consider alternative path |
 
-👉 **Detalhes completos em [PERFIL_ALUNO_IDEAL_SUMARIO.md](PERFIL_ALUNO_IDEAL_SUMARIO.md)**
+👉 **Full details in [PERFIL_ALUNO_IDEAL_SUMARIO.md](PERFIL_ALUNO_IDEAL_SUMARIO.md)**
 
 ---
 
-## �📚 Quick Navigation
+## 📚 Quick Navigation
 
 | **Resource** | **Purpose** | **Location** |
 |------------|----------|-----------|
@@ -137,7 +137,7 @@ This is a **production-ready, open-source curriculum** developed for advanced tr
 
 ---
 
-## � How to Use This Curriculum
+## 🧭 How to Use This Curriculum
 
 ### **For Students/Self-Study:**
 1. Fork this repository to your GitHub account
@@ -243,7 +243,7 @@ Copy-Item -Path "C:\Users\joaop\Downloads\FAPESP\Training_12Meses" `
 ## 📁 Project Structure
 
 ```
-Training_12Meses/
+./
 ├── README.md                              (This file - curriculum overview)
 ├── Scientific_AI_Engineering_Curriculum.md (Master plan & phases)
 ├── PERFIL_ALUNO_IDEAL_SUMARIO.md          (Student readiness test)
