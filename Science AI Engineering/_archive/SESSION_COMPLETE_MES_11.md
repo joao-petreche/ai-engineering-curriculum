@@ -54,7 +54,7 @@
    - Exercise 4.4: Full ML Pipeline Optimization
    - **Includes**: optuna_optimizer.py, optuna_pruning.py, optuna_multiobjective.py, optuna_ml_pipeline.py
 
-### Supporting Documentation Files (in root `SciSpace/`)
+### Supporting Documentation Files (in root `Science AI Engineering/`)
 
 6. **MES_11_DELIVERY_SUMMARY.md** (300 lines)
    - Overview of what was delivered
@@ -169,7 +169,7 @@
 ### RIGHT NOW
 ```bash
 # 1. Navigate to the directory
-cd c:\Users\joaop\Downloads\AI Engineering\SciSpace
+cd c:\Users\joaop\Downloads\AI Engineering\Science AI Engineering
 
 # 2. Read the overview
 cat MES_11_DELIVERY_SUMMARY.md
@@ -254,10 +254,10 @@ Next Milestone: Mês 12 capstone project
 
 ## 💾 File Locations
 
-All files are in: `c:\Users\joaop\Downloads\AI Engineering\SciSpace\`
+All files are in: `c:\Users\joaop\Downloads\AI Engineering\Science AI Engineering\`
 
 ```
-SciSpace/
+Science AI Engineering/
 ├── README.md (original)
 ├── curriculum_alignment_analysis.csv
 ├── CURRICULUM_INDEX.md ✅ UPDATED

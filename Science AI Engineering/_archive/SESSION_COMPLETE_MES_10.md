@@ -75,7 +75,7 @@
    - Privacy-preserving optimization
    - Production deployment guide
 
-### Supporting Documentation (root `SciSpace/`)
+### Supporting Documentation (root `Science AI Engineering/`)
 
 6. **MES_10_DELIVERY_SUMMARY.md** (400 lines)
    - What was delivered

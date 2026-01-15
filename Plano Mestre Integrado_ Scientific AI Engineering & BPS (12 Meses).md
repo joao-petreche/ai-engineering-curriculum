@@ -123,9 +123,9 @@ All months include:
 - ✅ Troubleshooting guides and common pitfalls
 
 **Navigate to:**
-- [CURRICULUM_INDEX.md](./SciSpace/CURRICULUM_INDEX.md) - Complete navigation index
-- [curriculum_alignment_matrix.md](./SciSpace/curriculum_alignment_matrix.md) - Literature alignment
-- [mes12_capstone/](./SciSpace/mes12_capstone/) - Final capstone project
+- [CURRICULUM_INDEX.md](./Science%20AI%20Engineering/CURRICULUM_INDEX.md) - Complete navigation index
+- [curriculum_alignment_matrix.md](./Science%20AI%20Engineering/curriculum_alignment_matrix.md) - Literature alignment
+- [mes12_capstone/](./Science%20AI%20Engineering/mes12_capstone/) - Final capstone project
 
 #### **🆕 Novas Tarefas Adicionadas (4)**
 
@@ -160,19 +160,19 @@ All months include:
 4. Expect 50-60 hours per month with 12-15 hours per week
 
 **Quick Reference Navigation:**
-- 📚 **[CURRICULUM_INDEX.md](./SciSpace/CURRICULUM_INDEX.md)** - Main navigation hub with all months
-- 🎯 **[curriculum_alignment_matrix.md](./SciSpace/curriculum_alignment_matrix.md)** - Scientific literature alignment
-- 📝 **[ALTERACOES_PROPOSTAS_RESUMO.md](./SciSpace/ALTERACOES_PROPOSTAS_RESUMO.md)** - Change summary
-- 📈 **[EVOLUCAO_MATRIZ.md](./SciSpace/EVOLUCAO_MATRIZ.md)** - Matrix evolution history
+- 📚 **[CURRICULUM_INDEX.md](./Science%20AI%20Engineering/CURRICULUM_INDEX.md)** - Main navigation hub with all months
+- 🎯 **[curriculum_alignment_matrix.md](./Science%20AI%20Engineering/curriculum_alignment_matrix.md)** - Scientific literature alignment
+- 📝 **[ALTERACOES_PROPOSTAS_RESUMO.md](./Science%20AI%20Engineering/ALTERACOES_PROPOSTAS_RESUMO.md)** - Change summary
+- 📈 **[EVOLUCAO_MATRIZ.md](./Science%20AI%20Engineering/EVOLUCAO_MATRIZ.md)** - Matrix evolution history
 
 **Month-Specific Resources:**
-- **Mês 9:** [mes9_production/](./SciSpace/mes9_production/) - Docker, Kubernetes, CI/CD
-- **Mês 10:** [mes10_federated_learning/](./SciSpace/mes10_federated_learning/) - Federated optimization
-- **Mês 11:** [mes11_advanced_analytics/](./SciSpace/mes11_advanced_analytics/) - Custom metrics
-- **Mês 12:** [mes12_capstone/](./SciSpace/mes12_capstone/) - Complete capstone project
+- **Mês 9:** [mes9_production/](./Science%20AI%20Engineering/mes9_production/) - Docker, Kubernetes, CI/CD
+- **Mês 10:** [mes10_federated_learning/](./Science%20AI%20Engineering/mes10_federated_learning/) - Federated optimization
+- **Mês 11:** [mes11_advanced_analytics/](./Science%20AI%20Engineering/mes11_advanced_analytics/) - Custom metrics
+- **Mês 12:** [mes12_capstone/](./Science%20AI%20Engineering/mes12_capstone/) - Complete capstone project
 
 **Progress Tracking:**
-- Use [SESSION_STATE documents](./SciSpace/) to track completion status
+- Use [SESSION_STATE documents](./Science%20AI%20Engineering/) to track completion status
 - Follow delivery summaries (MES_X_DELIVERY_SUMMARY.md) for each month
 - Review visual overviews (MES_X_VISUAL_OVERVIEW.md) for quick comprehension
 
@@ -411,7 +411,7 @@ pip install torch google-cloud-aiplatform streamlit pydantic
 ### **🗓️ MÊS 9: Production Deployment & DevOps (Docker, Kubernetes, CI/CD)**
 
 **Status:** ✅ **FULLY SCAFFOLDED**
-**Location:** [mes9_production/](./SciSpace/mes9_production/)
+**Location:** [mes9_production/](./Science%20AI%20Engineering/mes9_production/)
 
 * **Focus:** Bridge from research code to production systems with industry-standard DevOps.
 * **Architecture:** Containerization → Orchestration → CI/CD → Observability
@@ -434,7 +434,7 @@ pip install torch google-cloud-aiplatform streamlit pydantic
 ### **🗓️ MÊS 10: Federated Learning & Adaptive Prompting**
 
 **Status:** ✅ **FULLY SCAFFOLDED**
-**Location:** [mes10_federated_learning/](./SciSpace/mes10_federated_learning/)
+**Location:** [mes10_federated_learning/](./Science%20AI%20Engineering/mes10_federated_learning/)
 
 * **Focus:** Multi-site optimization systems with federated learning and adaptive LLM prompting.
 * **Architecture:** FedAvg algorithm, distributed optimization, real-time prompt adaptation
@@ -450,7 +450,7 @@ pip install torch google-cloud-aiplatform streamlit pydantic
 ### **🗓️ MÊS 11: Advanced Analytics & Custom Metrics**
 
 **Status:** ✅ **FULLY SCAFFOLDED**
-**Location:** [mes11_advanced_analytics/](./SciSpace/mes11_advanced_analytics/)
+**Location:** [mes11_advanced_analytics/](./Science%20AI%20Engineering/mes11_advanced_analytics/)
 
 * **Focus:** Custom performance metrics, sensitivity analysis, constrained optimization, Optuna integration.
 * **Architecture:** Custom metric frameworks, Sobol/Morris sensitivity, multi-objective optimization
@@ -471,7 +471,7 @@ pip install torch google-cloud-aiplatform streamlit pydantic
 ### **🗓️ MÊS 12: Capstone Project & Industry Application**
 
 **Status:** ✅ **FULLY SCAFFOLDED (January 14, 2026)**
-**Location:** [mes12_capstone/](./SciSpace/mes12_capstone/)
+**Location:** [mes12_capstone/](./Science%20AI%20Engineering/mes12_capstone/)
 
 * **Focus:** Complete industry-grade capstone integrating all 11 months of learning.
 * **Architecture:** End-to-end system from problem definition through academic publication

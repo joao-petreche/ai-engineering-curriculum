@@ -34,9 +34,9 @@ This is a **production-ready, open-source curriculum** developed for advanced tr
 
 | **Resource** | **Purpose** | **Location** |
 |------------|----------|-----------|
-| 📋 **Main Curriculum Index** | Navigate all 12 months | [SciSpace/CURRICULUM_INDEX.md](SciSpace/CURRICULUM_INDEX.md) |
+| 📋 **Main Curriculum Index** | Navigate all 12 months | [Science AI Engineering/CURRICULUM_INDEX.md](Science%20AI%20Engineering/CURRICULUM_INDEX.md) |
 | 🎯 **Master Plan** | Overall structure & phases | [Plano Mestre Integrado_...md](Plano%20Mestre%20Integrado_%20Scientific%20AI%20Engineering%20%26%20BPS%20%2812%20Meses%29.md) |
-| 📊 **Literature Alignment** | Scientific references (95% coverage) | [SciSpace/curriculum_alignment_matrix.md](SciSpace/curriculum_alignment_matrix.md) |
+| 📊 **Literature Alignment** | Scientific references (95% coverage) | [Science AI Engineering/curriculum_alignment_matrix.md](Science%20AI%20Engineering/curriculum_alignment_matrix.md) |
 | 💾 **Backup Guide** | Version control & backup strategy | [BACKUP_AND_VERSION_CONTROL_GUIDE.md](BACKUP_AND_VERSION_CONTROL_GUIDE.md) |
 | 🚀 **Quick Setup Script** | Automated backup & Git setup | [QUICK_BACKUP_SETUP.ps1](QUICK_BACKUP_SETUP.ps1) |
 
@@ -50,7 +50,7 @@ This is a **production-ready, open-source curriculum** developed for advanced tr
 - **Mês 5-8:** AI integration & optimization (GenAI, RAG, web UI, KAN networks)
 - **Mês 9:** Production deployment (Docker, Kubernetes, CI/CD, observability)
 
-📁 **Location:** [SciSpace/Exercicios_Mes_0-9.md](SciSpace/)
+📁 **Location:** [Science AI Engineering/Exercicios_Mes_0-9.md](Science%20AI%20Engineering/)
 
 ### ✅ Months 10-12: Advanced Systems & Capstone
 
@@ -58,22 +58,22 @@ This is a **production-ready, open-source curriculum** developed for advanced tr
 - **Status:** ✅ FULLY SCAFFOLDED (5,000+ lines)
 - **Weeks:** 4 complete weeks with 15 exercises
 - **Content:** FederatedOptimizer, adaptive LLM prompting, real-time integration
-- **Deliverable:** [SciSpace/mes10_federated_learning/](SciSpace/mes10_federated_learning/)
-- **Summary:** [SciSpace/MES_10_DELIVERY_SUMMARY.md](SciSpace/MES_10_DELIVERY_SUMMARY.md)
+- **Deliverable:** [Science AI Engineering/mes10_federated_learning/](Science%20AI%20Engineering/mes10_federated_learning/)
+- **Summary:** [Science AI Engineering/MES_10_DELIVERY_SUMMARY.md](Science%20AI%20Engineering/MES_10_DELIVERY_SUMMARY.md)
 
 #### **Mês 11: Advanced Analytics & Custom Metrics**
 - **Status:** ✅ FULLY SCAFFOLDED (5,000+ lines)
 - **Weeks:** 4 complete weeks with 15 exercises
 - **Content:** Custom metrics, sensitivity analysis, Optuna, human-in-the-loop
-- **Deliverable:** [SciSpace/mes11_advanced_analytics/](SciSpace/mes11_advanced_analytics/)
-- **Summary:** [SciSpace/MES_11_DELIVERY_SUMMARY.md](SciSpace/MES_11_DELIVERY_SUMMARY.md)
-- **Overview:** [SciSpace/MES_11_VISUAL_OVERVIEW.md](SciSpace/MES_11_VISUAL_OVERVIEW.md)
+- **Deliverable:** [Science AI Engineering/mes11_advanced_analytics/](Science%20AI%20Engineering/mes11_advanced_analytics/)
+- **Summary:** [Science AI Engineering/MES_11_DELIVERY_SUMMARY.md](Science%20AI%20Engineering/MES_11_DELIVERY_SUMMARY.md)
+- **Overview:** [Science AI Engineering/MES_11_VISUAL_OVERVIEW.md](Science%20AI%20Engineering/MES_11_VISUAL_OVERVIEW.md)
 
 #### **Mês 12: Capstone Project & Industry Application**
 - **Status:** ✅ FULLY SCAFFOLDED (5,480+ lines, January 14, 2026)
 - **Weeks:** 4 complete weeks with 15 exercises
 - **Content:** Problem formulation → Optimization → Deployment → Publication
-- **Deliverable:** [SciSpace/mes12_capstone/](SciSpace/mes12_capstone/)
+- **Deliverable:** [Science AI Engineering/mes12_capstone/](Science%20AI%20Engineering/mes12_capstone/)
   - Week 1: Domain Problem & Data Pipeline (1,050 lines)
   - Week 2: Optimization Pipeline (1,080 lines)
   - Week 3: Deployment & Validation (1,000 lines)
@@ -159,16 +159,16 @@ Copy entire folder to external storage for offline backup.
 4. Expect 600-700 hours total (12 months)
 
 ### **For Continuing Development**
-1. Review [CURRICULUM_INDEX.md](SciSpace/CURRICULUM_INDEX.md) for current status
+1. Review [CURRICULUM_INDEX.md](Science%20AI%20Engineering/CURRICULUM_INDEX.md) for current status
 2. Navigate to the month you're working on
 3. Follow the weekly structure and exercises
 4. Use Git to track changes: `git commit -m "Your message"`
 5. Push regularly: `git push origin main`
 
 ### **For Review/Audit**
-- Check [curriculum_alignment_matrix.md](SciSpace/curriculum_alignment_matrix.md) for literature coverage
-- Review [_archive/](SciSpace/_archive/) folder for historical documentation
-- See [MES_X_DELIVERY_SUMMARY.md](SciSpace/) for completion status
+- Check [curriculum_alignment_matrix.md](Science%20AI%20Engineering/curriculum_alignment_matrix.md) for literature coverage
+- Review [_archive/](Science%20AI%20Engineering/_archive/) folder for historical documentation
+- See [MES_X_DELIVERY_SUMMARY.md](Science%20AI%20Engineering/) for completion status
 
 ---
 
@@ -213,7 +213,7 @@ AI Engineering/
 ├── BACKUP_AND_VERSION_CONTROL_GUIDE.md (This backup guide)
 ├── QUICK_BACKUP_SETUP.ps1             (Automated setup script)
 ├── README.md                          (This file)
-└── SciSpace/
+└── Science AI Engineering/
     ├── CURRICULUM_INDEX.md            ⭐ Main navigation
     ├── curriculum_alignment_matrix.md (Research alignment)
     ├── Exercicios_Fase_0-9.md         (Months 0-9 exercises)
@@ -260,19 +260,19 @@ AI Engineering/
 ## 🔗 Resources & References
 
 **Main Navigation:**
-- [CURRICULUM_INDEX.md](SciSpace/CURRICULUM_INDEX.md) - All 12 months in one place
+- [CURRICULUM_INDEX.md](Science%20AI%20Engineering/CURRICULUM_INDEX.md) - All 12 months in one place
 
 **Months 10-12 Details:**
-- [mes10_federated_learning/README.md](SciSpace/mes10_federated_learning/README.md)
-- [mes11_advanced_analytics/README.md](SciSpace/mes11_advanced_analytics/README.md)
-- [mes12_capstone/README.md](SciSpace/mes12_capstone/README.md)
+- [mes10_federated_learning/README.md](Science%20AI%20Engineering/mes10_federated_learning/README.md)
+- [mes11_advanced_analytics/README.md](Science%20AI%20Engineering/mes11_advanced_analytics/README.md)
+- [mes12_capstone/README.md](Science%20AI%20Engineering/mes12_capstone/README.md)
 
 **Technical Guides:**
-- [mes9_production/TROUBLESHOOTING.md](SciSpace/mes9_production/TROUBLESHOOTING.md) - DevOps help
+- [mes9_production/TROUBLESHOOTING.md](Science%20AI%20Engineering/mes9_production/TROUBLESHOOTING.md) - DevOps help
 - [BACKUP_AND_VERSION_CONTROL_GUIDE.md](BACKUP_AND_VERSION_CONTROL_GUIDE.md) - Persistence strategy
 
 **Historical Documentation:**
-- [SciSpace/_archive/](SciSpace/_archive/) - Design docs, evolution, critiques
+- [Science AI Engineering/_archive/](Science%20AI%20Engineering/_archive/) - Design docs, evolution, critiques
 
 ---
 

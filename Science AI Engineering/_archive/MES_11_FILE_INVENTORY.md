@@ -9,7 +9,7 @@
 ## 📂 File Directory Structure
 
 ```
-SciSpace/
+Science AI Engineering/
 │
 ├── CURRICULUM_INDEX.md ✅ UPDATED
 │   (Master index with Mês 11 full scaffolding details)
@@ -117,22 +117,22 @@ SciSpace/
 ### Supporting Documentation (4 Files)
 
 6. **MES_11_DELIVERY_SUMMARY.md** (300 lines)
-   - Location: `SciSpace/`
+   - Location: `Science AI Engineering/`
    - Purpose: What was delivered and how to use it
    - Contains: File structure, code organization, validation checklist
 
 7. **MES_11_COMPLETE_DELIVERABLES.md** (300 lines)
-   - Location: `SciSpace/`
+   - Location: `Science AI Engineering/`
    - Purpose: Detailed inventory of all deliverables
    - Contains: Content overview, features, getting started guide
 
 8. **MES_11_VISUAL_OVERVIEW.md** (400 lines)
-   - Location: `SciSpace/`
+   - Location: `Science AI Engineering/`
    - Purpose: Visual guides and timelines
    - Contains: Learning progression, execution timeline, integration map
 
 9. **CURRICULUM_INDEX.md** ✅ UPDATED
-   - Location: `SciSpace/`
+   - Location: `Science AI Engineering/`
    - Purpose: Master curriculum index
    - Updated: Added complete Mês 11 scaffolding details
 
@@ -345,7 +345,7 @@ All files have been:
 
 ### Where Files Are Located
 ```
-c:\Users\joaop\Downloads\AI Engineering\SciSpace\
+c:\Users\joaop\Downloads\AI Engineering\Science AI Engineering\
 ├── MES_11_DELIVERY_SUMMARY.md
 ├── MES_11_COMPLETE_DELIVERABLES.md
 ├── MES_11_VISUAL_OVERVIEW.md
@@ -384,9 +384,9 @@ c:\Users\joaop\Downloads\AI Engineering\SciSpace\
 ## 📞 File Access
 
 All files are accessible from the workspace root:
-- `SciSpace/MES_11_DELIVERY_SUMMARY.md`
-- `SciSpace/mes11_advanced_analytics/README.md`
-- `SciSpace/mes11_advanced_analytics/WEEK_*.md`
+- `Science AI Engineering/MES_11_DELIVERY_SUMMARY.md`
+- `Science AI Engineering/mes11_advanced_analytics/README.md`
+- `Science AI Engineering/mes11_advanced_analytics/WEEK_*.md`
 - etc.
 
 ---

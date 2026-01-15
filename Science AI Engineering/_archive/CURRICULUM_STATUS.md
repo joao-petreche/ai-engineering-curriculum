@@ -76,7 +76,7 @@ All 12 months fully documented, scaffolded, and ready for execution.
 ## 📁 Project Structure
 
 ```
-SciSpace/
+Science AI Engineering/
 ├── Exercicios_Mes_1-8_*.md              # Months 1-8 curricula
 ├── Exercicios_Mes_9_Production_Deployment.md
 ├── Exercicios_Mes_10_Federated_Learning.md
@@ -350,4 +350,4 @@ You now have a complete, production-ready curriculum for:
 
 **Curriculum Status**: ✅ **COMPLETE & READY**  
 **Last Updated**: January 13, 2026  
-**Location**: `c:\Users\joaop\Downloads\AI Engineering\SciSpace\`
+**Location**: `c:\Users\joaop\Downloads\AI Engineering\Science AI Engineering\`

@@ -211,7 +211,7 @@ git push origin main
 ```
 AI Engineering/
 ├── Plano Mestre Integrado_...md          (Master plan - 480 lines)
-├── SciSpace/
+├── Science AI Engineering/
 │   ├── CURRICULUM_INDEX.md               (Main navigation)
 │   ├── curriculum_alignment_matrix.md
 │   ├── Exercicios_Fase_0-9.md           (Months 0-9 exercises)

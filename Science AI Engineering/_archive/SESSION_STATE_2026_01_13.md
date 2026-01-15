@@ -456,7 +456,7 @@ code "SESSION_STATE_2026_01_13.md"
 
 **Current Working Directory:**
 ```
-c:\Users\joaop\Downloads\AI Engineering\SciSpace\
+c:\Users\joaop\Downloads\AI Engineering\Science AI Engineering\
 ```
 
 **Files to Read First:**
