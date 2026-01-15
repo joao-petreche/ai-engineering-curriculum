@@ -156,15 +156,15 @@ This is a **production-ready, open-source curriculum** developed for advanced tr
 
 ```powershell
 # Clone the repository
-git clone https://github.com/YOUR-USERNAME/scientific-ai-curriculum.git
-cd scientific-ai-curriculum
+git clone https://github.com/joao-petreche/ai-engineering-curriculum.git
+cd ai-engineering-curriculum
 
 # Start with Month 0 (Setup)
 cd "Science AI Engineering"
 code Exercicios_Mes_0_Setup.md
 git add .
 git commit -m "Initial commit: 12-month curriculum (100% scaffolded)"
-git remote add origin https://github.com/YOUR_USERNAME/ai-engineering-curriculum.git
+git remote add origin https://github.com/joao-petreche/ai-engineering-curriculum.git
 git push -u origin main
 ```
 
@@ -326,7 +326,7 @@ If you use this curriculum in your research, teaching, or projects, please cite:
   year = {2026},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{https://github.com/YOUR-USERNAME/scientific-ai-curriculum}}
+  howpublished = {\url{https://github.com/joao-petreche/ai-engineering-curriculum}}
 }
 ```
 

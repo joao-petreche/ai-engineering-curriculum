@@ -28,7 +28,7 @@ git commit -m "Initial commit: Complete 12-month Scientific AI Engineering curri
 
 # Create a new repository on GitHub (github.com/new)
 # Then push to GitHub:
-git remote add origin https://github.com/YOUR_USERNAME/ai-engineering-curriculum.git
+git remote add origin https://github.com/joao-petreche/ai-engineering-curriculum.git
 git branch -M main
 git push -u origin main
 ```
@@ -346,7 +346,7 @@ ENERGYPLUS_PATH=C:\EnergyPlusV24-1-0
 git remote -v
 
 # Update if needed
-git remote set-url origin https://github.com/YOUR_USERNAME/new-repo.git
+git remote set-url origin https://github.com/joao-petreche/new-repo.git
 ```
 
 **Forgot to commit before making changes?**
@@ -362,7 +362,7 @@ git commit -m "Describe what changed"
 **Need to restore from backup?**
 ```powershell
 # From GitHub
-git clone https://github.com/YOUR_USERNAME/ai-engineering-curriculum.git
+git clone https://github.com/joao-petreche/ai-engineering-curriculum.git
 
 # From zip backup
 Expand-Archive "AI-Engineering-Backup-2026-01-14.zip" -DestinationPath "C:\Restore"

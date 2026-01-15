@@ -156,7 +156,7 @@ Write-Host "   https://github.com/new" -ForegroundColor Gray
 Write-Host "   - Repository name: ai-engineering-curriculum" -ForegroundColor Gray
 Write-Host ""
 Write-Host "2. Push to GitHub:" -ForegroundColor Cyan
-Write-Host "   git remote add origin https://github.com/YOUR_USERNAME/ai-engineering-curriculum.git" -ForegroundColor Gray
+Write-Host "   git remote add origin https://github.com/joao-petreche/ai-engineering-curriculum.git" -ForegroundColor Gray
 Write-Host "   git branch -M main" -ForegroundColor Gray
 Write-Host "   git push -u origin main" -ForegroundColor Gray
 Write-Host ""

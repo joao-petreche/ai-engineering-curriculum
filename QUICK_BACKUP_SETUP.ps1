@@ -166,7 +166,7 @@ Write-Host ""
 
 if ($GitHubUsername -eq "") {
     Write-Host "1. Push to GitHub (if not done yet):" -ForegroundColor Cyan
-    Write-Host "   git remote add origin https://github.com/YOUR_USERNAME/ai-engineering-curriculum.git" -ForegroundColor Gray
+    Write-Host "   git remote add origin https://github.com/joao-petreche/ai-engineering-curriculum.git" -ForegroundColor Gray
     Write-Host "   git branch -M main" -ForegroundColor Gray
     Write-Host "   git push -u origin main" -ForegroundColor Gray
     Write-Host ""
