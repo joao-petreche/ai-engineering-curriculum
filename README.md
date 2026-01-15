@@ -14,7 +14,7 @@
 ## 📖 About This Project
 
 This is a **production-ready, open-source curriculum** developed for advanced training in Scientific AI Engineering applied to Building Performance Simulation (BPS). The material is freely available under the MIT License for educational, research, and commercial use.
-**🔗 Part of FAPESP Research Project:** This curriculum represents **Phase 0 (Months 1-12)** of a comprehensive 48-month research project. See [../Projeto_Pesquisa/PROJETO DE PESQUISA.md](../Projeto_Pesquisa/PROJETO%20DE%20PESQUISA.md) for the complete research plan including Physics-Informed ML, Digital Twins, and Agentic AI phases.
+**🔗 Part of FAPESP Research Project:** This curriculum represents **Phase 0 (Months 1-12)** of a comprehensive 48-month research project. See [Scientific_AI_Engineering_Curriculum.md](Scientific_AI_Engineering_Curriculum.md) for the complete research plan including Physics-Informed ML, Digital Twins, and Agentic AI phases.
 **Who is this for?**
 - 🎓 Graduate students in Engineering, Architecture, or Computer Science
 - 🔬 Researchers working with building simulation and AI
@@ -279,14 +279,6 @@ Training_12Meses/
     └── _archive/                          (18 historical files)
 ```
 
-**🔗 Related FAPESP Project Resources:**
-- Research proposal: [../Projeto_Pesquisa/PROJETO DE PESQUISA.md](../Projeto_Pesquisa/PROJETO%20DE%20PESQUISA.md)
-- Literature reviews: [../Deep Search Report Generation/](../Deep%20Search%20Report%20Generation/)
-- Emerging AI: [../Emerging Applications/](../Emerging%20Applications/)
-- Datasets: [../Find Tropical Climate Datasets/](../Find%20Tropical%20Climate%20Datasets/)
-```
-
----
 
 ## 💡 Next Steps
 
@@ -368,10 +360,10 @@ This project is licensed under the **MIT License** - see [LICENSE](LICENSE) file
 This curriculum was developed as part of a FAPESP research project at the University of São Paulo (USP), integrating insights from 40+ scientific papers published between 2023-2025.
 
 **Project Context:**
-- 📝 Complete research plan: [../Projeto_Pesquisa/PROJETO DE PESQUISA.md](../Projeto_Pesquisa/PROJETO%20DE%20PESQUISA.md)
-- 📚 Literature reviews: [../Deep Search Report Generation/](../Deep%20Search%20Report%20Generation/)
-- 🔬 Emerging AI applications: [../Emerging Applications/](../Emerging%20Applications/)
-- 🌍 Tropical datasets: [../Find Tropical Climate Datasets/](../Find%20Tropical%20Climate%20Datasets/)
+- 📝 Complete research plan: [Scientific_AI_Engineering_Curriculum.md](Scientific_AI_Engineering_Curriculum.md)
+- 📚 Literature reviews (summary): [Science AI Engineering/curriculum_alignment_matrix.md](Science%20AI%20Engineering/curriculum_alignment_matrix.md)
+- 🔬 Emerging AI applications: [Science AI Engineering/MES_11_VISUAL_OVERVIEW.md](Science%20AI%20Engineering/MES_11_VISUAL_OVERVIEW.md)
+- 🌍 Dataset guidance: [Science AI Engineering/mes12_capstone/README.md](Science%20AI%20Engineering/mes12_capstone/README.md)
 
 **Key References:**
 - Jiang et al. (2025) - Physics-informed ML for BPS
