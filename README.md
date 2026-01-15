@@ -168,22 +168,18 @@ git remote add origin https://github.com/joao-petreche/ai-engineering-curriculum
 git push -u origin main
 ```
 
-### **Option 2: Cloud Backup**
-Upload backup ZIP to Google Drive, OneDrive, or Dropbox:
+### **Option 2: External Drive Backup**
+Copy entire folder to external storage for offline backup:
 
 ```powershell
-Compress-Archive -Path "C:\Users\joaop\Downloads\AI Engineering" `
-  -DestinationPath "C:\Users\joaop\Downloads\AI-Engineering-Backup-$(Get-Date -Format 'yyyy-MM-dd').zip"
+Copy-Item -Path "C:\Users\joaop\Downloads\FAPESP\Training_12Meses" `
+  -Destination "E:\Backup\Training_12Meses_Backup" -Recurse
 ```
 
-### **Option 3: External Drive**
-Copy entire folder to external storage for offline backup.
-
-### **Recommended Strategy: 3-2-1 Rule**
+### **Recommended Strategy: 2-1 Rule**
 - **Copy 1:** Working directory (this computer)
-- **Copy 2:** GitHub (remote version control)
-- **Copy 3A:** Google Drive (cloud backup)
-- **Copy 3B:** External drive (offline backup)
+- **Copy 2A:** GitHub (remote version control)
+- **Copy 2B:** External drive (offline backup)
 
 **📖 Detailed Guide:** [BACKUP_AND_VERSION_CONTROL_GUIDE.md](BACKUP_AND_VERSION_CONTROL_GUIDE.md)
 
@@ -321,7 +317,7 @@ If you use this curriculum in your research, teaching, or projects, please cite:
 
 ```bibtex
 @misc{petreche2026scientific,
-  author = {Petrêche, João},
+  author = {Petreche, João Roberto Diego},
   title = {Scientific AI Engineering Curriculum: Building Performance Simulation with Machine Learning},
   year = {2026},
   publisher = {GitHub},
@@ -376,6 +372,8 @@ GitHub: [joao-petreche](https://github.com/joao-petreche)
 
 **⭐ If you find this curriculum useful, please consider starring the repository!**
 
+| Period | Status | Code Lines | Exercises |
+|--------|--------|------------|----------|
 | Mês 0-9 | ✅ Complete | 20,000+ | 60+ |
 | Mês 10 | ✅ Complete | 5,000+ | 15 |
 | Mês 11 | ✅ Complete | 5,000+ | 15 |
