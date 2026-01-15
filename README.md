@@ -331,7 +331,7 @@ See [curriculum_alignment_matrix.md](Science%20AI%20Engineering/curriculum_align
 **João Petrêche**  
 University of São Paulo (USP)  
 Email: petreche@usp.br  
-GitHub: [@YOUR-USERNAME](https://github.com/YOUR-USERNAME)
+GitHub: [joao-petreche](https://github.com/joao-petreche)
 
 ---
 
