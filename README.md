@@ -14,7 +14,7 @@
 ## 📖 About This Project
 
 This is a **production-ready, open-source curriculum** developed for advanced training in Scientific AI Engineering applied to Building Performance Simulation (BPS). The material is freely available under the MIT License for educational, research, and commercial use.
-
+**🔗 Part of FAPESP Research Project:** This curriculum represents **Phase 0 (Months 1-12)** of a comprehensive 48-month research project. See [../Projeto_Pesquisa/PROJETO DE PESQUISA.md](../Projeto_Pesquisa/PROJETO%20DE%20PESQUISA.md) for the complete research plan including Physics-Informed ML, Digital Twins, and Agentic AI phases.
 **Who is this for?**
 - 🎓 Graduate students in Engineering, Architecture, or Computer Science
 - 🔬 Researchers working with building simulation and AI
@@ -155,15 +155,16 @@ This is a **production-ready, open-source curriculum** developed for advanced tr
 
 ```powershell
 # Clone the repository
-git clone https://github.com/joao-petreche/ai-engineering-curriculum.git
-cd ai-engineering-curriculum
+git clone https://github.com/joao-petreche/FAPESP-ML-Building-Simulation.git
+cd FAPESP-ML-Building-Simulation
 
-# Start with Month 0 (Setup)
+# Navigate to training curriculum
+cd Training_12Meses
 cd "Science AI Engineering"
 code Exercicios_Mes_0_Setup.md
-git add .
-git commit -m "Initial commit: 12-month curriculum (100% scaffolded)"
-git remote add origin https://github.com/joao-petreche/ai-engineering-curriculum.git
+
+# If forking, update remote
+git remote set-url origin https://github.com/YOUR-USERNAME/YOUR-REPO.git
 git push -u origin main
 ```
 
@@ -242,52 +243,67 @@ Copy-Item -Path "C:\Users\joaop\Downloads\FAPESP\Training_12Meses" `
 ## 📁 Project Structure
 
 ```
-AI Engineering/
-├── Scientific_AI_Engineering_Curriculum.md       (Master plan & phases)
-├── BACKUP_AND_VERSION_CONTROL_GUIDE.md (This backup guide)
-├── ARCHIVED_FILES/QUICK_BACKUP_SETUP.ps1 (Automated setup script)
-├── README.md                          (This file)
-└── Science AI Engineering/
-    ├── CURRICULUM_INDEX.md            ⭐ Main navigation
-    ├── curriculum_alignment_matrix.md (Research alignment)
-    ├── Exercicios_Fase_0-9.md         (Months 0-9 exercises)
-    ├── mes8_optimization/             (Month 8 implementation)
-    ├── mes9_production/               (Month 9: Docker, K8s, CI/CD)
-    ├── mes10_federated_learning/      (Month 10: Federated + LLM)
-    ├── mes11_advanced_analytics/      (Month 11: Analytics + HITL)
-    ├── mes12_capstone/                (Month 12: Complete capstone)
-    │   ├── README.md                  (Month overview)
-    │   ├── WEEK_1_DOMAIN_PROBLEM.md   (Problem & data)
-    │   ├── WEEK_2_OPTIMIZATION_PIPELINE.md (Optimization)
-    │   ├── WEEK_3_DEPLOYMENT_VALIDATION.md (Deployment)
-    │   ├── WEEK_4_PUBLICATION_CAPSTONE.md (Results & publication)
-    │   └── MES_12_DELIVERY_SUMMARY.md (Statistics)
-    ├── MES_10_DELIVERY_SUMMARY.md
-    ├── MES_11_DELIVERY_SUMMARY.md
-    ├── MES_11_VISUAL_OVERVIEW.md
-    ├── scripts/                       (Utility scripts)
-    ├── tests/                         (Test suites)
-    └── _archive/                      (18 historical files)
+Training_12Meses/
+├── README.md                              (This file - curriculum overview)
+├── Scientific_AI_Engineering_Curriculum.md (Master plan & phases)
+├── PERFIL_ALUNO_IDEAL_SUMARIO.md          (Student readiness test)
+├── PREREQUISITOS_MINIMOS_FORMACAO.md      (Prerequisites & preparation)
+├── CONTRIBUTING.md                        (Contribution guidelines)
+├── LICENSE                                (MIT License)
+├── CITATION.cff                           (Citation metadata)
+├── ARCHIVED_FILES/                        (Historical documentation)
+└── Science AI Engineering/                (📚 Main curriculum content)
+    ├── CURRICULUM_INDEX.md                ⭐ Main navigation (all 12 months)
+    ├── curriculum_alignment_matrix.md     (Literature alignment - 95%)
+    ├── Exercicios_Fase_0-9.md             (Months 0-9 exercises)
+    ├── mes8_optimization/                 (Month 8: Optimization)
+    ├── mes9_production/                   (Month 9: Docker, K8s, CI/CD)
+    ├── mes10_federated_learning/          (Month 10: Federated + LLM)
+    │   ├── README.md
+    │   ├── WEEK_*.md                      (4 weeks, 15 exercises)
+    │   └── MES_10_DELIVERY_SUMMARY.md
+    ├── mes11_advanced_analytics/          (Month 11: Analytics + HITL)
+    │   ├── README.md
+    │   ├── WEEK_*.md                      (4 weeks, 15 exercises)
+    │   ├── MES_11_DELIVERY_SUMMARY.md
+    │   └── MES_11_VISUAL_OVERVIEW.md
+    ├── mes12_capstone/                    (Month 12: Complete capstone)
+    │   ├── README.md
+    │   ├── WEEK_1_DOMAIN_PROBLEM.md
+    │   ├── WEEK_2_OPTIMIZATION_PIPELINE.md
+    │   ├── WEEK_3_DEPLOYMENT_VALIDATION.md
+    │   ├── WEEK_4_PUBLICATION_CAPSTONE.md
+    │   └── MES_12_DELIVERY_SUMMARY.md
+    ├── scripts/                           (Utility scripts)
+    ├── tests/                             (Test suites)
+    └── _archive/                          (18 historical files)
+```
+
+**🔗 Related FAPESP Project Resources:**
+- Research proposal: [../Projeto_Pesquisa/PROJETO DE PESQUISA.md](../Projeto_Pesquisa/PROJETO%20DE%20PESQUISA.md)
+- Literature reviews: [../Deep Search Report Generation/](../Deep%20Search%20Report%20Generation/)
+- Emerging AI: [../Emerging Applications/](../Emerging%20Applications/)
+- Datasets: [../Find Tropical Climate Datasets/](../Find%20Tropical%20Climate%20Datasets/)
 ```
 
 ---
 
 ## 💡 Next Steps
 
-1. **This Week:**
-   - [ ] Review [BACKUP_AND_VERSION_CONTROL_GUIDE.md](BACKUP_AND_VERSION_CONTROL_GUIDE.md)
-  - [ ] Run `ARCHIVED_FILES/QUICK_BACKUP_SETUP.ps1` to initialize Git
-   - [ ] Push to GitHub (create repo at github.com/new)
+1. **Getting Started:**
+   - [ ] Review [PERFIL_ALUNO_IDEAL_SUMARIO.md](PERFIL_ALUNO_IDEAL_SUMARIO.md) to check readiness
+   - [ ] Start with Month 0 (Infrastructure Setup)
+   - [ ] Complete exercises sequentially (Months 0-12)
 
-2. **This Month:**
-   - [ ] Upload backup ZIP to Google Drive
-   - [ ] Copy to external drive for redundancy
-   - [ ] Test restore from backup
+2. **During Training:**
+   - [ ] Track progress through [CURRICULUM_INDEX.md](Science%20AI%20Engineering/CURRICULUM_INDEX.md)
+   - [ ] Complete all exercises and projects
+   - [ ] Build your portfolio with implementations
 
-3. **Ongoing:**
-   - [ ] Commit changes weekly to Git
-   - [ ] Update backups monthly
-   - [ ] Review curriculum progress monthly
+3. **Version Control:**
+   - [ ] Fork this repository for your own work
+   - [ ] Commit changes regularly to track progress
+   - [ ] Share your implementations and improvements
 
 ---
 
@@ -350,6 +366,12 @@ This project is licensed under the **MIT License** - see [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 This curriculum was developed as part of a FAPESP research project at the University of São Paulo (USP), integrating insights from 40+ scientific papers published between 2023-2025.
+
+**Project Context:**
+- 📝 Complete research plan: [../Projeto_Pesquisa/PROJETO DE PESQUISA.md](../Projeto_Pesquisa/PROJETO%20DE%20PESQUISA.md)
+- 📚 Literature reviews: [../Deep Search Report Generation/](../Deep%20Search%20Report%20Generation/)
+- 🔬 Emerging AI applications: [../Emerging Applications/](../Emerging%20Applications/)
+- 🌍 Tropical datasets: [../Find Tropical Climate Datasets/](../Find%20Tropical%20Climate%20Datasets/)
 
 **Key References:**
 - Jiang et al. (2025) - Physics-informed ML for BPS
