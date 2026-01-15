@@ -155,13 +155,13 @@ This is a **production-ready, open-source curriculum** developed for advanced tr
 
 ```powershell
 # Clone the repository
-git clone https://github.com/joao-petreche/FAPESP-ML-Building-Simulation.git
-cd FAPESP-ML-Building-Simulation
+git clone https://github.com/joao-petreche/ai-engineering-curriculum.git
+cd ai-engineering-curriculum
 
 # Navigate to training curriculum
 cd Training_12Meses
 cd "Science AI Engineering"
-code Exercicios_Mes_0_Setup.md
+code Exercicios_Fase_0_Infraestrutura.md
 
 # If forking, update remote
 git remote set-url origin https://github.com/YOUR-USERNAME/YOUR-REPO.git
@@ -188,10 +188,11 @@ Copy-Item -Path "C:\Users\joaop\Downloads\FAPESP\Training_12Meses" `
 ## 🚀 Getting Started
 
 ### **For New Students**
-1. Start with **Mês 0** (Infrastructure setup) - mandatory
-2. Follow sequentially through Mês 12
-3. Each month has 4 weeks × 12-15 hours = 50-60 hours
-4. Expect 600-700 hours total (12 months)
+1. ⚠️ **First:** Read [PERFIL_ALUNO_IDEAL_SUMARIO.md](PERFIL_ALUNO_IDEAL_SUMARIO.md) to confirm you're ready
+2. **Start with Mês 0** (Infrastructure setup) - **mandatory prerequisite**
+3. Follow sequentially through Mês 12
+4. Each month has 4 weeks × 12-15 hours = 50-60 hours
+5. Expect 600-700 hours total (12 months)
 
 ### **For Continuing Development**
 1. Review [CURRICULUM_INDEX.md](Science%20AI%20Engineering/CURRICULUM_INDEX.md) for current status
