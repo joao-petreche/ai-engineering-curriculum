@@ -30,7 +30,46 @@ This is a **production-ready, open-source curriculum** developed for advanced tr
 
 ---
 
-## 📚 Quick Navigation
+## � ANTES DE COMEÇAR: Verifique Seus Pré-Requisitos
+
+**⚠️ NÃO comece o treinamento sem verificar se está pronto!**
+
+### Sua Lista de Verificação Rápida (5 minutos):
+
+👉 **[PERFIL_ALUNO_IDEAL_SUMARIO.md](PERFIL_ALUNO_IDEAL_SUMARIO.md)** ⭐ **LEIA PRIMEIRO**
+- Teste de prontidão automático (14 questões)
+- Descubra seu cenário (A=pronto agora, E=precisa bootcamp)
+- Recursos de preparação recomendados
+- Checklist de hardware e software
+
+📚 **[PREREQUISITOS_MINIMOS_FORMACAO.md](PREREQUISITOS_MINIMOS_FORMACAO.md)** - Análise Técnica Completa
+- Formações acadêmicas ideais (Engenharia, Computação, etc.)
+- Conhecimentos por nível (crítico, recomendado, desejável)
+- Roadmaps detalhados para cada gap
+- 40+ recursos gratuitos e pagos para preparação
+
+### ✅ Público-Alvo Direto (Pode Começar Agora):
+- 🎓 Mestrandos/Doutorandos em Engenharia
+- 💼 Engenheiros com 2-5 anos experiência
+- 🔬 Pesquisadores em Building Performance Simulation
+- 🖥️ Programadores competentes aprendendo ML
+- 📊 Cientistas de dados em transição para domínio
+
+### ⏱️ Tempo de Preparação por Cenário:
+
+| Seu Perfil | Tempo de Prep | Próximo Passo |
+|-----------|--------------|---------------|
+| Tenho Python, Matemática e Física | 0-1 semana | Comece Mês 0 |
+| Tenho código, falta ML/Física | 4-6 semanas | Estude então comece |
+| Tenho Physics, falta código | 6-8 semanas | Bootcamp Python |
+| Tenho pouco de tudo | 10-12 semanas | Bootcamp estruturado |
+| Sem formação STEM | 2-3 meses | Considere outro caminho |
+
+👉 **Detalhes completos em [PERFIL_ALUNO_IDEAL_SUMARIO.md](PERFIL_ALUNO_IDEAL_SUMARIO.md)**
+
+---
+
+## �📚 Quick Navigation
 
 | **Resource** | **Purpose** | **Location** |
 |------------|----------|-----------|
