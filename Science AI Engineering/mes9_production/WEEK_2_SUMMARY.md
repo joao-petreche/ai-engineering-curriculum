@@ -29,7 +29,7 @@
 
 ## 🔄 CI/CD
 
-- [.github/workflows/ci.yml](.github/workflows/ci.yml) - Testing & scanning
+- [.github/workflows/ci-enhanced.yml](.github/workflows/ci-enhanced.yml) - Testing & scanning
 - [.github/workflows/cd.yml](.github/workflows/cd.yml) - Staging + Production deployment
 
 ## 🎯 Exercise Breakdown

@@ -1431,10 +1431,10 @@ Create `BASELINE_REPORT.md` including:
 
 ### Resources
 
-- [Data Quality Patterns](https://example.com)
-- [Surrogate Modeling Best Practices](https://example.com)
-- [Production ML Pipelines](https://example.com)
-- [Real-World Optimization Case Studies](https://example.com)
+- [Data Quality Patterns](#)
+- [Surrogate Modeling Best Practices](#)
+- [Production ML Pipelines](#)
+- [Real-World Optimization Case Studies](#)
 
 ---
 

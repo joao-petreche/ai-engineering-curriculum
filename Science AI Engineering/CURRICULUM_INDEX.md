@@ -22,18 +22,18 @@ A comprehensive 12-month curriculum (600-700 hours) covering:
 
 | Month | Topic | Hours | Status | Materials |
 |-------|-------|-------|--------|-----------|
-| 1 | Python & Optimization Fundamentals | 50-60 | ✅ | [Exercicios_Mes_1_Python_Fundamentals.md](Exercicios_Mes_1_Python_Fundamentals.md) |
-| 2 | ML Basics, Surrogate Models | 50-60 | ✅ | [Exercicios_Mes_2_ML_Fundamentals.md](Exercicios_Mes_2_ML_Fundamentals.md) |
-| 3 | Co-Simulation & Integration | 50-60 | ✅ | [Exercicios_Mes_3_Cosim_Advanced.md](Exercicios_Mes_3_Cosim_Advanced.md) |
+| 1 | Python & Optimization Fundamentals | 50-60 | ✅ | [Exercicios_Mes_1_EnergyPlus.md](Exercicios_Mes_1_EnergyPlus.md) |
+| 2 | ML Basics, Surrogate Models | 50-60 | ✅ | [Exercicios_Mes_2_Engenharia_Software.md](Exercicios_Mes_2_Engenharia_Software.md) |
+| 3 | Co-Simulation & Integration | 50-60 | ✅ | [Exercicios_Mes_3_Big_Data.md](Exercicios_Mes_3_Big_Data.md) |
 
 ### API & Optimization Phase (Months 4-8)
 
 | Month | Topic | Hours | Status | Materials |
 |-------|-------|-------|--------|-----------|
-| 4 | REST API Development (FastAPI) | 50-60 | ✅ | [Exercicios_Mes_4_API_FastAPI.md](Exercicios_Mes_4_API_FastAPI.md) |
-| 5 | Multi-Objective Optimization | 50-60 | ✅ | [Exercicios_Mes_5_MultiObjective_Optimization.md](Exercicios_Mes_5_MultiObjective_Optimization.md) |
-| 6 | LLM Integration & Prompting | 50-60 | ✅ | [Exercicios_Mes_6_LLM_Integration.md](Exercicios_Mes_6_LLM_Integration.md) |
-| 7 | Advanced Co-Simulation | 50-60 | ✅ | [Exercicios_Mes_7_Advanced_Cosim.md](Exercicios_Mes_7_Advanced_Cosim.md) |
+| 4 | REST API Development (FastAPI) | 50-60 | ✅ | [Exercicios_Mes_4_PIML_Surrogates.md](Exercicios_Mes_4_PIML_Surrogates.md) |
+| 5 | Multi-Objective Optimization | 50-60 | ✅ | [Exercicios_Mes_5_Prompt_Engineering.md](Exercicios_Mes_5_Prompt_Engineering.md) |
+| 6 | LLM Integration & Prompting | 50-60 | ✅ | [Exercicios_Mes_6_Co_Simulacao.md](Exercicios_Mes_6_Co_Simulacao.md) |
+| 7 | Advanced Co-Simulation | 50-60 | ✅ | [Exercicios_Mes_7_Physics_Compliance.md](Exercicios_Mes_7_Physics_Compliance.md) |
 | 8 | Advanced Optimization Techniques | 50-60 | ✅ | [Exercicios_Mes_8_Advanced_Optimization.md](Exercicios_Mes_8_Advanced_Optimization.md) |
 
 ### Production Deployment (Month 9)
