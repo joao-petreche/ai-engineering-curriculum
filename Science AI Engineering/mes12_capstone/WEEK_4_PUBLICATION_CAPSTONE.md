@@ -207,9 +207,9 @@ class OptimizationResults:
 # Example usage
 if __name__ == "__main__":
     results = OptimizationResults(
-        "Manufacturing Cost & Quality Optimization - 2026 Q1",
-        start_date=datetime(2026, 1, 1),
-        end_date=datetime(2026, 3, 31)
+        "Manufacturing Cost & Quality Optimization - CICLO 1",
+        start_date=datetime(2000, 1, 1),
+        end_date=datetime(2000, 3, 31)
     )
     
     # Add objective results
@@ -293,7 +293,7 @@ class StakeholderReport:
         
         report += "## Recommendation\n"
         report += "✅ Scale to all facilities\n"
-        report += "✅ Allocate budget for 2026 expansion\n"
+        report += "✅ Allocate budget for next cycle expansion\n"
         report += "✅ Evaluate for other business units\n\n"
         
         return report
@@ -1064,5 +1064,5 @@ Create `CAPSTONE_PRESENTATION.md` including:
 ---
 
 **Prepared by:** AI Engineering Curriculum Team  
-**Date:** January 14, 2026  
+**Date:** MÊS 12 - SEMANA 4  
 **Status:** Ready for Execution

@@ -335,7 +335,7 @@ if __name__ == "__main__":
     pilot = ProductionPilot(
         baseline_config={'temperature': 130, 'pressure': 28},
         optimized_config={'temperature': 135, 'pressure': 30},
-        pilot_id="Pilot_Line_A_2026_Q1"
+        pilot_id="Pilot_Line_A_CICLO_1"
     )
     
     # Simulate 24-hour pilot

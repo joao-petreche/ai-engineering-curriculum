@@ -28,18 +28,18 @@
 
 ---
 
-## **⚠️ CURRICULUM UPDATE LOG (January 2026) - PRODUCTION-READY**
+## **⚠️ CURRICULUM UPDATE LOG (MÊS 1) - PRODUCTION-READY**
 
-### **Latest Update: January 14, 2026**
+### **Latest Update: MÊS 1 - SEMANA 2**
 
 **Curriculum Status:** ✅ **12/12 MONTHS FULLY SCAFFOLDED (100%)**
 
 This master plan was aligned with **2023-2025 scientific literature** comparing 20 scientific components against recent research (Jiang 2024, Zakeri 2025, Shan 2025, Alphinas 2024, Ma et al. 2024, Chen 2024). Analysis identified **10 curricular gaps** that were systematically integrated.
 
 **Recent Completions:**
-- **January 13, 2026:** Mês 10 (Federated Learning) fully scaffolded - 4 weeks, 15 exercises
-- **January 14, 2026:** Mês 11 (Advanced Analytics) fully scaffolded - 4 weeks, 15 exercises  
-- **January 14, 2026:** Mês 12 (Capstone Project) fully scaffolded - 4 weeks, 15 exercises
+- **MÊS 10 - SEMANA 1:** Mês 10 (Federated Learning) fully scaffolded - 4 weeks, 15 exercises
+- **MÊS 11 - SEMANA 1:** Mês 11 (Advanced Analytics) fully scaffolded - 4 weeks, 15 exercises  
+- **MÊS 12 - SEMANA 1:** Mês 12 (Capstone Project) fully scaffolded - 4 weeks, 15 exercises
 - **Total:** 5,480+ lines of code and documentation added in Mês 12 alone
 
 ### **Implementation Summary**
@@ -145,11 +145,11 @@ All months include:
 - ✅ **Chen 2024** (Python Rigor): 100% coberto (Mês 1-2)
 
 #### **⏰ Timeline das Alterações**
-- **13 Jan 2026:** Alterações propostas identificadas (4 gaps)
-- **13 Jan 2026:** Alterações implementadas no plano mestre
-- **13 Jan 2026:** Matriz refatorada (v2.1) com 95% cobertura
+- **MÊS 1:** Alterações propostas identificadas (4 gaps)
+- **MÊS 1:** Alterações implementadas no plano mestre
+- **MÊS 1:** Matriz refatorada (v2.1) com 95% cobertura
 - **Semana 3-4 Jan:** Desenvolvimento das 4 novas tarefas
-- **Junho 2026:** Revisão pós-primeira-turma
+- **MÊS 6:** Revisão pós-primeira-turma
 
 ### **How to Use This Master Plan**
 
@@ -470,7 +470,7 @@ pip install torch google-cloud-aiplatform streamlit pydantic
 
 ### **🗓️ MÊS 12: Capstone Project & Industry Application**
 
-**Status:** ✅ **FULLY SCAFFOLDED (January 14, 2026)**
+**Status:** ✅ **FULLY SCAFFOLDED (MÊS 1 - SEMANA 2)**
 **Location:** [mes12_capstone/](./Science%20AI%20Engineering/mes12_capstone/)
 
 * **Focus:** Complete industry-grade capstone integrating all 11 months of learning.
