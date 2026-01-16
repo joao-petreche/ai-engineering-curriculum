@@ -181,8 +181,6 @@ Copy-Item -Path "C:\Users\joaop\Downloads\FAPESP\Training_12Meses" `
 - **Copy 2A:** GitHub (remote version control)
 - **Copy 2B:** External drive (offline backup)
 
-**📖 Detailed Guide:** [BACKUP_AND_VERSION_CONTROL_GUIDE.md](BACKUP_AND_VERSION_CONTROL_GUIDE.md)
-
 ---
 
 ## 🚀 Getting Started
@@ -252,20 +250,73 @@ Copy-Item -Path "C:\Users\joaop\Downloads\FAPESP\Training_12Meses" `
 ├── CONTRIBUTING.md                        (Contribution guidelines)
 ├── LICENSE                                (MIT License)
 ├── CITATION.cff                           (Citation metadata)
-├── ARCHIVED_FILES/                        (Historical documentation)
 └── Science AI Engineering/                (📚 Main curriculum content)
     ├── CURRICULUM_INDEX.md                ⭐ Main navigation (all 12 months)
     ├── curriculum_alignment_matrix.md     (Literature alignment - 95%)
-    ├── Exercicios_Fase_0-9.md             (Months 0-9 exercises)
-    ├── mes8_optimization/                 (Month 8: Optimization)
+    ├── ORGANIZATION_SUMMARY.md            (Project organization overview)
+    ├── EXERCICIOS_NOME_MAPPING.md         (Exercise naming conventions)
+    ├── Exercicios_Fase_0_Infraestrutura.md          (Month 0: Infrastructure setup)
+    ├── Exercicios_Mes_1_EnergyPlus.md               (Month 1: EnergyPlus)
+    ├── Exercicios_Mes_2_Engenharia_Software.md      (Month 2: Software Engineering)
+    ├── Exercicios_Mes_3_Big_Data.md                 (Month 3: Big Data)
+    ├── Exercicios_Mes_4_PIML_Surrogates.md          (Month 4: PIML & Surrogates)
+    ├── Exercicios_Mes_5_Prompt_Engineering.md       (Month 5: Prompt Engineering)
+    ├── Exercicios_Mes_6_Co_Simulacao.md             (Month 6: Co-Simulation)
+    ├── Exercicios_Mes_7_Physics_Compliance.md       (Month 7: Physics Compliance)
+    ├── Exercicios_Mes_8_Advanced_Optimization.md    (Month 8: Advanced Optimization)
+    ├── Exercicios_Mes_9_Production_Deployment.md    (Month 9: Production Deployment)
+    ├── Exercicios_Mes_10_Federated_Learning.md      (Month 10: Federated Learning)
+    ├── Exercicios_Mes_11_Advanced_Analytics.md      (Month 11: Advanced Analytics)
+    ├── Exercicios_Mes_12_Capstone.md                (Month 12: Capstone)
+    ├── MES_10_DELIVERY_SUMMARY.md                   (Month 10 summary)
+    ├── MES_11_DELIVERY_SUMMARY.md                   (Month 11 summary)
+    ├── MES_11_VISUAL_OVERVIEW.md                    (Month 11 visual guide)
+    ├── mes8_optimization/                 (Month 8 modules & code)
+    │   ├── __init__.py
+    │   ├── constraints.py
+    │   ├── decision.py
+    │   ├── demo_run.py
+    │   ├── eval_template.py
+    │   ├── frontier_export.py
+    │   ├── ga_runner.py
+    │   ├── hooks.py
+    │   ├── island_runner.py
+    │   ├── metrics.py
+    │   ├── pareto.py
+    │   ├── sensitivity.py
+    │   └── visualization.py
     ├── mes9_production/                   (Month 9: Docker, K8s, CI/CD)
+    │   ├── README.md
+    │   ├── Dockerfile
+    │   ├── docker-compose.yml
+    │   ├── requirements.txt
+    │   ├── setup-k8s.sh
+    │   ├── test-k8s.sh
+    │   ├── test-k8s.bat
+    │   ├── TROUBLESHOOTING.md
+    │   ├── WEEK_1_DOCKER.md
+    │   ├── WEEK_2_KUBERNETES.md
+    │   ├── WEEK_2_SUMMARY.md
+    │   ├── WEEK_3_CICD.md
+    │   ├── WEEK_4_OBSERVABILITY.md
+    │   ├── WEEK_4_SUMMARY.md
+    │   ├── app/
+    │   ├── k8s/
+    │   ├── scripts/
+    │   └── tests/
     ├── mes10_federated_learning/          (Month 10: Federated + LLM)
     │   ├── README.md
-    │   ├── WEEK_*.md                      (4 weeks, 15 exercises)
+    │   ├── WEEK_1_FEDERATED_OPTIMIZATION.md
+    │   ├── WEEK_2_ADAPTIVE_PROMPTING.md
+    │   ├── WEEK_3_REALTIME_INTEGRATION.md
+    │   ├── WEEK_4_ADVANCED_FEDERATED.md
     │   └── MES_10_DELIVERY_SUMMARY.md
     ├── mes11_advanced_analytics/          (Month 11: Analytics + HITL)
     │   ├── README.md
-    │   ├── WEEK_*.md                      (4 weeks, 15 exercises)
+    │   ├── WEEK_1_CUSTOM_METRICS.md
+    │   ├── WEEK_2_SENSITIVITY.md
+    │   ├── WEEK_3_CONSTRAINED.md
+    │   ├── WEEK_4_OPTUNA.md
     │   ├── MES_11_DELIVERY_SUMMARY.md
     │   └── MES_11_VISUAL_OVERVIEW.md
     ├── mes12_capstone/                    (Month 12: Complete capstone)
@@ -276,8 +327,12 @@ Copy-Item -Path "C:\Users\joaop\Downloads\FAPESP\Training_12Meses" `
     │   ├── WEEK_4_PUBLICATION_CAPSTONE.md
     │   └── MES_12_DELIVERY_SUMMARY.md
     ├── scripts/                           (Utility scripts)
-    ├── tests/                             (Test suites)
-    └── _archive/                          (18 historical files)
+    │   ├── mes8_generate_report.py
+    │   └── mes8_metrics_report.py
+    └── tests/                             (Test suites)
+        ├── test_ga_metrics_mes8.py
+        ├── test_islands_mes8.py
+        └── (additional tests)
 ```
 
 
@@ -313,9 +368,6 @@ Copy-Item -Path "C:\Users\joaop\Downloads\FAPESP\Training_12Meses" `
 **Technical Guides:**
 - [mes9_production/TROUBLESHOOTING.md](Science%20AI%20Engineering/mes9_production/TROUBLESHOOTING.md) - DevOps help
 - [BACKUP_AND_VERSION_CONTROL_GUIDE.md](BACKUP_AND_VERSION_CONTROL_GUIDE.md) - Persistence strategy
-
-**Historical Documentation:**
-- [Science AI Engineering/_archive/](Science%20AI%20Engineering/_archive/) - Design docs, evolution, critiques
 
 ---
 
@@ -377,7 +429,7 @@ See [curriculum_alignment_matrix.md](Science%20AI%20Engineering/curriculum_align
 
 ## 📞 Contact
 
-**João Petrêche**  
+**João Petreche**  
 University of São Paulo (USP)  
 Email: petreche@usp.br  
 GitHub: [joao-petreche](https://github.com/joao-petreche)
@@ -398,16 +450,3 @@ GitHub: [joao-petreche](https://github.com/joao-petreche)
 **Last Update:** January 14, 2026  
 **Status:** 🟢 Production Ready
 
----
-
-## 📝 Version History
-
-- **January 14, 2026:** Mês 12 fully scaffolded (5,480 lines) - Curriculum 100% complete
-- **January 13, 2026:** Mês 10-11 fully scaffolded - Added federated learning & advanced analytics
-- **Previous:** Mês 0-9 complete with production deployment
-
----
-
-**Ready to save and continue development!** 🚀
-
-Start with: `.\ARCHIVED_FILES\QUICK_BACKUP_SETUP.ps1` or read [BACKUP_AND_VERSION_CONTROL_GUIDE.md](BACKUP_AND_VERSION_CONTROL_GUIDE.md)
