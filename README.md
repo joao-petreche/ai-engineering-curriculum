@@ -14,7 +14,10 @@
 ## 📖 About This Project
 
 This is a **production-ready, open-source curriculum** developed for advanced training in Scientific AI Engineering applied to Building Performance Simulation (BPS). The material is freely available under the MIT License for educational, research, and commercial use.
+
 **🔗 Part of FAPESP Research Project:** This curriculum represents **Phase 0 (Months 1-12)** of a comprehensive 48-month research project. See [Scientific_AI_Engineering_Curriculum.md](Scientific_AI_Engineering_Curriculum.md) for the complete research plan including Physics-Informed ML, Digital Twins, and Agentic AI phases.
+
+**👥 FAPESP Project Collaborators:** If you are a collaborator of the FAPESP research project, please read [COLABORADORES.md](COLABORADORES.md) for access instructions, permissions, and contribution guidelines.
 **Who is this for?**
 - 🎓 Graduate students in Engineering, Architecture, or Computer Science
 - 🔬 Researchers working with building simulation and AI
@@ -75,8 +78,7 @@ This is a **production-ready, open-source curriculum** developed for advanced tr
 |------------|----------|-----------|
 | 📋 **Main Curriculum Index** | Navigate all 12 months | [Science AI Engineering/CURRICULUM_INDEX.md](Science%20AI%20Engineering/CURRICULUM_INDEX.md) |
 | 🎯 **Master Plan** | Overall structure & phases | [Scientific_AI_Engineering_Curriculum.md](Scientific_AI_Engineering_Curriculum.md) |
-| 📊 **Literature Alignment** | Scientific references (95% coverage) | [Science AI Engineering/curriculum_alignment_matrix.md](Science%20AI%20Engineering/curriculum_alignment_matrix.md) |
-| � **Contributing Guide** | How to contribute & collaborate | [CONTRIBUTING.md](CONTRIBUTING.md) |
+| 📊 **Literature Alignment** | Scientific references (95% coverage) | [Science AI Engineering/curriculum_alignment_matrix.md](Science%20AI%20Engineering/curriculum_alignment_matrix.md) || 👥 **Collaborator Guide** | FAPESP project collaborators | [COLABORADORES.md](COLABORADORES.md) || � **Contributing Guide** | How to contribute & collaborate | [CONTRIBUTING.md](CONTRIBUTING.md) |
 
 ---
 
