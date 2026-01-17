@@ -622,6 +622,20 @@ You are free to:
 - Share and adapt the material for any purpose
 - Provide attribution to the original authors
 
+### **Attribution**
+
+When reusing or adapting this curriculum, include attribution such as:
+
+- Title: Scientific AI Engineering Curriculum: Building Performance Simulation with Machine Learning
+- Author: João Roberto Diego Petreche (University of São Paulo - USP)
+- Source: https://github.com/joao-petreche/ai-engineering-curriculum
+- License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+- Changes: Describe any modifications you made
+
+Short form example:
+
+“Scientific AI Engineering Curriculum (Petreche, USP), CC BY 4.0. Source: https://github.com/joao-petreche/ai-engineering-curriculum. Changes: [your summary].”
+
 ### **Citation**
 
 If you use this curriculum in academic work, please cite:

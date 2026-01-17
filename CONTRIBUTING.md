@@ -369,7 +369,7 @@ Interested in translating content?
 
 ## 📜 License
 
-By contributing, you agree that your contributions will be licensed under the **MIT License**, same as the project.
+By contributing, you agree that your contributions will be licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**, consistent with the project.
 
 ---
 

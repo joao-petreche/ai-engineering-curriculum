@@ -1,7 +1,7 @@
 # 🎓 Scientific AI Engineering Curriculum
 ## 12-Month Training Program ✅ COMPLETE (January 2026)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Status: Production Ready](https://img.shields.io/badge/Status-Production%20Ready-brightgreen.svg)]()
 [![Training: Complete](https://img.shields.io/badge/Training-100%25%20Complete-success.svg)]()
 [![GitHub stars](https://img.shields.io/github/stars/joao-petreche/ai-engineering-curriculum?style=social)](https://github.com/joao-petreche/ai-engineering-curriculum/stargazers)
@@ -12,18 +12,14 @@
 > 
 > **🎯 NEW:** Full English translation completed with 48-month FAPESP research project alignment (98/100 score)
 > 
-> 🌟 **Open Educational Resource:** Free to use, modify, and share under MIT License
+> 🌟 **Open Educational Resource:** Free to use, modify, and share under CC BY 4.0
 
 ---
 
 ## 🚀 Quick Start
-
 **👉 [START HERE: Scientific_AI_Engineering_Curriculum.md](Scientific_AI_Engineering_Curriculum.md)** - Complete 12-month program guide (English, 50 pages)
 
 📊 **For FAPESP Research Project:** Review [CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](CURRICULUM_FAPESP_ALIGNMENT_REPORT.md) - Validation that curriculum is 98% sufficient for 48-month research execution
-
----
-
 ## 📖 Project Overview
 
 A **production-ready, open-source curriculum** for advanced training in Scientific AI Engineering with real-world applications in Building Performance Simulation (BPS), Federated Learning, and Multi-Objective Optimization.
@@ -424,9 +420,23 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## 📜 License
 
-**MIT License** - See [LICENSE](LICENSE) for details.
+**Creative Commons Attribution 4.0 International (CC BY 4.0)** — See [LICENSE](LICENSE) for details.
 
-You are free to use, modify, and distribute this material for any purpose, including commercial use, with attribution.
+You are free to share and adapt the material for any purpose, even commercially, provided you give appropriate credit and indicate if changes were made.
+
+### Attribution
+
+When reusing or adapting this curriculum, include attribution such as:
+
+- Title: Scientific AI Engineering Curriculum: Building Performance Simulation with Machine Learning
+- Author: João Roberto Diego Petreche (University of São Paulo - USP)
+- Source: https://github.com/joao-petreche/ai-engineering-curriculum
+- License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+- Changes: Describe any modifications you made
+
+Short form example:
+
+“Scientific AI Engineering Curriculum (Petreche, USP), CC BY 4.0. Source: https://github.com/joao-petreche/ai-engineering-curriculum. Changes: [your summary].”
 
 ---
 

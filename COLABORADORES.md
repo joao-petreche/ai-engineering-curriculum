@@ -133,7 +133,7 @@ git submodule update --remote --merge
 
 ## 📄 Licença
 
-Este material está licenciado sob **MIT License** - veja [LICENSE](LICENSE) para detalhes.
+Este material está licenciado sob **Creative Commons Attribution 4.0 International (CC BY 4.0)** — veja [LICENSE](LICENSE) para detalhes.
 
 **Citação Acadêmica:**
 
