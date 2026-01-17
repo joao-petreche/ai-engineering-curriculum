@@ -1,1 +1,0 @@
-What are the emerging applications of 'Agentic AI' and 'Large Language Models (LLMs)' in automating Building Performance Simulation workflows? Focus on papers published in 2024 and 2025. Create a table comparing the methodology used (e.g., Code Generation vs. API Control) and the specific simulation engine controlled (e.g., EnergyPlus, OpenStudio).

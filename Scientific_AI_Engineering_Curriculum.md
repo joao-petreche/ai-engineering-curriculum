@@ -481,12 +481,6 @@ Training_12Meses/
 │   ├── mes11_advanced_analytics/ (Analytics dashboards)
 │   └── mes12_capstone/ (Complete capstone project)
 │
-├── Projeto/ (FAPESP research project documentation)
-│   ├── Projeto_Pesquisa/
-│   ├── Deep Search Report/ (Literature reviews)
-│   ├── Emerging Applications/ (Agentic AI research)
-│   └── Tropical Climate Datasets/ (Dataset documentation)
-│
 └── _legacy/ (Archived Portuguese documentation)
 ```
 

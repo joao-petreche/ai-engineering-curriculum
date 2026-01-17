@@ -60,21 +60,6 @@
 |---------|-------------------|------|--------|------|
 | surrogate_xgboost.pkl | Science AI Engineering/mes4_piml/models/ | Python Pickle | ~500 KB | 2026-01-16 |
 
-## Data Files
-
-### Tropical Climate Datasets
-| Arquivo | Localização Original | Tipo |
-|---------|-------------------|------|
-| COMPLETION_SUMMARY.txt | Projeto/Tropical Climate Datasets/ | Text |
-| datasets_comparison_table.csv | Projeto/Tropical Climate Datasets/ | CSV |
-| tropical_datasets_quick_access.csv | Projeto/Tropical Climate Datasets/ | CSV |
-
-### Deep Search Report
-| Arquivo | Localização Original | Tipo | Descrição |
-|---------|-------------------|------|-----------|
-| result_*.pdf | Projeto/Deep Search Report/ | PDF | 7 research papers (Chakraborty, Forouzandeh, Jiang, Markarian, Tian, Villano, Wang) |
-
-## Archival Strategy
 
 ### Arquivos NÃO DELETADOS (atualmente no workspace):
 - Mantidos em posição original para facilitar recuperação

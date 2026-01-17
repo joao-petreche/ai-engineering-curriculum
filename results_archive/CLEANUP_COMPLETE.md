@@ -34,8 +34,6 @@ Total de **49 arquivos** deletados dos locais originais.
 - ✅ `Science AI Engineering/mes10_federated_learning/` (sem outputs)
 - ✅ `Science AI Engineering/mes8_optimization/results/` (sem resultados)
 - ✅ `Science AI Engineering/mes4_piml/models/` (sem modelos)
-- ✅ `Projeto/Tropical Climate Datasets/` (sem CSVs/TXTs)
-- ✅ `Projeto/Deep Search Report/` (sem PDFs)
 
 ### Archive Status
 - ✅ **58 arquivos** preservados em `results_archive/`
@@ -114,10 +112,6 @@ Science AI Engineering/
 ├── mes8_optimization/results/sensitivity/* (5)
 ├── mes8_optimization/results/experiments/* (10+)
 └── mes10_federated_learning/*.txt (2)
-
-Projeto/
-├── Tropical Climate Datasets/*.csv/.txt (3)
-└── Deep Search Report/*.pdf (7)
 ```
 **Problema**: Difícil encontrar, fácil perder referência
 

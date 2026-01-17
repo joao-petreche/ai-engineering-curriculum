@@ -106,13 +106,6 @@ c:\Users\joaop\Downloads\FAPESP\Training_12Meses\
 │   └── mes10_federated_learning/
 │       └── [VAZIO - outputs estão em results_archive/federated_learning/]
 │
-├── Projeto/
-│   ├── Tropical Climate Datasets/
-│   │   └── [CÓPIA - originals copiad para results_archive/datasets/]
-│   │
-│   └── Deep Search Report/
-│       └── [CÓPIA - papers copiados para results_archive/research_papers/]
-│
 ├── README.md
 ├── Scientific_AI_Engineering_Curriculum.md  [Currículo em Inglês]
 └── ... [outros arquivos do workspace]
@@ -192,7 +185,7 @@ Quer um arquivo de volta no lugar original?
 │                      DATASETS                           │
 ├─────────────────────────────────────────────────────────┤
 │ 3 arquivos | 100 KB | CSV: 2 | TXT: 1                  │
-│ Origem: Projeto/Tropical Climate Datasets/             │
+│ Origem: External project (archived)                     │
 │ Uso: Referência de datasets disponíveis               │
 └─────────────────────────────────────────────────────────┘
 
@@ -200,7 +193,7 @@ Quer um arquivo de volta no lugar original?
 │                  RESEARCH PAPERS                        │
 ├─────────────────────────────────────────────────────────┤
 │ 7 arquivos | 50 MB | PDF: 7                            │
-│ Origem: Projeto/Deep Search Report/                    │
+│ Origem: External project (archived)                     │
 │ Uso: Literatura, revisão sistemática                   │
 │ Papers: Chakraborty, Forouzandeh, Jiang, Markarian,   │
 │         Tian, Villano, Wang                            │

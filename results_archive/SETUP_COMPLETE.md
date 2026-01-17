@@ -80,10 +80,6 @@ Science AI Engineering/
 ├── mes8_optimization/results/      ❌ Profundamente aninhado
 │   └── ...múltiplos subdiretórios
 └── mes10_federated_learning/       ❌ Outputs misturados
-
-Projeto/
-├── Tropical Climate Datasets/      ❌ Separado do código
-└── Deep Search Report/
 ```
 
 ### Depois (Centralizado)
