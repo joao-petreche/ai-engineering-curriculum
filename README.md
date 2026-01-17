@@ -249,6 +249,8 @@ Months 7-12: SCALING + EXPANSION
 | **Capstone Checkpoint** | Current project state | [mes12_capstone/_CHECKPOINT_RESUMO.md](Science%20AI%20Engineering/mes12_capstone/_CHECKPOINT_RESUMO.md) |
 | **Continuity Options** | 6 detailed next steps | [mes12_capstone/_POS_CAPSTONE_OPCOES.md](Science%20AI%20Engineering/mes12_capstone/_POS_CAPSTONE_OPCOES.md) |
 | **Literature Alignment** | 50+ scientific papers | [curriculum_alignment_matrix.md](Science%20AI%20Engineering/curriculum_alignment_matrix.md) |
+| **Student Profile** | Readiness assessment | [STUDENT_PROFILE.md](STUDENT_PROFILE.md) |
+| **Prerequisites** | Detailed requirements | [PREREQUISITES.md](PREREQUISITES.md) |
 
 ### 📁 Month-by-Month Deliverables
 
@@ -274,7 +276,7 @@ Months 7-12: SCALING + EXPANSION
 
 ### For New Students
 
-1. **Check Prerequisites:** Review [PERFIL_ALUNO_IDEAL_SUMARIO.md](PERFIL_ALUNO_IDEAL_SUMARIO.md) and [PREREQUISITOS_MINIMOS_FORMACAO.md](PREREQUISITOS_MINIMOS_FORMACAO.md)
+1. **Check Prerequisites:** Review [STUDENT_PROFILE.md](STUDENT_PROFILE.md) for readiness assessment and [PREREQUISITES.md](PREREQUISITES.md) for detailed requirements
 2. **Start Month 0:** Begin with [Exercicios_Fase_0_Infraestrutura.md](Science%20AI%20Engineering/Exercicios_Fase_0_Infraestrutura.md)
 3. **Progress Sequentially:** Follow months 0-12 in order
 4. **Track Progress:** Use Git to commit your work regularly
@@ -333,15 +335,17 @@ mypy . --ignore-missing-imports
 ### Ideal Students
 - 🎓 **Graduate Students:** Master's/PhD in Engineering, CS, Architecture
 - 🔬 **Researchers:** Building simulation, optimization, AI/ML
-- 💼 **Professionals:** Engineers transitioning to AI systems
+- 💼 **Professionals:** Engineers transitioning to AI systems (2-5 years experience)
 - 🏢 **Organizations:** Teams needing scientific computing + production AI skills
-- 📚 **Educators:** Teaching advanced ML engineering
+- 📚 **Educators:** Teaching advanced ML engineering courses
 
 ### Required Background
-- **Programming:** Intermediate Python
+- **Programming:** Intermediate Python (6+ months experience)
 - **Mathematics:** Calculus, linear algebra basics
 - **Physics/Engineering:** Understanding of physical systems
 - **Machine Learning:** Helpful but not required (taught in curriculum)
+
+**📋 Full Assessment:** See [STUDENT_PROFILE.md](STUDENT_PROFILE.md) for detailed readiness quiz and preparation roadmap
 
 ---
 
