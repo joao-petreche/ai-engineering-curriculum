@@ -10,7 +10,17 @@
 > 
 > **Capstone Project:** ✅ Delivered with 7.09% optimization improvement, $350K/year savings, academic publication ready
 > 
+> **🎯 NEW:** Full English translation completed with 48-month FAPESP research project alignment (98/100 score)
+> 
 > 🌟 **Open Educational Resource:** Free to use, modify, and share under MIT License
+
+---
+
+## 🚀 Quick Start
+
+**👉 [START HERE: Scientific_AI_Engineering_Curriculum.md](Scientific_AI_Engineering_Curriculum.md)** - Complete 12-month program guide (English, 50 pages)
+
+📊 **For FAPESP Research Project:** Review [CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](CURRICULUM_FAPESP_ALIGNMENT_REPORT.md) - Validation that curriculum is 98% sufficient for 48-month research execution
 
 ---
 
@@ -23,12 +33,20 @@ A **production-ready, open-source curriculum** for advanced training in Scientif
 | Component | Status | Details |
 |-----------|--------|---------|
 | **Curriculum (12 Months)** | ✅ **100% Complete** | 600+ hours, Months 0-12 |
+| **FAPESP Alignment** | ✅ **98/100 Score** | Ready for 48-month research project |
 | **Capstone Project** | ✅ **100% Complete** | 360 hours, 4 weeks delivered |
 | **Code Base** | ✅ **Production Ready** | 60,000+ lines, fully tested |
 | **Documentation** | ✅ **Comprehensive** | 4,000+ pages across all modules |
 | **Academic Publication** | ✅ **Ready for Submission** | IEEE format, 8,000 words |
 | **Business Case** | ✅ **Validated** | $350K/year savings, ROI 2,093% |
 | **Next Steps** | 📋 **Roadmap Defined** | 6 options documented |
+
+### 📚 Documentation
+
+- **[Scientific_AI_Engineering_Curriculum.md](Scientific_AI_Engineering_Curriculum.md)** - ⭐ **START HERE** - Complete 12-month master program (English, 50 pages)
+- **[CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](CURRICULUM_FAPESP_ALIGNMENT_REPORT.md)** - 48-month FAPESP research project alignment (98/100 score)
+- **[STUDENT_PROFILE.md](STUDENT_PROFILE.md)** - Readiness assessment with 15-question quiz
+- **[PREREQUISITES.md](PREREQUISITES.md)** - Detailed technical requirements with roadmaps
 
 ### 🏆 Key Achievements
 
@@ -244,13 +262,15 @@ Months 7-12: SCALING + EXPANSION
 
 | Document | Purpose | Location |
 |----------|---------|----------|
-| **Curriculum Index** | Navigate all 12 months | [CURRICULUM_INDEX.md](Science%20AI%20Engineering/CURRICULUM_INDEX.md) |
-| **Master Plan** | Complete 48-month research plan | [Scientific_AI_Engineering_Curriculum.md](Scientific_AI_Engineering_Curriculum.md) |
+| **Curriculum Master** | 🌟 **START HERE** - Complete 12-month program (English) | [Scientific_AI_Engineering_Curriculum.md](Scientific_AI_Engineering_Curriculum.md) |
+| **Curriculum Index** | Navigate all 12 months (Portuguese) | [CURRICULUM_INDEX.md](Science%20AI%20Engineering/CURRICULUM_INDEX.md) |
+| **FAPESP Alignment Report** | 98/100 score alignment with research project | [CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](CURRICULUM_FAPESP_ALIGNMENT_REPORT.md) |
 | **Capstone Checkpoint** | Current project state | [mes12_capstone/_CHECKPOINT_RESUMO.md](Science%20AI%20Engineering/mes12_capstone/_CHECKPOINT_RESUMO.md) |
 | **Continuity Options** | 6 detailed next steps | [mes12_capstone/_POS_CAPSTONE_OPCOES.md](Science%20AI%20Engineering/mes12_capstone/_POS_CAPSTONE_OPCOES.md) |
 | **Literature Alignment** | 50+ scientific papers | [curriculum_alignment_matrix.md](Science%20AI%20Engineering/curriculum_alignment_matrix.md) |
 | **Student Profile** | Readiness assessment | [STUDENT_PROFILE.md](STUDENT_PROFILE.md) |
 | **Prerequisites** | Detailed requirements | [PREREQUISITES.md](PREREQUISITES.md) |
+| **Portuguese Version** | Currículo original em português | [_legacy/Scientific_AI_Engineering_Curriculum_PT.md](_legacy/Scientific_AI_Engineering_Curriculum_PT.md) |
 
 ### 📁 Month-by-Month Deliverables
 
