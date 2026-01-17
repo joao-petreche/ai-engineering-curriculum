@@ -1,0 +1,52 @@
+[
+  {
+    "name": "max_annual_consumption",
+    "constraint_type": "inequality",
+    "operator": "<=",
+    "limit": 120000,
+    "weight": 1000.0,
+    "description": "Maximum annual consumption (120,000 kWh)",
+    "physics_law": "Energy budget",
+    "is_active": false
+  },
+  {
+    "name": "min_comfort_hours",
+    "constraint_type": "inequality",
+    "operator": ">=",
+    "limit": 5000,
+    "weight": 500.0,
+    "description": "Minimum comfort hours (5,000 h)",
+    "physics_law": "Habitability requirement",
+    "is_active": false
+  },
+  {
+    "name": "max_peak_cooling",
+    "constraint_type": "inequality",
+    "operator": "<=",
+    "limit": 45.0,
+    "weight": 100.0,
+    "description": "Maximum peak cooling (45 kW)",
+    "physics_law": "Equipment capacity limit",
+    "is_active": false
+  },
+  {
+    "name": "max_comfort_hours",
+    "constraint_type": "inequality",
+    "operator": "<=",
+    "limit": 8760,
+    "weight": 100.0,
+    "description": "Physical limit on comfort (\u2264 8760 h)",
+    "physics_law": "Time constraint",
+    "is_active": false
+  },
+  {
+    "name": "min_consumption",
+    "constraint_type": "inequality",
+    "operator": ">=",
+    "limit": 10000,
+    "weight": 1000.0,
+    "description": "Minimum consumption (10,000 kWh)",
+    "physics_law": "Energy balance",
+    "is_active": false
+  }
+]
