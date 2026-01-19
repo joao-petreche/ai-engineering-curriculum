@@ -1,0 +1,8 @@
+{
+  "total_solutions": 150,
+  "feasible_solutions": 0,
+  "feasibility_percentage": 0.0,
+  "best_feasible_consumption": null,
+  "best_penalized_consumption": 1290057.7227606198,
+  "most_violated_constraint": "min_comfort_hours"
+}

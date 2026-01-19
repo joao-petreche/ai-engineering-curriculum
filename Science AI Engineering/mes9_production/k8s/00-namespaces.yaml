@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: bps-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: bps-staging
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: bps-prod

@@ -1,0 +1,96 @@
+name: CD - Deploy to Staging
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "*.md"
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}/bps-api
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    
+    outputs:
+      image-tag: ${{ steps.meta.outputs.tags }}
+      image-digest: ${{ steps.build.outputs.digest }}
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+    
+    - name: Log in to Container Registry
+      uses: docker/login-action@v3
+      with:
+        registry: ${{ env.REGISTRY }}
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Extract metadata
+      id: meta
+      uses: docker/metadata-action@v5
+      with:
+        images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+        tags: |
+          type=ref,event=branch
+          type=semver,pattern={{version}}
+          type=sha,prefix={{branch}}-
+    
+    - name: Build and push
+      id: build
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        push: true
+        tags: ${{ steps.meta.outputs.tags }}
+        labels: ${{ steps.meta.outputs.labels }}
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+
+  deploy-staging:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    environment: staging
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Configure kubectl
+      run: |
+        mkdir -p $HOME/.kube
+        echo "${{ secrets.KUBE_CONFIG_STAGING }}" | base64 -d > $HOME/.kube/config
+        chmod 600 $HOME/.kube/config
+    
+    - name: Update Staging Deployment
+      run: |
+        REGISTRY=${{ env.REGISTRY }}
+        REPO=${{ github.repository }}
+        TAG=$(echo "${{ needs.build-and-push.outputs.image-tag }}" | head -1 | grep -oP '(?<=:)[^:]+$')
+        
+        kubectl set image deployment/bps-api \
+          api=$REGISTRY/$REPO/bps-api:$TAG \
+          -n bps-staging --record
+        
+        kubectl rollout status deployment/bps-api -n bps-staging --timeout=10m
+    
+    - name: Health Check
+      run: |
+        kubectl port-forward -n bps-staging svc/bps-api 8000:8000 &
+        sleep 5
+        curl -f http://localhost:8000/health || exit 1
+        curl -f http://localhost:8000/health/ready || exit 1
+
+  production-approval:
+    needs: deploy-staging
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Request Production Approval
+      run: echo "✅ Staging deployment successful. Ready for production approval."

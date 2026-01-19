@@ -1,0 +1,49 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: bps-prod
+
+commonLabels:
+  environment: production
+  managed-by: kustomize
+
+# Base resources
+resources:
+- ../base/namespace.yaml
+- ../base/configmap.yaml
+- ../base/deployment.yaml
+- ../base/postgres.yaml
+- ../base/redis.yaml
+- ../base/ingress.yaml
+- ../base/cert-manager.yaml
+
+# Environment-specific configuration
+configMapGenerator:
+- name: bps-config
+  behavior: merge
+  literals:
+  - ENVIRONMENT=production
+  - LOG_LEVEL=WARNING
+  - API_WORKERS=8
+  - REQUIRE_API_KEY=true
+
+replicas:
+- name: bps-api
+  count: 3
+
+images:
+- name: bps-api
+  newTag: v1.0.0
+
+# Production-specific patches
+patchesStrategicMerge:
+- deployment-patch.yaml
+
+patches:
+- target:
+    kind: Service
+    name: bps-api
+  patch: |-
+    - op: replace
+      path: /spec/type
+      value: LoadBalancer
