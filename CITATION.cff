@@ -9,6 +9,9 @@ authors:
     affiliation: "University of São Paulo (USP)"
     email: "petreche@usp.br"
     orcid: "https://orcid.org/0000-0003-1335-3334"
+  - family-names: "Corrêa"
+    given-names: "Fabiano Rogerio"
+    affiliation: "University of São Paulo (USP)"
 version: 1.0.0
 date-released: "2026-01-15"
 license: CC-BY-4.0

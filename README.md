@@ -391,7 +391,7 @@ If you use this curriculum in your work, please cite:
 
 ```bibtex
 @misc{petreche2026scientific,
-  author = {Petreche, João Roberto Diego},
+  author = {Petreche, João Roberto Diego and Corrêa, Fabiano Rogerio},
   title = {Scientific AI Engineering Curriculum: Building Performance Simulation with Machine Learning},
   year = {2026},
   publisher = {GitHub},
@@ -429,14 +429,14 @@ You are free to share and adapt the material for any purpose, even commercially,
 When reusing or adapting this curriculum, include attribution such as:
 
 - Title: Scientific AI Engineering Curriculum: Building Performance Simulation with Machine Learning
-- Author: João Roberto Diego Petreche (University of São Paulo - USP)
+- Authors: João Roberto Diego Petreche and Fabiano Rogerio Corrêa (University of São Paulo - USP)
 - Source: https://github.com/joao-petreche/ai-engineering-curriculum
 - License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
 - Changes: Describe any modifications you made
 
 Short form example:
 
-“Scientific AI Engineering Curriculum (Petreche, USP), CC BY 4.0. Source: https://github.com/joao-petreche/ai-engineering-curriculum. Changes: [your summary].”
+“Scientific AI Engineering Curriculum (Petreche and Corrêa, USP), CC BY 4.0. Source: https://github.com/joao-petreche/ai-engineering-curriculum. Changes: [your summary].”
 
 ---
 
