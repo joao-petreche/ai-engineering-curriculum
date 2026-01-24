@@ -7,11 +7,11 @@
 [![GitHub stars](https://img.shields.io/github/stars/joao-petreche/ai-engineering-curriculum?style=social)](https://github.com/joao-petreche/ai-engineering-curriculum/stargazers)
 
 > **Status:** 🎉 **CURRICULUM 100% COMPLETE** - 12 months, 600+ hours, 60,000+ lines of code
-> 
+>
 > **Capstone Project:** ✅ Delivered with 7.09% optimization improvement, $350K/year savings, academic publication ready
-> 
+>
 > **🎯 NEW:** Full English translation completed with 48-month FAPESP research project alignment (98/100 score)
-> 
+>
 > 🌟 **Open Educational Resource:** Free to use, modify, and share under CC BY 4.0
 
 ---
@@ -20,6 +20,13 @@
 **👉 [START HERE: Scientific_AI_Engineering_Curriculum.md](Scientific_AI_Engineering_Curriculum.md)** - Complete 12-month program guide (English, 50 pages)
 
 📊 **For FAPESP Research Project:** Review [CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](CURRICULUM_FAPESP_ALIGNMENT_REPORT.md) - Validation that curriculum is 98% sufficient for 48-month research execution
+
+## ⚡ Bootcamp Express: 1-Week Prep
+Intensive 1-week leveling program to set up infrastructure (Windows/Python/EnergyPlus) and master core skills (Git, Pandas, Cloud) required for Phase 0.
+
+- **[🇬🇧 English Version](Bootcamp%20Express/Bootcamp_Expresso_Google.md)**
+- **[🇧🇷 Versão em Português](Bootcamp%20Express/Bootcamp_Expresso_Google_PT.md)**
+
 ## 📖 Project Overview
 
 A **production-ready, open-source curriculum** for advanced training in Scientific AI Engineering with real-world applications in Building Performance Simulation (BPS), Federated Learning, and Multi-Objective Optimization.
@@ -247,7 +254,7 @@ Months 7-12: SCALING + EXPANSION
 └─ Months 10-12: Option 4 (New domains)
 ```
 
-**Expected Total Investment:** $115K-210K  
+**Expected Total Investment:** $115K-210K
 **Expected 10-Year Return:** $3.5M+ (validated)
 
 ---
@@ -263,7 +270,7 @@ Months 7-12: SCALING + EXPANSION
 | **FAPESP Alignment Report** | 98/100 score alignment with research project | [CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](CURRICULUM_FAPESP_ALIGNMENT_REPORT.md) |
 | **Capstone Checkpoint** | Current project state | [mes12_capstone/_CHECKPOINT_RESUMO.md](Science%20AI%20Engineering/mes12_capstone/_CHECKPOINT_RESUMO.md) |
 | **Continuity Options** | 6 detailed next steps | [mes12_capstone/_POS_CAPSTONE_OPCOES.md](Science%20AI%20Engineering/mes12_capstone/_POS_CAPSTONE_OPCOES.md) |
-| **Literature Alignment** | 50+ scientific papers | [curriculum_alignment_matrix.md](Science%20AI%20Engineering/curriculum_alignment_matrix.md) |
+| **Literature Alignment** | 30+ scientific papers | [Literature Alignment.md](Science%20AI%20Engineering/Literature%20Alignment/Literature%20Alignment_EN.md.md) |
 | **Student Profile** | Readiness assessment | [STUDENT_PROFILE.md](STUDENT_PROFILE.md) |
 | **Prerequisites** | Detailed requirements | [PREREQUISITES.md](PREREQUISITES.md) |
 | **Portuguese Version** | Currículo original em português | [_legacy/Scientific_AI_Engineering_Curriculum_PT.md](_legacy/Scientific_AI_Engineering_Curriculum_PT.md) |
@@ -368,20 +375,20 @@ mypy . --ignore-missing-imports
 ## 💡 What You'll Learn
 
 ### Technical Skills
-✅ Physics-Informed Machine Learning (PIML)  
-✅ Large Language Models with guardrails and RAG  
-✅ Federated optimization across distributed systems  
-✅ Multi-objective optimization (NSGA-II, constraints)  
-✅ Production deployment (Docker, Kubernetes, CI/CD)  
-✅ Monitoring and observability (Prometheus, Grafana)  
-✅ Academic writing and publication preparation  
+✅ Physics-Informed Machine Learning (PIML)
+✅ Large Language Models with guardrails and RAG
+✅ Federated optimization across distributed systems
+✅ Multi-objective optimization (NSGA-II, constraints)
+✅ Production deployment (Docker, Kubernetes, CI/CD)
+✅ Monitoring and observability (Prometheus, Grafana)
+✅ Academic writing and publication preparation
 
 ### Soft Skills
-✅ Project lifecycle management (problem → publication)  
-✅ Technical documentation and communication  
-✅ Code quality and testing practices  
-✅ Business case development and ROI analysis  
-✅ Presentation and stakeholder engagement  
+✅ Project lifecycle management (problem → publication)
+✅ Technical documentation and communication
+✅ Code quality and testing practices
+✅ Business case development and ROI analysis
+✅ Presentation and stakeholder engagement
 
 ---
 
@@ -457,9 +464,9 @@ See [curriculum_alignment_matrix.md](Science%20AI%20Engineering/curriculum_align
 
 ## 📞 Contact
 
-**João Roberto Diego Petreche**  
-University of São Paulo (USP)  
-Email: petreche@usp.br  
+**João Roberto Diego Petreche**
+University of São Paulo (USP)
+Email: petreche@usp.br
 GitHub: [@joao-petreche](https://github.com/joao-petreche)
 
 ---
@@ -483,6 +490,6 @@ GitHub: [@joao-petreche](https://github.com/joao-petreche)
 
 ---
 
-**Last Updated:** January 17, 2026  
-**Status:** 🟢 Curriculum Complete, Production Ready, Continuity Roadmap Defined  
+**Last Updated:** January 17, 2026
+**Status:** 🟢 Curriculum Complete, Production Ready, Continuity Roadmap Defined
 **Next Milestone:** Option 6 - Final Review (1 week)
