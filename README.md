@@ -270,7 +270,7 @@ Months 7-12: SCALING + EXPANSION
 | **FAPESP Alignment Report** | 98/100 score alignment with research project | [CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](CURRICULUM_FAPESP_ALIGNMENT_REPORT.md) |
 | **Capstone Checkpoint** | Current project state | [mes12_capstone/_CHECKPOINT_RESUMO.md](Science%20AI%20Engineering/mes12_capstone/_CHECKPOINT_RESUMO.md) |
 | **Continuity Options** | 6 detailed next steps | [mes12_capstone/_POS_CAPSTONE_OPCOES.md](Science%20AI%20Engineering/mes12_capstone/_POS_CAPSTONE_OPCOES.md) |
-| **Literature Alignment** | 30+ scientific papers | [Literature Alignment.md](Science%20AI%20Engineering/Literature%20Alignment/Literature%20Alignment_EN.md.md) |
+| **Literature Alignment** | 30+ scientific papers | [Literature Alignment.md](Literature%20Alignment/Literature%20Alignment.md) |
 | **Student Profile** | Readiness assessment | [STUDENT_PROFILE.md](STUDENT_PROFILE.md) |
 | **Prerequisites** | Detailed requirements | [PREREQUISITES.md](PREREQUISITES.md) |
 | **Portuguese Version** | Currículo original em português | [_legacy/Scientific_AI_Engineering_Curriculum_PT.md](_legacy/Scientific_AI_Engineering_Curriculum_PT.md) |
