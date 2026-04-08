@@ -12,6 +12,8 @@
 >
 > **🎯 NEW:** Full English translation completed with 48-month FAPESP research project alignment (98/100 score)
 >
+> **📝 NEW (April 2026):** Literature Review manuscript package refreshed (metadata sync, duplicate cleanup, scientific PDF without line numbers)
+>
 > 🌟 **Open Educational Resource:** Free to use, modify, and share under CC BY 4.0
 
 ---
@@ -27,11 +29,20 @@ Intensive 1-week leveling program to set up infrastructure (Windows/Python/Energ
 - **[🇬🇧 English Version](Bootcamp%20Express/Bootcamp_Expresso_Google.md)**
 - **[🇧🇷 Versão em Português](Bootcamp%20Express/Bootcamp_Expresso_Google_PT.md)**
 
+## 📄 Literature Review Package (April 2026)
+
+- **Scientific article source (LaTeX):** [manuscript.tex](Literature%20Alignment/Literature%20Review/manuscript.tex)
+- **Bibliography database (cited-only):** [references.bib](Literature%20Alignment/Literature%20Review/references.bib)
+- **Final scientific PDF (no line numbers):** [Validating the Scientific AI Engineering Curriculum - A Comprehensive Review of PIML, Interoperability, and Pedagogy.pdf](Literature%20Alignment/Literature%20Review/Validating%20the%20Scientific%20AI%20Engineering%20Curriculum%20-%20A%20Comprehensive%20Review%20of%20PIML,%20Interoperability,%20and%20Pedagogy.pdf)
+- **Alternative output:** [manuscript.pdf](Literature%20Alignment/Literature%20Review/manuscript.pdf)
+- **Markdown conversion:** [manuscript.md](Literature%20Alignment/Literature%20Review/manuscript.md)
+- **Canonical curated reference base:** [Literature Alignment.md](Literature%20Alignment/Literature%20Alignment.md)
+
 ## 📖 Project Overview
 
 A **production-ready, open-source curriculum** for advanced training in Scientific AI Engineering with real-world applications in Building Performance Simulation (BPS), Federated Learning, and Multi-Objective Optimization.
 
-### 🎯 Project Status (January 17, 2026)
+### 🎯 Project Status (April 2026)
 
 | Component | Status | Details |
 |-----------|--------|---------|
@@ -271,6 +282,7 @@ Months 7-12: SCALING + EXPANSION
 | **Capstone Checkpoint** | Current project state | [mes12_capstone/_CHECKPOINT_RESUMO.md](Science%20AI%20Engineering/mes12_capstone/_CHECKPOINT_RESUMO.md) |
 | **Continuity Options** | 6 detailed next steps | [mes12_capstone/_POS_CAPSTONE_OPCOES.md](Science%20AI%20Engineering/mes12_capstone/_POS_CAPSTONE_OPCOES.md) |
 | **Literature Alignment** | 30+ scientific papers | [Literature Alignment.md](Literature%20Alignment/Literature%20Alignment.md) |
+| **Literature Review Manuscript** | LaTeX source + final no-line scientific PDF | [Literature Review folder](Literature%20Alignment/Literature%20Review/) |
 | **Student Profile** | Readiness assessment | [STUDENT_PROFILE.md](STUDENT_PROFILE.md) |
 | **Prerequisites** | Detailed requirements | [PREREQUISITES.md](PREREQUISITES.md) |
 | **Portuguese Version** | Currículo original em português | [_legacy/Scientific_AI_Engineering_Curriculum_PT.md](_legacy/Scientific_AI_Engineering_Curriculum_PT.md) |
@@ -490,6 +502,6 @@ GitHub: [@joao-petreche](https://github.com/joao-petreche)
 
 ---
 
-**Last Updated:** January 17, 2026
-**Status:** 🟢 Curriculum Complete, Production Ready, Continuity Roadmap Defined
+**Last Updated:** April 8, 2026
+**Status:** 🟢 Curriculum Complete, Production Ready, Literature Review Package Refreshed
 **Next Milestone:** Option 6 - Final Review (1 week)
