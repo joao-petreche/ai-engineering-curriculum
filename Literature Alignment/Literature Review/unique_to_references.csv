@@ -1,0 +1,46 @@
+ref_key,doi_or_url,author,title,year,howpublished
+ref4,https://arxiv.org/abs/2508.01503,"Cohn, C. and Hutchins, N. and Biswas, G. and Vatral, C",A theory of adaptive scaffolding for LLM-based pedagogical agents,2025,arXiv preprint
+ref12,https://arxiv.org/abs/2510.11076,"Fu, C. and Li, Y. and Zhang, J",DebugTA: An LLM-based agent for simplifying debugging and teaching in programming education,2025,arXiv preprint
+ref13,https://arxiv.org/abs/2507.02660,"Gadde, R. and Vasudevan, S. and Krishnamurthy, P","Hey AI, generate me a hardware code! Agentic AI-based hardware design and verification",2025,arXiv preprint
+ref14,(none),"Gadginmath, S. and Voskov, D. and Tchelepi, H",Provably safe generative sampling with constricting barrier functions,2026,[Manuscript in preparation]
+ref15,https://arxiv.org/abs/2508.18875,"Gale, T. and Sentance, S. and Waite, J",PRIMMDebug: A debugging teaching aid for secondary students,2025,arXiv preprint
+ref16,(none),"Gao, X. and Li, H. and Wang, J",Multi-agent framework for schema-guided reasoning and tool-augmented interaction with IFC models,2024,[Conference paper]
+ref19,https://arxiv.org/abs/2510.22286,Anonymous,"Hybrid Instructor AI Assessment in Academic Projects: Efficiency, Equity, and Methodological Lessons",2025,arXiv preprint
+ref20,(none),"Ibba, M. and Marini, A. and Pavan, A",ASK-BIM: A knowledge graph-powered AI system for natural language querying of BIM models,2024,[Conference paper]
+ref21,https://arxiv.org/abs/2504.16813,"Iranmanesh, A. and Hu, X. and Kocaturk, T",LLM-assisted Graph-RAG information extraction from IFC data,2025,arXiv preprint
+ref27,https://doi.org/10.21203/rs.3.rs-7718099/v1,"Jukiewicz, M",Sentiment analysis of large language models feedback: A multi-model comparative study in programming assessment,2025,Research Square
+ref29,https://doi.org/10.2139/ssrn.5563440,"Kim, J. and Park, S. and Lee, H",Language models as BIM interpreters: Unlocking IFC data for automation in construction informatics,2025,Social Science Research Network
+ref31,https://arxiv.org/abs/2508.18391,"Kulkarni, C. and Sharma, R. and Patel, V",PKG-DPO: Optimizing domain-specific AI systems with physics knowledge graphs and direct preference optimization,2025,arXiv preprint
+ref32,https://arxiv.org/abs/2509.00768,"Lee, S. and Kim, J. and Park, H",Aligning reasoning LLMs for materials discovery with physics-aware rejection sampling,2025,arXiv preprint
+ref33,https://doi.org/10.1016/j.aei.2024.102379,"Li, Z. and Wang, Y. and Chen, X. and Liu, H",Design information-assisted graph neural network for modeling central air conditioning systems,2024,Advanced Engineering Informatics
+ref34,https://doi.org/10.1177/03064190241272728,"Liu, X",Application of large language models in engineering education: A case study of system modeling and simulation courses,2024,The International Journal of Mechanical Engineering Education
+ref35,https://doi.org/10.3390/educsci15111443,"Liu, Y. and Chen, Z. and Wang, Q",Exploring the impact of different assistance approaches on students' performance in engineering lab courses,2025,Education Sciences
+ref38,(none),"Martín-Dorta, N. and Saorin, J. L. and Contero, M",Natural language queries on IFC,2024,[Conference paper]
+ref40,https://doi.org/10.1016/j.cma.2024.117397,"Koenig, B. C. and Kim, S. and Deng, S.",KAN-ODEs: Kolmogorov-Arnold Network Ordinary Differential Equations for Learning Dynamical Systems and Hidden Physics,2024,Computer Methods in Applied Mechanics and Engineering
+ref41,https://doi.org/10.1109/ACCESS.2024.3504962,"Rigas, S. and Papachristou, M. and Papadopoulos, T. and Anagnostopoulos, F. and Alexandridis, G.",Adaptive Training of Grid-Dependent Physics-Informed Kolmogorov-Arnold Networks,2024,IEEE Access
+ref42,https://arxiv.org/abs/2501.09694,"Noller, Y. and Böhme, M. and Roychoudhury, A",Simulated interactive debugging,2025,arXiv preprint
+ref44,https://doi.org/10.3390/en17122997,"Płoszaj-Mazurek, M. and Ryńska, E. and Grochulska-Salak, M","Artificial Intelligence and Digital Tools for Assisting Low-Carbon Architectural Design: Merging the Use of Machine Learning, Large Language Models, and Building Information Modeling for Life Cycle Assessment Tool Development",2024,Energies
+ref45,https://arxiv.org/abs/2510.18050,Anonymous,Prompt-to-Primal Teaching,2025,arXiv preprint
+ref46,https://arxiv.org/abs/2412.09048,"Qiao, S. and Lim, B. and Tan, C",Oversight in action: Experiences with instructor-moderated LLM responses in an online discussion forum,2024,arXiv preprint
+ref47,https://doi.org/10.54097/3veq6255,"Qiu, Y",Multi-agent reinforcement learning for coordinated smart grid and building energy management across urban communities,2025,Jisuanji shenghuojia
+ref49,(none),"Saluz, M. and Borrmann, A. and Vilgertshofer, S",Large-language-model-based building-information-model alignment for automatic compliance-checking: Towards closing the gap between model authoring and compliance,2024,[Conference paper]
+ref52,https://arxiv.org/abs/2501.03445,"Sisk, C. and Bae, J. and Kim, S",Physics-constrained generative artificial intelligence for rapid takeoff trajectory design,2025,arXiv preprint
+ref54,https://doi.org/10.1186/s40561-024-00354-1,"Steinert, C. and Möller, R. and Ziegler, J",Harnessing large language models to develop research-based learning assistants for formative feedback,2024,Smart Learning Environments
+ref55,https://doi.org/10.5258/soton/p1254,"Stephanie, L",Indoor temperature prediction for residential heat pumps: A physics-informed machine learning approach,2025,[Thesis/Technical report]
+ref56,https://arxiv.org/abs/2510.17146,"Subin, P. and Park, J. and Kim, H",Physics-informed large language models for HVAC anomaly detection with autonomous rule generation,2025,arXiv preprint
+ref58,https://doi.org/10.1038/s41598-025-96443-3,"Toderean, L. and Pop, C. and Cioara, T",Heuristic based federated learning with adaptive hyperparameter tuning for households energy prediction,2025,Scientific Reports
+ref59,https://arxiv.org/abs/2510.08295,"Tsuyoshi, I",Bridging the physics-data gap with FNO-guided conditional flow matching: Designing inductive bias through hierarchical physical constraints,2025,arXiv preprint
+ref61,https://arxiv.org/abs/2509.14623,"Wan, H. and Zhang, L. and Chen, J. and Li, Y",Automating Modelica module generation using large language models: A case study on building control description language,2025,arXiv preprint
+ref63,(none),"Wang, Z. and Li, H. and Zhang, Y",Scalable physics-informed multi-agent reinforcement learning for building energy system control,2024,[Conference paper]
+ref64,https://doi.org/10.1016/j.autcon.2025.106611,"Xu, Z. and Li, Y. and Chen, J. and Zhang, L",Automated carbon-aware assessment of openBIM-based ductwork design using knowledge graph--augmented LLM multi-agent framework,2025,Automation in Construction
+ref71,https://doi.org/10.3390/en18236363,"Zhu, X. and Wang, Y. and Liu, H",Chiller System Power Prediction by Physical-Informed Neural Network,2025,Energies
+ref125,https://arxiv.org/abs/2510.18551,"Hua, W.",SOCIA-Nabla: Textual Gradient Meets Multi-Agent Orchestration for Automated Simulator Generation,2025,arXiv preprint
+ref153,https://doi.org/10.1109/tsg.2024.3524756,"Xia, Y.",Federated Accelerated Deep Reinforcement Learning for Multi-Zone HVAC Control in Commercial Buildings,2025,IEEE Transactions on Smart Grid
+ref162,https://doi.org/10.1063/5.0161114,"Peng, W.",Physics-informed graph convolutional neural network for modeling fluid flow and heat convection,2023,The Physics of Fluids
+ref170,(none),"Petreche, J.",Projeto de Pesquisa: Integracao de Machine Learning e Physics-Informed ML na Simulacao de Desempenho de Edificios: Superando Limitacoes de Escala e Incerteza em Climas Tropicais,n.d.,Project documentation (grey literature)
+ref179,https://doi.org/10.1016/j.egyai.2024.100346,"Yang, X.",Physics-constrained graph modeling for building thermal dynamics,2024,Energy and AI
+ref195,https://arxiv.org/abs/2504.12952,"Drgona, J.",Safe physics-informed machine learning for dynamics and control,2025,arXiv preprint
+ref211,https://arxiv.org/abs/2212.12380,Scalable Physically Consistent Neural Networks Collaboration,Towards Scalable Physically Consistent Neural Networks: an Application to Data-driven Multi-zone Thermal Building Models,2022,arXiv preprint
+ref265,https://doi.org/10.1016/j.jcp.2019.05.024,"Drgoňa, J.",Physics-constrained deep learning for high-dimensional surrogate modeling and uncertainty quantification without labeled data,2021,Journal of Computational Physics
+ref346,https://arxiv.org/abs/2410.03756,"Goldfeder, S.",The Smart Buildings Control Suite: A Diverse Open Source Benchmark to Evaluate and Scale HVAC Control Policies for Sustainability,2024,arXiv preprint
+ref347,https://arxiv.org/abs/2407.11075,"Hou, Y. and Ji, T. and Zhang, D. and Stefanidis, A.","Kolmogorov-Arnold Networks: A Critical Assessment of Claims, Performance, and Practical Viability",2024,arXiv preprint
