@@ -12,7 +12,7 @@
 >
 > **🎯 NEW:** Full English translation completed with 48-month FAPESP research project alignment (98/100 score)
 >
-> **📝 NEW (April 2026):** Literature Review manuscript package refreshed (metadata sync, duplicate cleanup, scientific PDF without line numbers)
+> **📝 NEW (April 2026):** Literature Review manuscript package refreshed (metadata sync, duplicate cleanup, bibliography normalization)
 >
 > 🌟 **Open Educational Resource:** Free to use, modify, and share under CC BY 4.0
 
@@ -33,8 +33,7 @@ Intensive 1-week leveling program to set up infrastructure (Windows/Python/Energ
 
 - **Scientific article source (LaTeX):** [manuscript.tex](Literature%20Alignment/Literature%20Review/manuscript.tex)
 - **Bibliography database (cited-only):** [references.bib](Literature%20Alignment/Literature%20Review/references.bib)
-- **Final scientific PDF (no line numbers):** [Validating the Scientific AI Engineering Curriculum - A Comprehensive Review of PIML, Interoperability, and Pedagogy.pdf](Literature%20Alignment/Literature%20Review/Validating%20the%20Scientific%20AI%20Engineering%20Curriculum%20-%20A%20Comprehensive%20Review%20of%20PIML,%20Interoperability,%20and%20Pedagogy.pdf)
-- **Alternative output:** [manuscript.pdf](Literature%20Alignment/Literature%20Review/manuscript.pdf)
+- **Final scientific PDF:** [manuscript.pdf](Literature%20Alignment/Literature%20Review/manuscript.pdf)
 - **Markdown conversion:** [manuscript.md](Literature%20Alignment/Literature%20Review/manuscript.md)
 - **Canonical curated reference base:** [Literature Alignment.md](Literature%20Alignment/Literature%20Alignment.md)
 
@@ -282,7 +281,7 @@ Months 7-12: SCALING + EXPANSION
 | **Capstone Checkpoint** | Current project state | [mes12_capstone/_CHECKPOINT_RESUMO.md](Science%20AI%20Engineering/mes12_capstone/_CHECKPOINT_RESUMO.md) |
 | **Continuity Options** | 6 detailed next steps | [mes12_capstone/_POS_CAPSTONE_OPCOES.md](Science%20AI%20Engineering/mes12_capstone/_POS_CAPSTONE_OPCOES.md) |
 | **Literature Alignment** | 30+ scientific papers | [Literature Alignment.md](Literature%20Alignment/Literature%20Alignment.md) |
-| **Literature Review Manuscript** | LaTeX source + final no-line scientific PDF | [Literature Review folder](Literature%20Alignment/Literature%20Review/) |
+| **Literature Review Manuscript** | LaTeX source + PDF + Markdown + bibliography | [Literature Review folder](Literature%20Alignment/Literature%20Review/) |
 | **Student Profile** | Readiness assessment | [STUDENT_PROFILE.md](STUDENT_PROFILE.md) |
 | **Prerequisites** | Detailed requirements | [PREREQUISITES.md](PREREQUISITES.md) |
 | **Portuguese Version** | Currículo original em português | [_legacy/Scientific_AI_Engineering_Curriculum_PT.md](_legacy/Scientific_AI_Engineering_Curriculum_PT.md) |
