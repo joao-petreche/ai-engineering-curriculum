@@ -34,15 +34,15 @@ def print_header():
     print(f"{Colors.BOLD}{'='*70}{Colors.END}\n")
 
 def check_python_version() -> Tuple[bool, str]:
-    """Valida Python 3.10.x"""
+    """Valida Python 3.10+"""
     version = sys.version_info
-    is_valid = version.major == 3 and version.minor == 10
-    
+    is_valid = version.major == 3 and version.minor >= 10
+
     message = f"Python {version.major}.{version.minor}.{version.micro}"
     if is_valid:
         return True, f"✅ {message}"
     else:
-        return False, f"❌ {message} (Requerido: Python 3.10.x)"
+        return False, f"❌ {message} (Requerido: Python 3.10+)"
 
 def check_pip() -> Tuple[bool, str]:
     """Valida pip instalado"""
@@ -223,7 +223,7 @@ def run_validation() -> Dict[str, List[Tuple[bool, str]]]:
     print("-" * 70)
     
     critical_checks = [
-        ("Python 3.10.x", check_python_version()),
+        ("Python 3.10+", check_python_version()),
         ("pip", check_pip()),
         ("EnergyPlus 24.1.0", check_energyplus()),
         ("Git", check_git()),

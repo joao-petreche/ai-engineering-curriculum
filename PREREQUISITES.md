@@ -1,6 +1,6 @@
 # 📋 Prerequisites & Preparation Guide
 
-**Last Updated:** January 17, 2026  
+**Last Updated:** April 30, 2026  
 **Curriculum Status:** ✅ 100% Complete (12 months, 600-700 hours)  
 **Target Audience:** Scientific AI Engineers in Building Performance Simulation
 
@@ -453,7 +453,7 @@ By completing this curriculum, you will be able to:
 - [ ] Stable internet connection (>10 Mbps)
 
 #### Software Installed
-- [ ] Python 3.10.x
+- [ ] Python 3.10+ (tested on 3.13)
 - [ ] VS Code + extensions (Python, Jupyter, GitHub Copilot)
 - [ ] Git and GitHub account
 - [ ] EnergyPlus 24.1.0
@@ -552,4 +552,4 @@ The training is designed to be **challenging but accessible**. It won't be easy,
 
 **Report Completed:** Complete prerequisites analysis provided.  
 **Next Step:** Review [STUDENT_PROFILE.md](STUDENT_PROFILE.md) for detailed readiness assessment.  
-**Last Updated:** January 17, 2026
+**Last Updated:** April 30, 2026

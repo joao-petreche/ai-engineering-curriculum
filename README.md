@@ -327,7 +327,7 @@ Months 7-12: SCALING + EXPANSION
 ```powershell
 # Clone the repository
 git clone https://github.com/joao-petreche/ai-engineering-curriculum.git
-cd ai-engineering-curriculum/Training_12Meses
+cd ai-engineering-curriculum
 
 # Navigate to curriculum
 cd "Science AI Engineering"
@@ -341,6 +341,25 @@ code _CHECKPOINT_RESUMO.md
 code _POS_CAPSTONE_OPCOES.md
 ```
 
+### Set Up Python Environment
+
+Use a virtual environment to isolate dependencies. Requires **Python 3.10+** (tested on 3.13).
+
+```powershell
+# From the repo root
+python -m venv .venv
+
+# Activate (PowerShell)
+.\.venv\Scripts\Activate.ps1
+# Activate (Git Bash / WSL)
+# source .venv/Scripts/activate
+
+# Install all curriculum dependencies
+pip install -r requirements.txt
+```
+
+The pinned `requirements.txt` covers the scientific stack (numpy, pandas, scipy, scikit-learn, xgboost, matplotlib, seaborn, plotly), the optimization/simulation tools (deap, eppy), and the production module deps (FastAPI, uvicorn, pydantic, OpenTelemetry, prometheus-client) plus testing.
+
 ### Quick Commands for Continuity
 
 ```powershell
@@ -349,13 +368,13 @@ cd "Science AI Engineering/mes12_capstone"
 git status
 git log --oneline -10
 
-# Test capstone code
+# Test capstone code (with .venv activated)
 python capstone_integrated_system.py
 python capstone_week2_optimization.py  # Quick test: edit rounds to 5
 python capstone_week3_validation.py    # Quick test: edit rounds to 10
 python capstone_week4_publication.py
 
-# Start Option 6 (Code Review)
+# Start Option 6 (Code Review) — install code-quality tools into the venv
 pip install black flake8 mypy pip-audit bandit radon
 black . --check
 flake8 . --max-line-length=100
@@ -501,6 +520,6 @@ GitHub: [@joao-petreche](https://github.com/joao-petreche)
 
 ---
 
-**Last Updated:** April 8, 2026
+**Last Updated:** April 30, 2026
 **Status:** 🟢 Curriculum Complete, Production Ready, Literature Review Package Refreshed
 **Next Milestone:** Option 6 - Final Review (1 week)
