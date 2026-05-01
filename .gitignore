@@ -53,3 +53,7 @@ Thumbs.db
 *secret*
 *token*
 *.key
+
+# Personal notes (not part of the project)
+NOTAS_CLAUDE_CODE.md
+.weekly-status/

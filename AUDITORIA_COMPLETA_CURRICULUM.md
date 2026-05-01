@@ -1,3 +1,13 @@
+> ⚠️ **DOCUMENTO HISTÓRICO (Janeiro/2026)**
+>
+> Esta auditoria foi a referência válida na época de sua produção. Para o **estado atual do repositório (Abril/2026)**, consulte:
+>
+> 👉 **[AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md)** — Re-auditoria com verificação arquivo-por-arquivo dos 20 gaps prioritários listados aqui. **8 dos 10 gaps P0 já foram resolvidos** desde esta análise.
+>
+> Este documento é mantido por valor histórico e para mostrar a trajetória do projeto. Não use suas estimativas de esforço (257h) como referência atual — o esforço residual real é ~45h técnico + ~40–80h de instructor enablement (camada não coberta nesta auditoria).
+
+---
+
 # 🔍 AUDITORIA COMPLETA DO CURRÍCULO - TRAINING 12 MESES
 
 **Data:** MÊS 1 - SEMANA 3  

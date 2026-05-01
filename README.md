@@ -1,18 +1,20 @@
 # 🎓 Scientific AI Engineering Curriculum
-## 12-Month Training Program ✅ COMPLETE (January 2026)
+## 12-Month Training Program — Pre-Onboarding (Content ~80%, April 2026)
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Status: Production Ready](https://img.shields.io/badge/Status-Production%20Ready-brightgreen.svg)]()
-[![Training: Complete](https://img.shields.io/badge/Training-100%25%20Complete-success.svg)]()
+[![Status: Pre-Onboarding](https://img.shields.io/badge/Status-Pre--Onboarding-yellow.svg)]()
+[![Content: ~80%](https://img.shields.io/badge/Content-~80%25-yellow.svg)]()
 [![GitHub stars](https://img.shields.io/github/stars/joao-petreche/ai-engineering-curriculum?style=social)](https://github.com/joao-petreche/ai-engineering-curriculum/stargazers)
 
-> **Status:** 🎉 **CURRICULUM 100% COMPLETE** - 12 months, 600+ hours, 60,000+ lines of code
+> **Status:** ⚠️ **PRE-ONBOARDING** — Curriculum content substantially complete (~80%); residual technical gaps and instructor enablement materials pending. See [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md) for the verified gap list.
 >
-> **Capstone Project:** ✅ Delivered with 7.09% optimization improvement, $350K/year savings, academic publication ready
+> **Curriculum Content:** 600+ hours of material delivered, 60,000+ lines of code. Months 0–9 substantially complete; Months 10–12 have residual gaps (stragglers handling, conflict detection, operations runbook).
 >
-> **🎯 NEW:** Full English translation completed with 48-month FAPESP research project alignment (98/100 score)
+> **Capstone Project:** ✅ Delivered with 7.09% optimization improvement, $350K/year savings, academic publication-ready
 >
-> **📝 NEW (April 2026):** Literature Review manuscript package refreshed (metadata sync, duplicate cleanup, bibliography normalization)
+> **FAPESP Alignment:** 98/100 score (Jan/2026) — see [CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](CURRICULUM_FAPESP_ALIGNMENT_REPORT.md) (scope: research project alignment, distinct from instructor-readiness)
+>
+> **📝 Literature Review (April 2026):** Manuscript package refreshed (metadata sync, duplicate cleanup, bibliography normalization)
 >
 > 🌟 **Open Educational Resource:** Free to use, modify, and share under CC BY 4.0
 
@@ -47,20 +49,33 @@ Intensive 1-week leveling program to set up infrastructure (Windows/Python/Energ
 
 ## 📖 Project Overview
 
-A **production-ready, open-source curriculum** for advanced training in Scientific AI Engineering with real-world applications in Building Performance Simulation (BPS), Federated Learning, and Multi-Objective Optimization.
+An **open-source curriculum** for advanced training in Scientific AI Engineering with real-world applications in Building Performance Simulation (BPS), Federated Learning, and Multi-Objective Optimization. Currently in **pre-onboarding state** — see [Known Gaps](#-known-gaps--current-limitations) below.
 
 ### 🎯 Project Status (April 2026)
 
 | Component | Status | Details |
 |-----------|--------|---------|
-| **Curriculum (12 Months)** | ✅ **100% Complete** | 600+ hours, Months 0-12 |
-| **FAPESP Alignment** | ✅ **98/100 Score** | Ready for 48-month research project |
-| **Capstone Project** | ✅ **100% Complete** | 360 hours, 4 weeks delivered |
-| **Code Base** | ✅ **Production Ready** | 60,000+ lines, fully tested |
-| **Documentation** | ✅ **Comprehensive** | 4,000+ pages across all modules |
-| **Academic Publication** | ✅ **Ready for Submission** | IEEE format, 8,000 words |
-| **Business Case** | ✅ **Validated** | $350K/year savings, ROI 2,093% |
-| **Next Steps** | 📋 **Roadmap Defined** | 6 options documented |
+| **Curriculum Content (Months 0–9)** | ✅ **Substantially Complete** | Core technical content delivered, verified Apr/2026 |
+| **Curriculum Content (Months 10–12)** | ⚠️ **Partial** | Code present; gaps: stragglers handling, conflict detection, operations runbook |
+| **FAPESP Alignment** | ✅ **98/100 Score** | Validated Jan/2026 (scope: research project alignment) |
+| **Capstone Project** | ✅ **Delivered** | 4,050 lines, 3,750 pages |
+| **Code Base** | 🟡 **Beta (~80%)** | Verified pending items in [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md) |
+| **Test Coverage** | 🔴 **Sparse** | 3 test files (Month 8 only); other months lack automated suites |
+| **Reproducibility** | ⚠️ **Partial** | `requirements.txt` uses version ranges, not pinned versions |
+| **Documentation (student-facing)** | ✅ **Comprehensive** | 4,000+ pages |
+| **Instructor Enablement** | 🔴 **Not Started** | Instructor guide, answer keys, slides, dry-run pending (~40–80h) |
+| **Next Steps** | 📋 **F2–F4 Defined** | See audit for technical revision (F2), instructor materials (F3), onboarding (F4) |
+
+### ⚠️ Known Gaps & Current Limitations
+
+This repository is in **pre-onboarding state**. While core technical content is largely complete, several gaps must be addressed before the material can be applied by external instructors:
+
+- **Operational tooling** — stragglers handling (Month 10), conflict detection (Month 11), and operations runbook (Month 12) are pending
+- **Test coverage** — only Month 8 has automated tests; Months 1–7 and 9–12 lack pytest suites
+- **Reproducibility** — `requirements.txt` uses version ranges (`>=`) instead of pinned versions
+- **Instructor enablement** — instructor guide, answer keys, slides, dry-run, and onboarding script are not yet created
+
+📋 **Full diagnostic:** [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md) — Re-audit (Apr/2026) with verified status of 20 priority gaps and ~45h technical + 40–80h instructor enablement residual workload.
 
 ### 📚 Documentation
 
@@ -514,14 +529,15 @@ GitHub: [@joao-petreche](https://github.com/joao-petreche)
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│ COMPLETED: January 2026                                 │
+│ STATE (April 2026): PRE-ONBOARDING                      │
 ├─────────────────────────────────────────────────────────┤
 │ Phase 1 (Months 0-4)    ████████████ 200h  ✅           │
 │ Phase 2 (Months 5-9)    ██████████████ 250h ✅          │
-│ Phase 3 (Months 10-12)  ████████████████ 360h ✅        │
+│ Phase 3 (Months 10-12)  ████████████░░░░ 360h ⚠️        │
 ├─────────────────────────────────────────────────────────┤
-│ NEXT: Option 6 (Final Review) - 1 week                 │
-│ ROADMAP: 12-month continuity plan defined               │
+│ RESIDUAL: ~45h technical + ~40–80h instructor enablement│
+│ NEXT: F2 (technical revision) → F3 (instructor) → F4    │
+│ See AUDITORIA_2026_04_REVISAO.md for verified gap list  │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -529,6 +545,6 @@ GitHub: [@joao-petreche](https://github.com/joao-petreche)
 
 ---
 
-**Last Updated:** April 30, 2026
-**Status:** 🟢 Curriculum Complete, Production Ready, Literature Review Package Refreshed
-**Next Milestone:** Option 6 - Final Review (1 week)
+**Last Updated:** May 1, 2026
+**Status:** 🟡 Pre-Onboarding · Content ~80% · Instructor Enablement Pending
+**Next Milestone:** F2 — Student-ready repo by 2026-08-15 — see [PROGRAMACAO_F2_F3.md](PROGRAMACAO_F2_F3.md) and [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md)
