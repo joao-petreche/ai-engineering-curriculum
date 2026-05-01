@@ -3,7 +3,7 @@
 **Projeto Vinculado:** Integração de Machine Learning e Physics-Informed ML na Simulação de Desempenho de Edifícios
 **Documento:** Relatório de Fundamentação Científica do Treinamento (Fase 0)
 **Data original:** Janeiro 2026
-**Última revisão:** Maio 2026 (conteúdo estável; o pacote do manuscrito de revisão de literatura em [Literature Review/](Literature%20Review/) foi atualizado em abril/2026 — sincronização de metadata, remoção de duplicatas, normalização da bibliografia e limpeza de mojibake)
+**Última revisão:** Maio 2026 (conteúdo estável; o pacote do manuscrito de revisão de literatura em [Literature Review/](Literature%20Review/) foi atualizado em abril/2026 — sincronização de metadata, remoção de duplicatas, normalização da bibliografia — e recebeu limpeza de mojibake em maio/2026)
 
 ---
 

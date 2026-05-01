@@ -3,7 +3,7 @@
 **Related Context:** Integration of Machine Learning and Physics-Informed ML in Building Performance Simulation
 **Document:** Scientific Foundation Report (Phase 0)
 **Original date:** January 2026
-**Last reviewed:** May 2026 (content stable; the companion Literature Review manuscript package in [Literature Review/](Literature%20Review/) was refreshed in April 2026 — metadata sync, duplicate cleanup, bibliography normalization, mojibake cleanup)
+**Last reviewed:** May 2026 (content stable; the companion Literature Review manuscript package in [Literature Review/](Literature%20Review/) was refreshed in April 2026 — metadata sync, duplicate cleanup, bibliography normalization — and received mojibake cleanup in May 2026)
 
 ---
 
