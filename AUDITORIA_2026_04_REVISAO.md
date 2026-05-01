@@ -133,6 +133,7 @@ Itens fora do escopo dos 20 gaps prioritários, observados durante a re-auditori
 2. **Cobertura de testes esparsa** — apenas 3 arquivos em [Science AI Engineering/tests/](Science%20AI%20Engineering/tests/), todos do Mês 8 (`test_ga_metrics_mes8.py`, `test_islands_mes8.py`, `test_pareto_mes8.py`). Meses 1–7 e 9–12 não têm suíte automatizada.
 3. **README.md desatualizado** — declarações de "100% complete" e "production-ready" geram atrito ao usuário externo. **Corrigido nesta entrega** (ver [README.md](README.md) atualizado em 2026-04-30).
 4. **CURRICULUM_FAPESP_ALIGNMENT_REPORT.md** mantido intocado — escopo dele (alinhamento com projeto FAPESP) é diferente de "prontidão para uso por instrutores". A pontuação 98/100 segue válida no escopo dela.
+5. **Trilha paralela: Literature Alignment + Literature Review** — [Literature Alignment.md](Literature%20Alignment/Literature%20Alignment.md) (alinhamento bibliográfico do currículo) e o pacote em [Literature Review/](Literature%20Alignment/Literature%20Review/) (manuscrito acadêmico revisando 888 papers) são uma **trilha separada**, refresheada em abril/2026 e fora do escopo de F2/F3. Não bloqueiam o onboarding de alunos nem o de professores. Em maio/2026 o `manuscript.md` teve mojibake (símbolos matemáticos e nomes de autores corrompidos) corrigido.
 
 ---
 

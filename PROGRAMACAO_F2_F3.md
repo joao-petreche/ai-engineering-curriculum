@@ -94,6 +94,10 @@
 - ❌ Workshop 2h hands-on do Mês 12 (migra para F3 como parte do material do instrutor)
 - ❌ Pré-popular `/data/` com datasets-âncora (mantém geração sob demanda; documentar tempo esperado nos exercícios)
 
+**Trilhas paralelas (independentes, não bloqueiam F2/F3):**
+- 📄 **Literature Alignment + Literature Review** ([Literature Alignment.md](Literature%20Alignment/Literature%20Alignment.md) e [Literature Review/](Literature%20Alignment/Literature%20Review/)) — alinhamento bibliográfico e manuscrito acadêmico revisando 888 papers. Refresheado em abril/2026 (metadata, duplicatas, bibliografia) e maio/2026 (mojibake fix em `manuscript.md`). **Não cabe atualização nesta programação F2/F3** — se houver mudança substantiva, fica em commits separados.
+- 📊 **CURRICULUM_FAPESP_ALIGNMENT_REPORT.md** — alinhamento com projeto FAPESP (98/100). Escopo é prontidão para pesquisa, não para uso por instrutores. Mantido intocado.
+
 ---
 
 ## 👨‍🏫 F3 — Material do instrutor
