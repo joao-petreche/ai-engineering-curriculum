@@ -21,6 +21,14 @@
 ## 🚀 Quick Start
 **👉 [START HERE: Scientific_AI_Engineering_Curriculum.md](Scientific_AI_Engineering_Curriculum.md)** - Complete 12-month program guide (English, 50 pages)
 
+**📘 Reference Guide:** [Science AI Engineering/docs/guia_referencia_completo.md](Science%20AI%20Engineering/docs/guia_referencia_completo.md) - Complete workflows, phase diagrams, and technical glossary (Portuguese)
+
+### ⚙️ Environment Setup (Windows PowerShell)
+
+- **Automated setup script:** [setup_env.ps1](setup_env.ps1)
+- **What it does:** validates Python 3.10.x, creates/updates `.venv`, installs dependencies from `requirements.txt`, and activates the virtual environment.
+- **Run:** `./setup_env.ps1`
+
 📊 **For FAPESP Research Project:** Review [CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](CURRICULUM_FAPESP_ALIGNMENT_REPORT.md) - Validation that curriculum is 98% sufficient for 48-month research execution
 
 ## ⚡ Bootcamp Express: 1-Week Prep
@@ -57,6 +65,7 @@ A **production-ready, open-source curriculum** for advanced training in Scientif
 ### 📚 Documentation
 
 - **[Scientific_AI_Engineering_Curriculum.md](Scientific_AI_Engineering_Curriculum.md)** - ⭐ **START HERE** - Complete 12-month master program (English, 50 pages)
+- **[Science AI Engineering/docs/guia_referencia_completo.md](Science%20AI%20Engineering/docs/guia_referencia_completo.md)** - Reference guide with architecture, workflow diagrams, and consolidated glossary (Portuguese)
 - **[CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](CURRICULUM_FAPESP_ALIGNMENT_REPORT.md)** - 48-month FAPESP research project alignment (98/100 score)
 - **[STUDENT_PROFILE.md](STUDENT_PROFILE.md)** - Readiness assessment with 15-question quiz
 - **[PREREQUISITES.md](PREREQUISITES.md)** - Detailed technical requirements with roadmaps
