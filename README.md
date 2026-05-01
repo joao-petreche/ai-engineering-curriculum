@@ -31,7 +31,37 @@
 - **What it does:** validates Python 3.10.x, creates/updates `.venv`, installs dependencies from `requirements.txt`, and activates the virtual environment.
 - **Run:** `./setup_env.ps1`
 
+### 🌐 Híbrido: Google Colab + VS Code
+
+Para simulações pesadas de EnergyPlus sem consumir recursos locais do Codespace:
+
+- **Notebook:** [EnergyPlus_API_Colab.ipynb](EnergyPlus_API_Colab.ipynb)
+- **Workflow:** Execute o kernel remoto do Colab diretamente dentro do VS Code usando a extensão oficial.
+- **Vantagem:** Instalação automatizada do EnergyPlus v25.1.0 na VM do Google e pipeline otimizado para processamento paralelo de múltiplos arquivos `.idf`.
+- **Requisito:** Conta Google ativa com acesso ao Colab.
+
 📊 **For FAPESP Research Project:** Review [CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](CURRICULUM_FAPESP_ALIGNMENT_REPORT.md) - Validation that curriculum is 98% sufficient for 48-month research execution
+
+## 🌡️ EnergyPlus & Cloud Integration
+
+O currículo agora suporta execução em ambiente de nuvem híbrida, otimizando o fluxo de **Scientific AI Engineering**.
+
+### Fluxo de Simulação Automatizado
+
+O notebook `EnergyPlus_API_Colab.ipynb` implementa o ciclo completo de simulação:
+
+1. **Instalação On-the-fly**: Configuração automática do EnergyPlus v25.1.0 e bibliotecas X11 na VM Linux.
+2. **Stage-In**: Download dinâmico de arquivos `.idf` e `.epw` do Google Cloud Storage (GCS).
+3. **API Python**: Execução via `pyenergyplus` permitindo controle em tempo real.
+4. **Stage-Out**: Upload automático de resultados (eso, htm, csv) para buckets versionados com timestamp.
+
+### Como configurar a Extensão Colab no Codespace
+
+1. Instale a extensão **"Google Colab"** no VS Code dentro do seu Codespace.
+2. Faça login em [colab.research.google.com](https://colab.research.google.com) no seu navegador.
+3. No VS Code, abra o arquivo `EnergyPlus_API_Colab.ipynb`.
+4. Clique em **"Select Kernel"** (Canto superior direito) > **"Existing Jupyter Server"** ou selecione o kernel remoto do Colab detectado.
+5. A autenticação GCP será herdada da sua sessão do navegador.
 
 ## ⚡ Bootcamp Express: 1-Week Prep
 Intensive 1-week leveling program to set up infrastructure (Windows/Python/EnergyPlus) and master core skills (Git, Pandas, Cloud) required for Phase 0.
@@ -315,7 +345,7 @@ Months 7-12: SCALING + EXPANSION
 | Month | Topic | Status | Location |
 |-------|-------|--------|----------|
 | 0 | Infrastructure Setup | ✅ | [Exercicios_Fase_0_Infraestrutura.md](Science%20AI%20Engineering/Exercicios_Fase_0_Infraestrutura.md) |
-| 1 | EnergyPlus | ✅ | [Exercicios_Mes_1_EnergyPlus.md](Science%20AI%20Engineering/Exercicios_Mes_1_EnergyPlus.md) |
+| 1 | EnergyPlus | ✅ | [EnergyPlus_API_Colab.ipynb](EnergyPlus_API_Colab.ipynb) & [Exercicios_Mes_1_EnergyPlus.md](Science%20AI%20Engineering/Exercicios_Mes_1_EnergyPlus.md) |
 | 2 | Software Engineering | ✅ | [Exercicios_Mes_2_Engenharia_Software.md](Science%20AI%20Engineering/Exercicios_Mes_2_Engenharia_Software.md) |
 | 3 | Big Data | ✅ | [Exercicios_Mes_3_Big_Data.md](Science%20AI%20Engineering/Exercicios_Mes_3_Big_Data.md) |
 | 4 | PIML & Surrogates | ✅ | [Exercicios_Mes_4_PIML_Surrogates.md](Science%20AI%20Engineering/Exercicios_Mes_4_PIML_Surrogates.md) |
