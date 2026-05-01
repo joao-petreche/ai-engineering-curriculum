@@ -2,7 +2,8 @@
 
 **Related Context:** Integration of Machine Learning and Physics-Informed ML in Building Performance Simulation
 **Document:** Scientific Foundation Report (Phase 0)
-**Date:** January 2026
+**Original date:** January 2026
+**Last reviewed:** May 2026 (content stable; the companion Literature Review manuscript package in [Literature Review/](Literature%20Review/) was refreshed in April 2026 — metadata sync, duplicate cleanup, bibliography normalization, mojibake cleanup)
 
 ---
 
@@ -36,6 +37,10 @@ Below, we correlate the training modules with the bibliographic references that 
 *   **Why PIML?** Purely data-driven models (*black-box*) tend to violate physical laws. The curriculum explicitly teaches the implementation of *Physics-Informed Loss Functions*, as reviewed by **Jiang, Z. X., et al. (2025)**. This approach penalizes thermodynamic violations during neural network training.
 *   **Physical Consistency:** The implementation of *Constraints* (Month 7) follows the guidelines of **Di Natale et al. (2022)**, ensuring that model predictions respect energy conservation, which is fundamental for the scientific acceptance of results.
 *   **Data Efficiency:** The use of *Physics-Constrained Deep Learning* (**Drgoňa et al., 2021**) is taught as a method to reduce the need for training data by 30-50%, accelerating the experimental phase.
+*   **PI-GCN for Data-Efficient Fluid-Heat Simulation:** **Peng et al. (2023)** demonstrate that a Physics-Informed Graph Convolutional Neural Network (PI-GCN) accurately predicts fluid flow and heat convection fields with as few as 20 training samples — a benchmark that strongly supports Month 4's data efficiency argument: physics-informed architectures can drastically reduce the number of EnergyPlus simulations required to build reliable surrogates.
+*   **PI-GNN for Multi-Zone Thermal Modeling:** **Yang et al. (2024)** demonstrate that Physics-Constrained Graph Neural Networks for building thermal dynamics achieve accuracy improvements of 17–35% over standard MLPs by encoding zone topology and energy balance constraints directly into the architecture, providing the empirical foundation for graph-based PIML in Month 4.
+*   **HVAC Network Graph Modeling:** **Li et al. (2024)** extend graph-based PIML to central air conditioning systems, modeling VAV terminals, AHUs and ductwork as nodes and edges derived from design information. This approach is directly relevant to Month 6 (Co-Simulation), enabling structured representation of HVAC topology for surrogate-based optimization.
+*   **Safety in PIML:** **Drgoňa (2025)** synthesizes recent advances in safe physics-informed machine learning for dynamics and control, providing the methodological foundation for Month 7's anti-hallucination framework with hard constraint enforcement (vs. soft loss-based penalties only).
 
 ### 2.4. Generative AI and Agentic AI (Month 5, 6 and 9)
 *The frontier of cognitive automation.*
@@ -43,12 +48,19 @@ Below, we correlate the training modules with the bibliographic references that 
 *   **Automation via LLMs:** Training in *Prompt Engineering* and *Fine-Tuning* (Month 5) prepares the team to implement agents that translate natural language into simulation models. This approach is pioneering and based on **Zhang et al. (2025a)** and **Zhao et al. (2025)**, who demonstrate the viability of *Text-to-EnergyPlus*.
 *   **Efficient Fine-Tuning:** The use of techniques like LoRA (Low-Rank Adaptation) in the curriculum is directly supported by **Jiang, G., et al. (2025b)**, who proved the efficiency of this method for adapting LLMs to complex energy modeling cases.
 *   **RAG (Retrieval-Augmented Generation):** The integration of normative bases (e.g., NBR 15.575) via RAG (Month 6) follows the trend of AI-assisted expert systems, such as the *BIM-GPT* proposed by **Fernandes et al. (2024)**, which achieved 94% success in interactions with BIM models.
+*   **Physics-Informed LLMs for HVAC:** **Subin et al. (2025)** demonstrate that physics-informed large language models can perform HVAC anomaly detection with autonomous rule generation, bridging Month 5 (LLM methods) and Month 7 (physics compliance) by using LLMs to derive and verify physical constraints rather than producing free-form predictions vulnerable to thermodynamic violations.
 
 ### 2.5. Optimization and Calibration (Month 8 and 11)
 *Closing the loop between simulation and reality.*
 
 *   **Multi-Objective Optimization:** The use of genetic algorithms and Bayesian optimization (Optuna) in Month 8 is validated by **Markarian et al. (2024)**, who reported a 1,266x acceleration in optimizations using ML *surrogates* compared to direct simulation.
 *   **Uncertainty and Calibration:** The emphasis on sensitivity analysis and uncertainty (Month 11) responds to the warning by **Tian (2024)** regarding the failure of deterministic models to capture real operational variability.
+
+### 2.6. Federated Learning and Distributed Optimization (Month 10)
+*Scaling AI to multi-site building networks without centralizing data.*
+
+*   **Heuristic Federated Learning for Households:** **Toderean et al. (2025)** apply federated learning with adaptive hyperparameter tuning to residential energy prediction across heterogeneous household nodes (*Scientific Reports*), demonstrating that heuristic aggregation strategies achieve accuracy comparable to centralized training while preserving data privacy — filling the building-specific federated case that Month 10 previously lacked.
+*   **Federated Accelerated Deep Reinforcement Learning for HVAC:** **Xia et al. (2025)** present a federated accelerated DRL framework for multi-zone HVAC control in commercial buildings (*IEEE Transactions on Smart Grid*), showing that federated agents achieve near-optimal energy savings without sharing raw operational data. This complements Month 10 with a concrete DRL-based distributed case aligned with the capstone's multi-site optimization scenario.
 
 ---
 
@@ -66,6 +78,9 @@ Below, we correlate the training modules with the bibliographic references that 
 | **Rapid Optimization** | Markarian et al. (2024) | Month 8 | Real-time optimization via Surrogates. |
 | **Tropical Validation** | Wang et al. (2025) | Month 3, 7, 12 | Critical gap in global literature. |
 | **Uncertainty Analysis** | Tian (2024) | Month 11 | Robustness against real variability. |
+| **PI-GCN Data Efficiency** | Peng et al. (2023) | Month 4 | 20-sample PIML benchmark for surrogates. |
+| **Federated Learning (Buildings)** | Toderean et al. (2025) | Month 10 | Building-specific federated energy management. |
+| **Federated DRL for HVAC** | Xia et al. (2025) | Month 10 | Distributed RL for multi-site HVAC control. |
 
 ---
 
@@ -81,10 +96,12 @@ The references below constitute the mandatory bibliography for the theoretical g
 * **CHAKRABORTY, D.; ELZARKA, H.** Advanced machine learning techniques for building performance simulation: a comparative analysis. **Journal of Building Performance Simulation**, 2019. DOI: [10.1080/19401493.2018.1498538](https://doi.org/10.1080/19401493.2018.1498538).
 * **DI NATALE, L.; SVETOZAREVIC, B.; HEER, P.; JONES, C. N.** Physically Consistent Neural Networks for building thermal modeling: Theory and analysis. **Applied Energy**, v. 325, p. 119806, 2022. DOI: [10.1016/j.apenergy.2022.119806](https://doi.org/10.1016/j.apenergy.2022.119806).
 * **DRGOŇA, J.; TUOR, A. R.; CHANDAN, V.; VRABIE, D. L.** Physics-constrained deep learning of multi-zone building thermal dynamics. **Energy and Buildings**, v. 243, p. 110992, 2021. DOI: [10.1016/j.enbuild.2021.110992](https://doi.org/10.1016/j.enbuild.2021.110992).
+* **DRGOŇA, J.** Safe physics-informed machine learning for dynamics and control. **arXiv preprint**, 2025. DOI: [10.48550/ARXIV.2504.12952](https://doi.org/10.48550/ARXIV.2504.12952).
 * **ELSAYED, M.; SHULTZ, J.; KURTZ, J.** User-friendly AI-driven automation for rapid building energy model generation. **Energy and Buildings**, v. 345, p. 116092, 2025. DOI: [10.1016/j.enbuild.2025.116092](https://doi.org/10.1016/j.enbuild.2025.116092).
 * **FERNANDES, D.; GARG, S.; NIKKEL, M.; GUVEN, G.** A GPT-Powered Assistant for Real-Time Interaction with Building Information Models. **Buildings**, v. 14, n. 8, p. 2499, 2024. DOI: [10.3390/buildings14082499](https://doi.org/10.3390/buildings14082499).
 * **FORTH, K.; BORRMANN, A.** Semantic enrichment for BIM-based building energy performance simulations using semantic textual similarity and fine-tuning multilingual LLM. **Journal of Building Engineering**, v. 95, p. 110312, 2024. DOI: [10.1016/j.jobe.2024.110312](https://doi.org/10.1016/j.jobe.2024.110312).
 * **FOROUZANDEH, N.; ZOMORODIAN, Z. S.; SHAGHAGHIAN, Z.; TAHSILDOOST, M.** Room energy demand and thermal comfort predictions in early stages of design based on the Machine Learning methods. **Intelligent Buildings International**, 2023. DOI: [10.1080/17508975.2022.2049190](https://doi.org/10.1080/17508975.2022.2049190).
+* **LI, A.; ZHANG, J.; XIAO, F.; FAN, C.; YU, Y.; CHEN, Z.** Design Information-Assisted Graph Neural Network for Modeling Central Air Conditioning Systems. **Advanced Engineering Informatics**, 2024. DOI: [10.1016/j.aei.2024.102379](https://doi.org/10.1016/j.aei.2024.102379).
 * **LI, H.; XU, Y.; HONG, T.** EnergyPlus-MCP: A model-context-protocol server for ai-driven building energy modeling. **SoftwareX**, v. 32, p. 102367, 2025. DOI: [10.1016/j.softx.2025.102367](https://doi.org/10.1016/j.softx.2025.102367).
 * **HONG, T.; ZHANG, L.** AI for building energy modeling: A transformation. **Building Simulation**, v. 18, n. 9, p. 2219-2225, 2025. DOI: [10.1007/s12273-025-1329-4](https://doi.org/10.1007/s12273-025-1329-4).
 * **JIANG, G.; CHEN, J.** Efficient fine-tuning of large language models for automated building energy modeling in complex cases. **Automation in Construction**, v. 175, p. 106223, 2025. DOI: [10.1016/j.autcon.2025.106223](https://doi.org/10.1016/j.autcon.2025.106223).
@@ -99,12 +116,17 @@ The references below constitute the mandatory bibliography for the theoretical g
 * **MARKARIAN, E.; QIBLAWI, S.; KRISHNAN, S.; AZAR, E.** Informing building retrofits at low computational costs: a multi-objective optimisation using machine learning surrogates of building performance simulation models. **Journal of Building Performance Simulation**, 2024. DOI: [10.1080/19401493.2024.2384487](https://doi.org/10.1080/19401493.2024.2384487).
 * **MICHALAKOPOULOS, V.; PELEKIS, S.; KORMPAKIS, G.; KARAKOLIS, V.; MOUZAKITIS, S.; ASKOUNIS, D.** Data-driven building energy efficiency prediction using physics-informed neural networks. In: **2024 IEEE Conference on Technologies for Sustainability (SusTech)**, p. 84-91, 2024. DOI: [10.1109/SusTech60925.2024.10553513](https://doi.org/10.1109/SusTech60925.2024.10553513).
 * **OSEI-OWUSU, J.; BAHADORI-JAHROMI, A.; AMIRKHANI, S.; GODFREY, P.** Automating Building Energy Performance Simulation with EnergyPlus Using Modular JSON–Python Workflows: A Case Study of the Hilton Watford Hotel. **Sustainability**, v. 17, n. 22, p. 10317, 2025. DOI: [10.3390/su172210317](https://doi.org/10.3390/su172210317).
+* **PENG, J.-Z.; HUA, Y.; LI, Y.-B.; CHEN, Z.-H.; WU, W.-T.; AUBRY, N.** Physics-Informed Graph Convolutional Neural Network for Modeling Fluid Flow and Heat Convection. **Physics of Fluids**, 2023. DOI: [10.1063/5.0161114](https://doi.org/10.1063/5.0161114).
 * **RENDE, A. N. N.; YILMAZ, T.; ULUSOY, Ö.** Negotiating Comfort: Simulating Personality-Driven LLM Agents in Shared Residential Social Networks. **arXiv preprint**, 2025. DOI: [10.48550/ARXIV.2507.09657](https://doi.org/10.48550/ARXIV.2507.09657).
 * **SHAO, X.; LIU, Z.; ZHANG, S.; ZHAO, Z.; HU, C.** PIGNN-CFD: A physics-informed graph neural network for rapid predicting urban wind field defined on unstructured mesh. **Building and Environment**, v. 232, p. 110056, 2023. DOI: [10.1016/j.buildenv.2023.110056](https://doi.org/10.1016/j.buildenv.2023.110056).
 * **SONG, J.; YOON, S.** Ontology-assisted GPT-based building performance simulation and assessment: Implementation of multizone airflow simulation. **Energy and Buildings**, v. 325, p. 114983, 2024. DOI: [10.1016/j.enbuild.2024.114983](https://doi.org/10.1016/j.enbuild.2024.114983).
+* **SUBIN, P.; PARK, J.; KIM, H.** Physics-informed large language models for HVAC anomaly detection with autonomous rule generation. **arXiv preprint**, 2025. DOI: [10.48550/ARXIV.2510.17146](https://doi.org/10.48550/ARXIV.2510.17146).
 * **TIAN, W.** Towards advanced uncertainty and sensitivity analysis of building energy performance using machine learning techniques. **Journal of Building Performance Simulation**, v. 17, n. 6, p. 655-662, 2024. DOI: [10.1080/19401493.2024.2387071](https://doi.org/10.1080/19401493.2024.2387071).
+* **TODEREAN, L.; DAIAN, M.; CIOARA, T.; ANGHEL, I.; MICHALAKOPOULOS, V.; SARANTINOPOULOS, E.; SARMAS, E.** Heuristic Based Federated Learning With Adaptive Hyperparameter Tuning for Households Energy Prediction. **Scientific Reports**, 2025. DOI: [10.1038/s41598-025-96443-3](https://doi.org/10.1038/s41598-025-96443-3).
 * **VILLANO, F.; MAURO, G. M.; PEDACE, A.** A Review on Machine/Deep Learning Techniques Applied to Building Energy Simulation, Optimization and Management. **Thermo**, 2024. DOI: [10.3390/thermo4010008](https://doi.org/10.3390/thermo4010008).
 * **WANG, D. Y.; DONG, Q.; SUN, C.** Evaluating the adaptation potential and retrofitting effectiveness of existing residential buildings in severe cold regions of China under climate change. **Building and Environment**, 2025. DOI: [10.1016/j.buildenv.2025.112982](https://doi.org/10.1016/j.buildenv.2025.112982).
+* **XIA, Y.; WANG, X.; YIN, X.; BO, W.; WANG, L.; LI, S.; LI, K.** Federated Accelerated Deep Reinforcement Learning for Multi-Zone HVAC Control in Commercial Buildings. **IEEE Transactions on Smart Grid**, 2025. DOI: [10.1109/tsg.2024.3524756](https://doi.org/10.1109/tsg.2024.3524756).
+* **YANG, Z.; GAIDHANE, A. D.; DRGOŇA, J.; CHANDAN, V.; HALAPPANAVAR, M. M.; LIU, F.; CAO, Y.** Physics-Constrained Graph Modeling for Building Thermal Dynamics. **Energy and AI**, 2024. DOI: [10.1016/j.egyai.2024.100346](https://doi.org/10.1016/j.egyai.2024.100346).
 * **YANG, Z.; WU, P.** Research on intelligent generation of structural demolition suggestions based on multi-model collaboration. **arXiv preprint**, 2025. DOI: [10.48550/ARXIV.2508.15820](https://doi.org/10.48550/ARXIV.2508.15820).
 * **ZHAN, D.; RAYEGAN, S.; QIN, S.; WANG, L.; HASSAN, I. G.** Leveraging large language models to enhance urban building energy modeling: A case study. 2025. DOI: [10.5194/icuc12-542](https://doi.org/10.5194/icuc12-542).
 * **ZHAO, K.; DIENG, O.; LEE, S.** Poster Abstract: Text-To-EnergyPlus: Translating Natural Language into Building Energy Simulation. In: **Proceedings of the 12th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation**, p. 326-327, 2025. DOI: [10.1145/3736425.3772120](https://doi.org/10.1145/3736425.3772120).
