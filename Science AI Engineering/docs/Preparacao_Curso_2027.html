@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scientific AI Engineering — Preparação 2027</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --blue:    #1a3a5c;
+    --blue2:   #2563a8;
+    --accent:  #e8a020;
+    --green:   #1e7a4a;
+    --red:     #b91c1c;
+    --yellow:  #c47a00;
+    --light:   #ffffff;
+    --text:    #1e293b;
+    --muted:   #64748b;
+    --border:  #cbd5e1;
+    --white:   #ffffff;
+  }
+
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #0f1e30;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 16px;
+  }
+
+  /* ── Deck container ── */
+  #deck {
+    position: relative;
+    width: min(960px, 100%);
+    aspect-ratio: 16/9;
+  }
+
+  .slide {
+    display: none;
+    position: absolute;
+    inset: 0;
+    background: #e8ecf2;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 12px 48px rgba(0,0,0,.5);
+    flex-direction: column;
+  }
+  .slide.active { display: flex; }
+
+  /* ── Slide header bar ── */
+  .slide-header {
+    background: var(--blue);
+    color: var(--white);
+    padding: 18px 32px 14px;
+    flex-shrink: 0;
+  }
+  /* per-slide header colors */
+  .hdr-s2  { background: linear-gradient(135deg, #1a3a5c 0%, #5b7a99 55%, #1e5060 100%); }
+  .hdr-s3  { background: linear-gradient(135deg, #1e4d7a 0%, #5a8ab0 55%, #1a3a5c 100%); }
+  .hdr-s4  { background: linear-gradient(135deg, #7c1e1e 0%, #b06060 55%, #5c1a1a 100%); }
+  .hdr-s5  { background: linear-gradient(135deg, #1e5c3a 0%, #5a9970 55%, #1a4a2e 100%); }
+  .hdr-s6  { background: linear-gradient(135deg, #2d3a7c 0%, #6b7ab0 55%, #1e2d6a 100%); }
+  .hdr-s7  { background: linear-gradient(135deg, #3b2a7c 0%, #7b6ab0 55%, #2a1e6a 100%); }
+  .hdr-s8  { background: linear-gradient(135deg, #1a5060 0%, #5a8a99 55%, #1a3a50 100%); }
+  .hdr-s9  { background: linear-gradient(135deg, #5c3a1a 0%, #997a5a 55%, #4a2a10 100%); }
+  .hdr-s10 { background: linear-gradient(135deg, #1a3a5c 0%, #5b7a99 55%, #1e5060 100%); }
+  .slide-header .num {
+    font-size: .72em;
+    opacity: .65;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    margin-bottom: 2px;
+  }
+  .slide-header h1 {
+    font-size: 1.35em;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .slide-header .sub {
+    font-size: .82em;
+    opacity: .8;
+    margin-top: 4px;
+  }
+  .accent-bar {
+    height: 4px;
+    background: var(--accent);
+  }
+
+  /* ── Slide body ── */
+  .slide-body {
+    flex: 1;
+    padding: 22px 32px 18px;
+    overflow: auto;
+    color: var(--text);
+    font-size: .86em;
+    line-height: 1.55;
+    background: #e8ecf2;
+  }
+
+  /* ── Typography ── */
+  strong { color: var(--blue2); font-weight: 600; }
+  em     { color: var(--muted); font-style: normal; font-size: .92em; }
+
+  ul { padding-left: 1.2em; }
+  ul li { margin-bottom: .35em; }
+  ul li::marker { color: var(--accent); }
+
+  .bullet-group { margin-bottom: .9em; }
+  .bullet-group > .label {
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: .2em;
+    display: block;
+  }
+
+  /* ── Callout box ── */
+  .callout {
+    background: var(--light);
+    border-left: 4px solid var(--blue2);
+    border-radius: 4px;
+    padding: 10px 14px;
+    margin: 8px 0;
+    font-size: .85em;
+  }
+  .callout.warn  { border-color: var(--yellow); background: #fffbeb; }
+  .callout.ok    { border-color: var(--green);  background: #f0fdf4; }
+  .callout.alert { border-color: var(--red);    background: #fef2f2; }
+
+  /* ── Metrics pills ── */
+  .metrics { display: flex; gap: 14px; flex-wrap: wrap; margin: 10px 0; }
+  .metric {
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 18px;
+    text-align: center;
+    min-width: 110px;
+    flex: 1;
+  }
+  .metric .val { font-size: 1.5em; font-weight: 800; color: var(--blue); line-height: 1; }
+  .metric .lbl { font-size: .72em; color: var(--muted); margin-top: 3px; }
+
+  /* ── Gap pills row ── */
+  .gap-row { display: flex; gap: 10px; margin: 10px 0; }
+  .gap-pill {
+    flex: 1;
+    border-radius: 8px;
+    padding: 10px 12px;
+    text-align: center;
+    font-weight: 700;
+    font-size: .9em;
+  }
+  .gap-pill.ok    { background: #d1fae5; color: #065f46; border: 1.5px solid #34d399; }
+  .gap-pill.warn  { background: #fef3c7; color: #92400e; border: 1.5px solid #f59e0b; }
+  .gap-pill.alert { background: #fee2e2; color: #991b1b; border: 1.5px solid #f87171; }
+  .gap-pill .sub  { font-size: .75em; font-weight: 400; display: block; margin-top: 2px; }
+
+  /* ── Tables ── */
+  table { width: 100%; border-collapse: collapse; font-size: .82em; margin: 8px 0; }
+  th { background: var(--blue); color: var(--white); padding: 7px 10px; text-align: left; font-weight: 600; }
+  td { padding: 6px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:nth-child(even) td { background: var(--light); }
+  .tag-high   { background:#fee2e2; color:#991b1b; border-radius:4px; padding:1px 6px; font-size:.78em; font-weight:600; }
+  .tag-med    { background:#fef3c7; color:#92400e; border-radius:4px; padding:1px 6px; font-size:.78em; font-weight:600; }
+  .tag-low    { background:#d1fae5; color:#065f46; border-radius:4px; padding:1px 6px; font-size:.78em; font-weight:600; }
+
+  /* ── Two-column layout ── */
+  .cols { display: grid; gap: 18px; }
+  .cols.two  { grid-template-columns: 1fr 1fr; }
+  .cols.three{ grid-template-columns: 1fr 1fr 1fr; }
+  .col-card {
+    background: var(--light);
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    padding: 12px 14px;
+  }
+  .col-card h3 { color: var(--blue); font-size: .85em; margin-bottom: 6px; }
+
+  /* ── Timeline ── */
+  .timeline { display: flex; align-items: stretch; gap: 0; margin: 12px 0; overflow: hidden; border-radius: 6px; }
+  .tl-phase {
+    flex: 1;
+    padding: 10px 10px 8px;
+    font-size: .76em;
+    text-align: center;
+    position: relative;
+  }
+  .tl-phase::after {
+    content: '▶';
+    position: absolute;
+    right: -7px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    font-size: .9em;
+  }
+  .tl-phase:last-child::after { display: none; }
+  .tl-phase .tl-label { font-weight: 700; font-size: 1em; display: block; margin-bottom: 3px; }
+  .tl-phase .tl-date  { font-size: .85em; opacity: .8; display: block; }
+  .tl-phase .tl-note  { font-size: .8em;  margin-top: 4px; opacity: .85; }
+  .tl-done    { background: #1e7a4a; color: #fff; }
+  .tl-active  { background: #2563a8; color: #fff; }
+  .tl-next    { background: #6366f1; color: #fff; }
+  .tl-future  { background: #64748b; color: #fff; }
+  .tl-launch  { background: #e8a020; color: #fff; }
+
+  /* ── Decision boxes ── */
+  .decision {
+    background: var(--light);
+    border: 1.5px solid var(--blue2);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+  }
+  .decision h3 { color: var(--blue); font-size: .88em; margin-bottom: 6px; }
+  .decision blockquote {
+    color: var(--text);
+    font-size: .84em;
+    border-left: 3px solid var(--accent);
+    padding-left: 10px;
+    margin: 0;
+  }
+
+  /* ── Slide 1 special ── */
+  .title-slide {
+    background: linear-gradient(135deg, #1a3a5c 0%, #5b7a99 55%, #1e5060 100%);
+    color: var(--white);
+  }
+  .ts-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 40px 16px;
+    gap: 12px;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .ts-wrap .num { font-size: .72em; opacity: .6; text-transform: uppercase; letter-spacing: .08em; }
+  .ts-wrap h1 { font-size: 1.5em; font-weight: 700; line-height: 1.2; color: var(--white); }
+  .ts-wrap .sub { font-size: .88em; opacity: .8; }
+  .ts-researchers { display: flex; gap: 14px; }
+  .researcher {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 6px;
+    padding: 10px 16px;
+    color: var(--white);
+    font-size: .8em;
+    flex: 1;
+    line-height: 1.5;
+  }
+  .researcher .role { font-weight: 700; color: var(--accent); font-size: .9em; display: block; margin-bottom: 3px; }
+  .ts-message {
+    background: rgba(255,255,255,.07);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    padding: 10px 16px;
+    font-size: .82em;
+    color: rgba(255,255,255,.85);
+    line-height: 1.5;
+  }
+  .ts-message strong { color: var(--accent); }
+
+  /* ── Controls ── */
+  #controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+    color: #94a3b8;
+    font-size: .85em;
+  }
+  #controls button {
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.2);
+    color: #e2e8f0;
+    border-radius: 6px;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: .9em;
+    transition: background .15s;
+  }
+  #controls button:hover { background: rgba(255,255,255,.2); }
+  #controls button:disabled { opacity: .35; cursor: default; }
+  #counter { min-width: 60px; text-align: center; }
+
+  /* ── Progress bar ── */
+  #progress {
+    width: min(960px, 100%);
+    height: 3px;
+    background: rgba(255,255,255,.1);
+    border-radius: 2px;
+    margin-top: 8px;
+  }
+  #progress-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: width .25s;
+  }
+
+  /* ── Responsive scale ── */
+  @media (max-width: 680px) {
+    .slide-body { font-size: .78em; padding: 14px 18px 12px; }
+    .slide-header h1 { font-size: 1.05em; }
+    .metrics { gap: 8px; }
+    .cols.two, .cols.three { grid-template-columns: 1fr; }
+    .gap-row { flex-direction: column; }
+    .timeline { flex-direction: column; border-radius: 6px; }
+    .tl-phase::after { display: none; }
+  }
+  @media print {
+    @page { size: 16in 9in; margin: 0; }
+    body { background: none; padding: 0; display: block; min-height: auto; }
+    #deck { width: 100%; height: auto; aspect-ratio: auto; box-shadow: none; position: static; }
+    .slide {
+      display: flex !important;
+      position: relative !important;
+      width: 100vw;
+      height: 100vh;
+      page-break-after: always;
+      break-after: page;
+      box-shadow: none;
+      border-radius: 0;
+      inset: auto;
+    }
+    .controls { display: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div id="deck">
+
+  <!-- ══════════════════════════════════════ SLIDE 1 ══ -->
+  <div class="slide title-slide active">
+    <div class="ts-wrap">
+      <div class="num">Slide 1 / 10 &nbsp;·&nbsp; Apresentação executiva &nbsp;·&nbsp; 01 mai 2026</div>
+      <h1>Engenharia de IA Científica aplicada à Simulação Energética de Edifícios</h1>
+      <div class="sub">Plano Integrado de Preparação — Oferta 2027</div>
+      <div class="ts-researchers">
+        <div class="researcher">
+          <span class="role">Pesquisador BPS — Building Performance Simulation</span>
+          Validade física · EnergyPlus · PINNs / Physics-Informed ML · Calibração e validação de modelos · Conformidade energética (Energy Code Compliance)
+        </div>
+        <div class="researcher">
+          <span class="role">Pesquisador TI — TI &amp; Construção Civil</span>
+          Interoperabilidade BIM/BPS · Arquitetura de dados · MLOps (CI/CD, Model Registry, Monitoring) · Reprodutibilidade computacional · Operação acadêmica
+        </div>
+      </div>
+      <div class="ts-message">
+        <strong>Mensagem-chave:</strong>
+        Temos uma base técnica sólida. O desafio de 2026–2027 é transformá-la em curso operável — com qualidade técnica, didática e docente.
+      </div>
+    </div>
+    <div class="accent-bar"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════ SLIDE 2 ══ -->
+  <div class="slide">
+    <div class="slide-header hdr-s2">
+      <div class="num">Slide 2 / 10</div>
+      <h1>Por que este curso, por que agora</h1>
+    </div>
+    <div class="accent-bar"></div>
+    <div class="slide-body">
+      <div class="cols two">
+        <div>
+          <div class="callout">
+            <strong>Demanda de mercado</strong><br>
+            Eficiência energética, digitalização da construção e IA aplicada são exigências crescentes.
+            Cursos que integram <em>física de edificações + IA + operação em produção</em> são raros no mercado nacional.
+          </div>
+          <div class="callout ok" style="margin-top:10px;">
+            <strong>Oportunidade institucional</strong><br>
+            Perfil híbrido único: <em>Scientific Machine Learning + Engenharia de Software + Produção</em>, com capstone (projeto final integrador) validado por caso real — pronto para submissão em periódicos como <em>Building &amp; Environment</em> e <em>Energy and Buildings</em>.
+          </div>
+        </div>
+        <div>
+          <div class="col-card" style="margin-bottom:10px;">
+            <h3>3 diferenciais competitivos</h3>
+            <ul>
+              <li><strong>Física + IA integradas</strong> — PINNs e Surrogate Models, não apenas analytics genérico.</li>
+              <li><strong>Trilha ponta a ponta:</strong> pesquisa → engenharia de ML → operação em produção (MLOps).</li>
+              <li><strong>Método científico aplicado</strong> desde o mês 1 — aluno sai com portfólio publicável e rastreabilidade de experimentos (Experiment Tracking).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="callout" style="margin-top:6px;">
+        <strong>BIM + BPS:</strong> Building Information Modeling (modelo digital integrado do edifício) + Building Performance Simulation (simulação de desempenho energético/ambiental). A integração entre os dois, mediada por IA, é o núcleo diferencial do curso.
+      </div>
+      <div class="callout warn" style="margin-top:6px;">
+        <strong>🕐 Janela estratégica</strong><br>
+        Oferta 2027 é viável — <strong>se a preparação iniciar agora (mai/2026).</strong>
+        Atraso de 2 meses comprime a Fase 3 (capacitação docente) de forma irrecuperável.
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════ SLIDE 3 ══ -->
+  <div class="slide">
+    <div class="slide-header hdr-s3">
+      <div class="num">Slide 3 / 10</div>
+      <h1>Onde estamos: diagnóstico e maturidade</h1>
+      <div class="sub">Auditoria Abril/2026 — fonte de verdade institucional &nbsp;·&nbsp; <a href="https://docs.google.com/document/d/1ii-VQpTelxbCR9gO5lAE0ynvS7-4iEgiTQhCJDYIGqk" target="_blank" style="color:rgba(255,255,255,.85);text-decoration:underline;font-size:.85em;">Abrir documento completo ↗</a></div>
+    </div>
+    <div class="accent-bar"></div>
+    <div class="slide-body">
+      <div class="metrics">
+        <div class="metric"><div class="val">~8.0<span style="font-size:.55em">/10</span></div><div class="lbl">Score geral<br><em>era 7.2 em jan/2026</em></div></div>
+        <div class="metric"><div class="val">~75–80%</div><div class="lbl">Completude<br>de conteúdo</div></div>
+        <div class="metric"><div class="val">~45h</div><div class="lbl">Esforço técnico<br>residual</div></div>
+        <div class="metric"><div class="val">~40–80h</div><div class="lbl">Capacitação<br>docente (nova)</div></div>
+      </div>
+
+      <div class="gap-row">
+        <div class="gap-pill ok">8 / 20<span class="sub">✅ Resolvidos<br><em>validate_phase0, scripts M1, dataset M4, PIML M4, K-Fold, Vertex AI, Golden Dataset M7, requirements M11…</em></span></div>
+        <div class="gap-pill warn">6 / 20<span class="sub">⚠️ Parciais<br><em>GuardrailValidator (3/15 testes), CoSim sem E2E, hallucination detector 2/3 camadas, retry sem loop…</em></span></div>
+        <div class="gap-pill alert">6 / 20<span class="sub">🔴 Abertos<br><em>JSON 50 exemplos M5, requirements pinados, 4 physics validators M7, stragglers M10, conflict detection M11, runbook M12</em></span></div>
+      </div>
+
+      <div class="callout ok" style="margin-top:8px;">
+        <strong>Ponto positivo — evolução jan→abr/2026</strong><br>
+        Score geral: 7,2 → <strong>~8,0 / 10</strong>. Esforço residual: 257h → <strong>~45h</strong>. Gaps críticos abertos: 34 → <strong>6</strong>.<br>
+        8 dos 10 gaps P0 (prioridade máxima) estão fechados — a base técnica para o aluno está pronta.
+      </div>
+      <div class="callout warn" style="margin-top:8px;">
+        <strong>Conclusão do diagnóstico:</strong> o gargalo para 2027 não é mais o conteúdo técnico do aluno — é a <strong>preparação docente</strong> e a <strong>operacionalização didática.</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════ SLIDE 4 ══ -->
+  <div class="slide">
+    <div class="slide-header hdr-s4">
+      <div class="num">Slide 4 / 10</div>
+      <h1>O que ainda falta para ofertar em 2027</h1>
+    </div>
+    <div class="accent-bar"></div>
+    <div class="slide-body">
+      <div class="cols two">
+        <div>
+          <div class="col-card">
+            <h3>🔴 Pendências técnicas (~45h) — organizadas em 4 blocos de prioridade</h3>
+            <ul style="margin-top:6px;">
+              <li><strong>Bloco A — Quick-wins (~8h) — mai/jun:</strong> pinar versões em requirements.txt; gerar JSON 50 exemplos físicos (M5); retry 3× em batch; Exercício 2.0 pytest.</li>
+              <li style="margin-top:5px;"><strong>Bloco B — Robustez técnica (~19h) — jul/ago:</strong> suíte 15+ testes GuardrailValidator; 3 testes E2E CoSimulationManager; 3ª camada hallucination detector; 4 physics validators (balanço energético, 2ª lei, conservação massa).</li>
+              <li style="margin-top:5px;"><strong>Bloco C — Tópicos avançados M10–12 (~15h) — jul/ago:</strong> stragglers/FedAvg async (M10); conflict detection + threshold alerts (M11); operations runbook (M12).</li>
+              <li style="margin-top:5px;"><strong>Bloco D — Documentação fina (~3h) — mai/jun:</strong> guia direcionado de leitura do IDD PDF (~50 perguntas).</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="col-card">
+            <h3>⚠️ Capacitação docente — Instructor Enablement (~62h)</h3>
+            <p style="margin-bottom:6px;font-size:.88em;color:var(--muted);">Identificada na auditoria Abr/2026 — não existia no escopo original do projeto.</p>
+            <ul>
+              <li><strong>Guia do instrutor</strong> — objetivos pedagógicos, armadilhas e tempo aferido por mês (~20h).</li>
+              <li><strong>Gabaritos</strong> — referência cruzada exercício ↔ código-solução para todos os 12 meses (~12h).</li>
+              <li><strong>4 decks de slides de aula</strong> — Fase 0, Fase 1, Fase 2, Fase 3 (~12h).</li>
+              <li><strong>FAQ docente</strong> — 20+ perguntas com respostas estruturadas (~6h).</li>
+              <li><strong>Dry-run docente</strong> — mês-piloto cronometrado com professor externo, out/nov 2026 (~10h).</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════ SLIDE 5 ══ -->
+  <div class="slide">
+    <div class="slide-header hdr-s5">
+      <div class="num">Slide 5 / 10</div>
+      <h1>Modelo de co-liderança: as duas lentes necessárias</h1>
+    </div>
+    <div class="accent-bar"></div>
+    <div class="slide-body">
+      <div class="callout" style="margin-bottom:12px;">
+        <strong>Por que duas lideranças?</strong> O curso une física de edificações com engenharia de software e IA.
+        Uma área sem a outra produz conteúdo tecnicamente bom, mas inoperável na prática docente.
+      </div>
+      <div class="cols two">
+        <div class="col-card">
+          <h3>🏗 Pesquisador BPS — Building Performance Simulation</h3>
+          <ul style="margin-top:6px;">
+            <li>Validade física dos modelos e Gêmeos Digitais (Digital Twins)</li>
+            <li>Calibração e validação de simulações (Building Performance Simulation)</li>
+            <li>Conformidade energética (Energy Code Compliance — ASHRAE, ABNT, Procel Edifica)</li>
+            <li>Integridade científica e reprodutibilidade dos experimentos</li>
+          </ul>
+        </div>
+        <div class="col-card">
+          <h3>💻 Pesquisador TI — TI Construção Civil</h3>
+          <ul style="margin-top:6px;">
+            <li>Arquitetura de dados, pipelines e interoperabilidade BIM/BPS</li>
+            <li>Reprodutibilidade computacional (versionamento de dados, código e modelos)</li>
+            <li>MLOps — CI/CD, Model Registry, Experiment Tracking e Monitoramento Contínuo</li>
+            <li>Operação acadêmica, onboarding e suporte técnico ao aluno</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout ok" style="margin-top:10px;">
+        <strong>Decisões conjuntas obrigatórias:</strong> desenho pedagógico, critérios de avaliação, prontidão para oferta.
+        Nenhuma decisão curricular sem validação cruzada entre as duas lentes.
+      </div>
+      <div class="callout" style="margin-top:8px;">
+        <strong>Governança em operação:</strong> comitê bimestral (BPS + TI CC + coordenação pedagógica) com ciclo de melhoria contínua por turma — lições aprendidas → backlog → versionamento semestral do currículo (Living Curriculum). Alinhamento com padrões IBPSA e boas práticas de Scientific ML.
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════ SLIDE 6 ══ -->
+  <div class="slide">
+    <div class="slide-header hdr-s6">
+      <div class="num">Slide 6 / 10</div>
+      <h1>Arquitetura do curso — visão executiva</h1>
+      <div class="sub">12 meses · 3 blocos técnicos progressivos + capstone (projeto final integrador)</div>
+    </div>
+    <div class="accent-bar"></div>
+    <div class="slide-body">
+      <table style="margin-bottom:12px;">
+        <thead>
+          <tr><th>Bloco</th><th>Meses</th><th>Conteúdo principal</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1 — Fundamentos</strong></td>
+            <td>M0–M3</td>
+            <td>Infraestrutura, EnergyPlus, Big Data, Engenharia de Software</td>
+          </tr>
+          <tr>
+            <td><strong>2 — IA Aplicada</strong></td>
+            <td>M4–M6</td>
+            <td>PINNs / PIML (Redes Neurais com Restrições Físicas), Modelos Substitutos (Surrogate Models), Prompt Engineering, Co-simulação BPS+IA, Guardrails físicos</td>
+          </tr>
+          <tr>
+            <td><strong>3 — Produção Avançada</strong></td>
+            <td>M7–M12</td>
+            <td>Compliance físico, Otimização, Deploy, Aprendizado Federado, Analytics, <strong>Capstone</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="font-weight:700;color:var(--blue);margin-bottom:6px;">Trilhas transversais — presentes em todos os meses:</p>
+      <div class="cols three">
+        <div class="col-card"><h3>Trilha A</h3>Física e desempenho de edificações</div>
+        <div class="col-card"><h3>Trilha B</h3>Dados, interoperabilidade e engenharia de software</div>
+        <div class="col-card"><h3>Trilha C</h3>Governança de IA, validação, rastreabilidade e ética aplicada</div>
+      </div>
+
+      <div class="callout" style="margin-top:10px;">
+        <strong>Avaliação:</strong> contínua por evidência (código + experimentos rastreados); rubrica de dupla validação — mérito físico (BPS) + mérito computacional (ML Test Score); capstone com banca mista academia + indústria; resultado pronto para submissão científica.
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════ SLIDE 7 ══ -->
+  <div class="slide">
+    <div class="slide-header hdr-s7">
+      <div class="num">Slide 7 / 10</div>
+      <h1>Roadmap de preparação: maio/2026 → lançamento 2027</h1>
+      <div class="sub"><a href="https://docs.google.com/document/d/12VVjjcCZKGszizIa0MA3n1qI8-MfSGToksmZ_dzrLEY" target="_blank" style="color:rgba(255,255,255,.85);text-decoration:underline;font-size:.85em;">Cronograma detalhado semana-a-semana ↗</a></div>
+    </div>
+    <div class="accent-bar"></div>
+    <div class="slide-body">
+
+      <div class="timeline" style="margin-bottom:14px;">
+        <div class="tl-phase tl-done">
+          <span class="tl-label">F1 ✅</span>
+          <span class="tl-date">até 01/mai/2026</span>
+          <span class="tl-note">Currículo produzido</span>
+        </div>
+        <div class="tl-phase tl-active">
+          <span class="tl-label">F2 →</span>
+          <span class="tl-date">até 15/ago/2026</span>
+          <span class="tl-note">Student-ready</span>
+        </div>
+        <div class="tl-phase tl-next">
+          <span class="tl-label">F3</span>
+          <span class="tl-date">até 15/dez/2026</span>
+          <span class="tl-note">Instructor-ready</span>
+        </div>
+        <div class="tl-phase tl-launch">
+          <span class="tl-label">🚀 Lançamento</span>
+          <span class="tl-date">jan–jun/2027 (Q1/Q2)</span>
+          <span class="tl-note">Turma 2027</span>
+        </div>
+      </div>
+
+      <div class="cols two">
+        <div>
+          <p style="font-weight:700;color:var(--blue);margin-bottom:6px;">F2 — Repositório pronto para alunos</p>
+          <ul>
+            <li><strong>30/jun:</strong> Blocos A + D completos; Bloco B ~70%; ~25h investidas de ~78h disponíveis.</li>
+            <li><strong>15/ago ✅:</strong> Blocos B + C fechados; dry-run end-to-end realizado (M0→M12); kit de boas-vindas publicado.</li>
+          </ul>
+        </div>
+        <div>
+          <p style="font-weight:700;color:var(--blue);margin-bottom:6px;">F3 — Material pronto para instrutores (ondas mensais)</p>
+          <ul>
+            <li><strong>15/set:</strong> guia do instrutor (Fase 0 → M9) + cronograma de aplicação (presencial e assíncrono).</li>
+              <li><strong>15/out:</strong> guia M10–M12 + gabaritos 12 meses + FAQ 20+ perguntas + convite ao professor-piloto.</li>
+              <li><strong>15/nov:</strong> 4 decks de slides + iteração com feedback do professor-piloto.</li>
+              <li><strong>15/dez ✅:</strong> dry-run docente cronometrado + roteiro de onboarding + kit do instrutor consolidado.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout ok" style="margin-top:10px;">
+        <strong>Lançamento (jan–jun/2027):</strong> onboarding dos professores, ajuste fino pré-oferta e abertura da primeira turma. <em>Q1 = jan–mar; Q2 = abr–jun.</em>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════ SLIDE 8 ══ -->
+  <div class="slide">
+    <div class="slide-header hdr-s8">
+      <div class="num">Slide 8 / 10</div>
+      <h1>Plano de trabalho e distribuição de esforço</h1>
+    </div>
+    <div class="accent-bar"></div>
+    <div class="slide-body">
+      <table style="margin-bottom:10px;">
+        <thead>
+          <tr><th>Período</th><th>Dispon.</th><th>Foco</th><th>Líder</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mai–Jun/2026</td>
+            <td>3h/sem <em>(~26h)</em></td>
+            <td>Blocos A + D: quick-wins técnicos + documentação fina</td>
+            <td>TI</td>
+          </tr>
+          <tr>
+            <td>Jul–15/Ago/2026</td>
+            <td>8h/sem <em>(~52h)</em></td>
+            <td>Blocos B + C: robustez + tópicos M10–12 + dry-run M0→capstone (~22h)</td>
+            <td>BPS + TI</td>
+          </tr>
+          <tr>
+            <td>16/Ago–15/Dez/2026</td>
+            <td>4h/sem <em>(~70h)</em></td>
+            <td>Instructor Enablement: guia · gabaritos · FAQ · 4 decks · dry-run docente</td>
+            <td>BPS + TI</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="cols two">
+        <div class="callout ok">
+          <strong>Orçamento F2</strong> — ~78h disponível vs. ~64h estimado <em>(+14h de folga)</em><br>
+          Entregável: repositório student-ready + kit de boas-vindas + dry-run concluído.
+        </div>
+        <div class="callout ok">
+          <strong>Orçamento F3</strong> — ~70h disponível vs. ~62h estimado <em>(+8h de folga)</em><br>
+          Entregável: "Kit de módulo" por mês — conteúdo + guia + gabarito + slides.
+        </div>
+      </div>      <div class="callout" style="margin-top:8px;font-size:.82em;">
+        <strong>Marcos intermediários de controle:</strong>
+        &nbsp; 30/jun — Blocos A+D prontos, B ~70% &nbsp;·&nbsp;
+        15/ago — F2 concluída (student-ready) &nbsp;·&nbsp;
+        15/out — gabaritos + FAQ + professor-piloto convidado &nbsp;·&nbsp;
+        15/dez — F3 concluída (instructor-ready)
+      </div>    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════ SLIDE 9 ══ -->
+  <div class="slide">
+    <div class="slide-header hdr-s9">
+      <div class="num">Slide 9 / 10</div>
+      <h1>Riscos e métricas de prontidão</h1>
+    </div>
+    <div class="accent-bar"></div>
+    <div class="slide-body">
+      <table style="margin-bottom:12px;font-size:.78em;">
+        <thead>
+          <tr><th>Risco</th><th>Prob.</th><th>Impacto</th><th>Mitigação</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dry-run revelar bugs e estourar janela de agosto</td>
+            <td><span class="tag-med">Média</span></td>
+            <td><span class="tag-high">Alta</span></td>
+            <td>Iniciar dry-run em julho; buffer de 2 semanas no marco F2</td>
+          </tr>
+          <tr>
+            <td>Baixa disponibilidade em fim de semestre (mai–jun)</td>
+            <td><span class="tag-med">Média</span></td>
+            <td><span class="tag-med">Média</span></td>
+            <td>Focar só em quick-wins no período; adiar tarefas pesadas para julho</td>
+          </tr>
+          <tr>
+            <td>Professor-piloto indisponível até outubro</td>
+            <td><span class="tag-med">Média</span></td>
+            <td><span class="tag-high">Alta</span></td>
+            <td>Convidar piloto em agosto; não condicionar F3 inteiro à resposta dele</td>
+          </tr>
+          <tr>
+            <td>Subestimação do esforço real (20–30%)</td>
+            <td><span class="tag-high">Alta</span></td>
+            <td><span class="tag-med">Média</span></td>
+            <td>Revisão de escopo no marco 30/jun antes de comprometer julho</td>
+          </tr>
+          <tr>
+            <td>Colisão com calendário acadêmico no onboarding</td>
+            <td><span class="tag-low">Baixa</span></td>
+            <td><span class="tag-med">Média</span></td>
+            <td>Fixar datas de onboarding ainda em 2026</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="font-weight:700;color:var(--blue);margin-bottom:6px;">KPIs <em>(Key Performance Indicators — indicadores-chave de desempenho)</em> de prontidão para lançamento:</p>
+      <div class="cols two">
+        <ul>
+          <li>% de módulos com material docente completo <em>(meta: 100% até 15/dez/2026)</em>.</li>
+          <li>% de exercícios com gabarito validado e rubrica <em>(meta: 100% até 15/dez/2026)</em>.</li>
+          <li>Taxa de sucesso no dry-run com aluno piloto <em>(meta: ≥90% sem bloqueio crítico)</em>.</li>
+        </ul>
+        <ul>
+          <li>6 gaps abertos fechados + 6 parciais zerados <em>até 15/ago/2026</em>.</li>
+          <li>Horas executadas vs. planejadas nos marcos F2 e F3 <em>(desvio máx. 20%)</em>.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════ SLIDE 10 ══ -->
+  <div class="slide">
+    <div class="slide-header hdr-s10">
+      <div class="num">Slide 10 / 10</div>
+      <h1>Decisões solicitadas</h1>
+      <div class="sub">Encerramento — 3 decisões, 1 ação imediata</div>
+    </div>
+    <div class="accent-bar"></div>
+    <div class="slide-body">
+      <div class="decision">
+        <h3>Decisão 1 — Modelo de co-liderança</h3>
+        <blockquote>
+          Aprovar a co-liderança formal entre Pesquisador BPS (Building Performance Simulation) e Pesquisador TI (TI Construção Civil),
+          com comitê bimestral e responsabilidades diferenciadas conforme Slide 5.
+        </blockquote>
+      </div>
+      <div class="decision">
+        <h3>Decisão 2 — Roadmap de preparação</h3>
+        <blockquote>
+          Aprovar o roadmap F2 (student-ready 15/08/2026) → F3 (instructor-ready 15/12/2026) → Lançamento (jan–jun/2027),
+          com marcos e orçamento de horas conforme Slides 7 e 8.
+        </blockquote>
+      </div>
+      <div class="decision">
+        <h3>Decisão 3 — Primeira ação concreta (próximos 30 dias)</h3>
+        <blockquote>
+          Definir: &nbsp;
+          (a)&nbsp;data do primeiro dry-run com aluno piloto;&nbsp;
+          (b)&nbsp;nome do professor-piloto a convidar;&nbsp;
+          (c)&nbsp;responsável por cada pacote de trabalho imediato.
+        </blockquote>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- /deck -->
+
+<!-- ── Progress + Controls ── -->
+<div id="progress"><div id="progress-fill" style="width:10%"></div></div>
+
+<div id="controls">
+  <button id="btn-prev" onclick="go(-1)" disabled>◀ Anterior</button>
+  <span id="counter">1 / 10</span>
+  <button id="btn-next" onclick="go(1)">Próximo ▶</button>
+  <span style="margin-left:12px;opacity:.5;font-size:.8em;">← → ou clique nos botões</span>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const total  = slides.length;
+  let   cur    = 0;
+
+  function show(n) {
+    slides[cur].classList.remove('active');
+    cur = Math.max(0, Math.min(n, total - 1));
+    slides[cur].classList.add('active');
+    document.getElementById('counter').textContent = `${cur + 1} / ${total}`;
+    document.getElementById('progress-fill').style.width = `${((cur + 1) / total) * 100}%`;
+    document.getElementById('btn-prev').disabled = cur === 0;
+    document.getElementById('btn-next').disabled = cur === total - 1;
+  }
+
+  function go(d) { show(cur + d); }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown'  || e.key === ' ') go(1);
+    if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')                      go(-1);
+  });
+</script>
+</body>
+</html>
