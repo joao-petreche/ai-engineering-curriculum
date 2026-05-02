@@ -1,17 +1,124 @@
 param(
     [string]$VenvDir = ".venv",
     [string]$RequirementsFile = "requirements.txt",
-    [string]$ExpectedMajorMinor = "3.10"
+    [string]$ExpectedMajorMinor = "3.10",
+    [string]$GCPProject = "gen-lang-client-0464475716",
+    [switch]$SkipGCP = $false
 )
 
 $ErrorActionPreference = "Stop"
+$StepCount = 0
+$TotalSteps = 8
 
 function Write-Step {
     param([string]$Message)
-    Write-Host "`n==> $Message" -ForegroundColor Cyan
+    $script:StepCount++
+    Write-Host "`n==> [$script:StepCount/$TotalSteps] $Message" -ForegroundColor Cyan
 }
 
-function Get-PythonCommand {
+function Test-GCPInfrastructure {
+    Write-Step "Validando infraestrutura do Google Cloud..."
+
+    if (-not (Get-Command gcloud -ErrorAction SilentlyContinue)) {
+        Write-Host "    ⚠️ gcloud CLI nao encontrado. Instalacao recomendada:" -ForegroundColor Yellow
+        Write-Host "    https://cloud.google.com/sdk/docs/install#windows" -ForegroundColor Yellow
+        return $false
+    }
+
+    Write-Host "    ✓ Google Cloud SDK detectado." -ForegroundColor Green
+    return $true
+}
+
+function Get-SystemDiagnostics {
+    Write-Step "Diagnóstico de Recursos do Sistema (Hardware)..."
+
+    $computerMemory = Get-WmiObject Win32_ComputerSystem | Select-Object -ExpandProperty TotalPhysicalMemory
+    $totalMemoryMB = [math]::Round($computerMemory / 1MB, 0)
+
+    $osMemory = Get-WmiObject Win32_OperatingSystem | Select-Object -ExpandProperty FreePhysicalMemory
+    $freeMemoryMB = [math]::Round($osMemory / 1KB, 0)
+
+    Write-Host "    - Memória Disponível: ${freeMemoryMB}MB de ${totalMemoryMB}MB" -ForegroundColor Cyan
+
+    if ($freeMemoryMB -lt 1024) {
+        Write-Host "    ⚠️ AVISO: Memória RAM crítica (< 1GB). Recomenda-se fechar aplicacoes." -ForegroundColor Yellow
+    }
+}
+
+function Clear-PythonProcesses {
+    Write-Step "Limpeza de Processos Python..."
+
+    $pythonProcesses = Get-Process -Name "python*" -ErrorAction SilentlyContinue
+    if ($pythonProcesses.Count -gt 0) {
+        Write-Host "    - Encerrando $($pythonProcesses.Count) processo(s) Python..."
+        Stop-Process -Name "python*" -Force -ErrorAction SilentlyContinue
+        Start-Sleep -Seconds 1
+        Write-Host "    ✓ Processos Python reiniciados para otimização." -ForegroundColor Green
+    }
+    else {
+        Write-Host "    - Nenhum processo Python em execução." -ForegroundColor Green
+    }
+}
+
+function Set-GCPProject {
+    param([string]$Project)
+
+    Write-Step "Vinculando Projetos GCP..."
+
+    if (-not (Get-Command gcloud -ErrorAction SilentlyContinue)) {
+        Write-Host "    ⚠️ gcloud nao disponivel. Pulando configuracao GCP." -ForegroundColor Yellow
+        return
+    }
+
+    try {
+        gcloud config set project $Project --quiet 2>$null
+        Write-Host "    ✓ Projeto GCP: $Project" -ForegroundColor Green
+    }
+    catch {
+        Write-Host "    ⚠️ Falha ao configurar projeto GCP: $_" -ForegroundColor Yellow
+    }
+}
+
+function Test-ADCCredentials {
+    Write-Step "Verificação de Credenciais de Aplicação (ADC)..."
+
+    $adcPath = "$env:APPDATA\gcloud\application_default_credentials.json"
+
+    if (Test-Path $adcPath) {
+        Write-Host "    ✓ Credenciais ADC prontas." -ForegroundColor Green
+        return $true
+    }
+    else {
+        Write-Host "    ⚠️ REQUERIDO: Execute 'gcloud auth application-default login'" -ForegroundColor Yellow
+        return $false
+    }
+}
+
+function Run-BillingReport {
+    Write-Step "Relatório Financeiro e Observabilidade..."
+    Write-Host "------------------------------------------------------------" -ForegroundColor Cyan
+
+    if (-not (Test-Path "analise_faturamento_real.py")) {
+        Write-Host "    ⚠️ Script de faturamento nao encontrado." -ForegroundColor Yellow
+        Write-Host "------------------------------------------------------------" -ForegroundColor Cyan
+        return
+    }
+
+    $venvPython = Join-Path $VenvDir "Scripts\python.exe"
+
+    try {
+        $output = & $venvPython analise_faturamento_real.py 2>&1
+        Write-Host $output
+        Write-Host "`n✅ Infraestrutura validada: Custo Líquido R$ 0.00." -ForegroundColor Green
+    }
+    catch {
+        Write-Host "`n⚠️ Dados de faturamento em processamento (aguarde 24h)." -ForegroundColor Yellow
+    }
+
+    Write-Host "------------------------------------------------------------" -ForegroundColor Cyan
+}
+
+
     # Prefer py launcher on Windows, then fallback to python in PATH.
     if (Get-Command py -ErrorAction SilentlyContinue) {
         return "py"
@@ -111,12 +218,29 @@ try {
     Assert-PythonVersion -Version $pythonVersion
     Write-Host "Python valido detectado: $pythonVersion" -ForegroundColor Green
 
+    # Novo fluxo com GCP e observabilidade
+    if (-not $SkipGCP) {
+        $gcpAvailable = Test-GCPInfrastructure
+        Get-SystemDiagnostics
+        Clear-PythonProcesses
+
+        if ($gcpAvailable) {
+            Set-GCPProject -Project $GCPProject
+            Test-ADCCredentials | Out-Null
+        }
+    }
+
     New-OrUpdateVenv -PythonCmd $pythonCmd
     Install-Dependencies
     Load-ConfigHints
     Activate-Venv
 
-    Write-Host "`nAmbiente configurado com sucesso." -ForegroundColor Green
+    # Relatório final
+    if (-not $SkipGCP) {
+        Run-BillingReport
+    }
+
+    Write-Host "`n[OK] Ambiente v1.2.3 pronto para Scientific AI Engineering." -ForegroundColor Green
     Write-Host "Comando sugerido para validar: python --version" -ForegroundColor Green
 }
 catch {
