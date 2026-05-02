@@ -14,9 +14,21 @@ echo "==> [1/8] Validando infraestrutura do Google Cloud..."
 if ! command -v gcloud &> /dev/null; then
     echo "    - Instalando Google Cloud SDK..."
     curl https://sdk.cloud.google.com | bash -s -- --disable-prompts
-    source /home/codespace/google-cloud-sdk/path.bash.inc
+fi
+
+# Trecho para garantir que o gcloud esteja sempre no PATH
+GCLOUD_PATH_INC="/home/codespace/google-cloud-sdk/path.bash.inc"
+
+if [ -f "$GCLOUD_PATH_INC" ]; then
+    if ! grep -q "$GCLOUD_PATH_INC" ~/.bashrc; then
+        echo "    - Adicionando Google Cloud SDK ao PATH permanentemente..."
+        echo "source $GCLOUD_PATH_INC" >> ~/.bashrc
+    fi
+    # Carrega para a sessão atual do script
+    source "$GCLOUD_PATH_INC"
+    echo "    - Google Cloud SDK detectado e configurado."
 else
-    echo "    - Google Cloud SDK detectado."
+    echo "    ⚠️ Aviso: Arquivo de inicialização do SDK não encontrado em $GCLOUD_PATH_INC"
 fi
 
 echo "==> [2/8] Diagnóstico de Recursos do Sistema (Hardware)..."

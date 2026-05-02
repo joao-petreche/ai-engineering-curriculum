@@ -2,17 +2,14 @@
   "recommendations": [
     "google.colab",
     "bigladder.energyplus-modelkit",
-    "googlecloudtools.cloudcode",
+    "anthropic.claude-code",
     "google.geminicodeassist",
     "google.gemini-cli-vscode-ide-companion",
     "ms-toolsai.datawrangler",
-    "ritwickdey.liveserver",
     "charliermarsh.ruff",
     "davidanson.vscode-markdownlint",
     "tomoki1207.pdf",
     "bierner.markdown-mermaid",
-    "vscode-icons-team.vscode-icons",
-    "github.github-vscode-theme",
     "ms-toolsai.jupyter",
     "ms-python.python",
     "ms-python.vscode-pylance"
