@@ -31,37 +31,70 @@
 - **What it does:** validates Python 3.10.x, creates/updates `.venv`, installs dependencies from `requirements.txt`, and activates the virtual environment.
 - **Run:** `./setup_env.ps1`
 
-### 🌐 Híbrido: Google Colab + VS Code
+## 🛠️ Development Environment Setup (GitHub Codespaces)
 
-Para simulações pesadas de EnergyPlus sem consumir recursos locais do Codespace:
+To ensure stability of simulation and AI tools in GitHub Codespaces, this project uses an isolated Python environment. Using `venv` resolves the "externally managed environment" error and isolates dependencies from the system's global Python.
+
+1. **Virtual Environment (`venv`):**
+
+```bash
+# Create the environment
+python3 -m venv .venv
+
+# Activate the environment
+source .venv/bin/activate
+```
+
+2. **Installing Dependencies:**
+
+With the environment active, install the necessary libraries for data processing and Google Cloud integration:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. **Automation (GCP Setup):**
+
+You can also use the automation script that manages the environment lifecycle, enables necessary APIs in BigQuery, and validates billing:
+
+```bash
+chmod +x setup_gcp_env.sh
+./setup_gcp_env.sh
+```
+
+> Tip: In GitHub Codespaces, the terminal is already available within the remote environment. If `python3` is not automatically located, use `which python3` or `python --version` to confirm the activated interpreter path.
+
+### 🌐 Hybrid: Google Colab + VS Code
+
+For heavy EnergyPlus simulations without consuming local Codespace resources:
 
 - **Notebook:** [EnergyPlus_API_Colab.ipynb](EnergyPlus_API_Colab.ipynb)
-- **Workflow:** Execute o kernel remoto do Colab diretamente dentro do VS Code usando a extensão oficial.
-- **Vantagem:** Instalação automatizada do EnergyPlus v25.1.0 na VM do Google e pipeline otimizado para processamento paralelo de múltiplos arquivos `.idf`.
-- **Requisito:** Conta Google ativa com acesso ao Colab.
+- **Workflow:** Execute the remote Colab kernel directly within VS Code using the official extension.
+- **Advantage:** Automated installation of EnergyPlus v25.1.0 on Google's VM and optimized pipeline for parallel processing of multiple `.idf` files.
+- **Requirement:** Active Google account with Colab access.
 
 📊 **For FAPESP Research Project:** Review [CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](CURRICULUM_FAPESP_ALIGNMENT_REPORT.md) - Validation that curriculum is 98% sufficient for 48-month research execution
 
 ## 🌡️ EnergyPlus & Cloud Integration
 
-O currículo agora suporta execução em ambiente de nuvem híbrida, otimizando o fluxo de **Scientific AI Engineering**.
+The curriculum now supports execution in a hybrid cloud environment, optimizing the **Scientific AI Engineering** workflow.
 
-### Fluxo de Simulação Automatizado
+### Automated Simulation Workflow
 
-O notebook `EnergyPlus_API_Colab.ipynb` implementa o ciclo completo de simulação:
+The `EnergyPlus_API_Colab.ipynb` notebook implements the complete simulation cycle:
 
-1. **Instalação On-the-fly**: Configuração automática do EnergyPlus v25.1.0 e bibliotecas X11 na VM Linux.
-2. **Stage-In**: Download dinâmico de arquivos `.idf` e `.epw` do Google Cloud Storage (GCS).
-3. **API Python**: Execução via `pyenergyplus` permitindo controle em tempo real.
-4. **Stage-Out**: Upload automático de resultados (eso, htm, csv) para buckets versionados com timestamp.
+1. **On-the-fly Installation**: Automatic configuration of EnergyPlus v25.1.0 and X11 libraries on the Linux VM.
+2. **Stage-In**: Dynamic download of `.idf` and `.epw` files from Google Cloud Storage (GCS).
+3. **Python API**: Execution via `pyenergyplus` allowing real-time control.
+4. **Stage-Out**: Automatic upload of results (eso, htm, csv) to timestamped versioned buckets.
 
-### Como configurar a Extensão Colab no Codespace
+### How to Configure the Colab Extension in Codespace
 
-1. Instale a extensão **"Google Colab"** no VS Code dentro do seu Codespace.
-2. Faça login em [colab.research.google.com](https://colab.research.google.com) no seu navegador.
-3. No VS Code, abra o arquivo `EnergyPlus_API_Colab.ipynb`.
-4. Clique em **"Select Kernel"** (Canto superior direito) > **"Existing Jupyter Server"** ou selecione o kernel remoto do Colab detectado.
-5. A autenticação GCP será herdada da sua sessão do navegador.
+1. Install the **"Google Colab"** extension in VS Code within your Codespace.
+2. Log in to [colab.research.google.com](https://colab.research.google.com) in your browser.
+3. In VS Code, open the `EnergyPlus_API_Colab.ipynb` file.
+4. Click **"Select Kernel"** (Top right corner) > **"Existing Jupyter Server"** or select the detected remote Colab kernel.
+5. GCP authentication will be inherited from your browser session.
 
 ## ⚡ Bootcamp Express: 1-Week Prep
 Intensive 1-week leveling program to set up infrastructure (Windows/Python/EnergyPlus) and master core skills (Git, Pandas, Cloud) required for Phase 0.
