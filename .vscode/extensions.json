@@ -5,6 +5,7 @@
     "anthropic.claude-code",
     "google.geminicodeassist",
     "google.gemini-cli-vscode-ide-companion",
+    "github.copilot-chat",
     "ms-toolsai.datawrangler",
     "charliermarsh.ruff",
     "davidanson.vscode-markdownlint",
