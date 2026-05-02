@@ -8,6 +8,7 @@
         "ms-python.python",
         "ms-python.vscode-pylance",
         "ms-toolsai.jupyter",
+        "github.copilot-chat",
         "google.geminicodeassist",
         "anthropic.claude-code",
         "bigladder.energyplus-modelkit",
