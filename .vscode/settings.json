@@ -5,5 +5,11 @@
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   },
-  "remote.autoForwardPortsFallback": 0
+  "remote.autoForwardPortsFallback": 0,
+  "geminicodeassist.project": "gen-lang-client-0464475716",
+  "python.defaultInterpreterPath": "/workspaces/AI-Engineering-Curriculum/.venv/bin/python",
+  "ruff.enable": true,
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "basic",
+  "editor.defaultFormatter": "charliermarsh.ruff"
 }

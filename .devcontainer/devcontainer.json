@@ -1,0 +1,19 @@
+{
+  "name": "Scientific AI Engineering",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "postCreateCommand": "sudo npm install -g @anthropic-ai/claude-code && source /home/codespace/google-cloud-sdk/path.bash.inc",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "google.geminicodeassist",
+        "anthropic.claude-code",
+        "bigladder.energyplus-modelkit",
+        "charliermarsh.ruff",
+        "ms-toolsai.datawrangler"
+      ]
+    }
+  }
+}
