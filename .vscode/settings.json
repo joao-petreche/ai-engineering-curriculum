@@ -4,5 +4,6 @@
   "files.trimTrailingWhitespace": true,
   "[markdown]": {
     "files.trimTrailingWhitespace": false
-  }
+  },
+  "remote.autoForwardPortsFallback": 0
 }
