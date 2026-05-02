@@ -7,7 +7,15 @@
   },
   "remote.autoForwardPortsFallback": 0,
   "geminicodeassist.project": "gen-lang-client-0464475716",
-  "python.defaultInterpreterPath": "/workspaces/AI-Engineering-Curriculum/.venv/bin/python",
+
+  // --- INTERPRETADOR PYTHON ---
+  // Opção 1: Windows Local (Ativa agora)
+  "python.defaultInterpreterPath": ".venv\\Scripts\\python.exe",
+
+  // Opção 2: Codespaces / Linux (Comentada)
+  // "python.defaultInterpreterPath": "/workspaces/AI-Engineering-Curriculum/.venv/bin/python",
+  // ----------------------------
+
   "ruff.enable": true,
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "basic",

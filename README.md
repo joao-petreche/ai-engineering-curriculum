@@ -2,8 +2,8 @@
 ## 12-Month Training Program — Pre-Onboarding (Content ~80%, April 2026)
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Status: Pre-Onboarding](https://img.shields.io/badge/Status-Pre--Onboarding-yellow.svg)]()
-[![Content: ~80%](https://img.shields.io/badge/Content-~80%25-yellow.svg)]()
+[![Status: Pre-Onboarding](https://img.shields.io/badge/Status-Pre--Onboarding-yellow.svg)](https://github.com/joao-petreche/ai-engineering-curriculum)
+[![Content: ~80%](https://img.shields.io/badge/Content-~80%25-yellow.svg)](https://github.com/joao-petreche/ai-engineering-curriculum)
 [![GitHub stars](https://img.shields.io/github/stars/joao-petreche/ai-engineering-curriculum?style=social)](https://github.com/joao-petreche/ai-engineering-curriculum/stargazers)
 
 > **Status:** ⚠️ **PRE-ONBOARDING** — Curriculum content substantially complete (~80%); residual technical gaps and instructor enablement materials pending. See [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md) for the verified gap list.
@@ -66,9 +66,9 @@ chmod +x setup_gcp_env.sh
 
 ### 🌐 Hybrid: Google Colab + VS Code
 
-For heavy EnergyPlus simulations without consuming local Codespace resources:
+For heavy EnergyPlus simulations without consuming local Codespaces resources:
 
-- **Notebook:** [EnergyPlus_API_Colab.ipynb](EnergyPlus_API_Colab.ipynb)
+- **Notebook:** [EnergyPlus_VS_Code_Colab.ipynb](EnergyPlus_VS_Code_Colab.ipynb)
 - **Workflow:** Execute the remote Colab kernel directly within VS Code using the official extension.
 - **Advantage:** Automated installation of EnergyPlus v25.1.0 on Google's VM and optimized pipeline for parallel processing of multiple `.idf` files.
 - **Requirement:** Active Google account with Colab access.
@@ -79,20 +79,31 @@ For heavy EnergyPlus simulations without consuming local Codespace resources:
 
 The curriculum now supports execution in a hybrid cloud environment, optimizing the **Scientific AI Engineering** workflow.
 
-### Automated Simulation Workflow
+### 📄 Notebook Documentation: Hybrid Simulation
 
-The `EnergyPlus_API_Colab.ipynb` notebook implements the complete simulation cycle:
+This notebook (`EnergyPlus_VS_Code_Colab.ipynb`) automates the complete lifecycle of a thermal simulation, combining Google Colab's processing power with the convenience of VS Code.
 
-1. **On-the-fly Installation**: Automatic configuration of EnergyPlus v25.1.0 and X11 libraries on the Linux VM.
-2. **Stage-In**: Dynamic download of `.idf` and `.epw` files from Google Cloud Storage (GCS).
-3. **Python API**: Execution via `pyenergyplus` allowing real-time control.
-4. **Stage-Out**: Automatic upload of results (eso, htm, csv) to timestamped versioned buckets.
+#### 🏗️ System Architecture
+The workflow is designed to be fully stateless locally, using Google Cloud Storage (GCS) as the single persistence layer:
 
-### How to Configure the Colab Extension in Codespace
+- **Frontend (Local):** VS Code for code editing, IntelliSense, and version control.
+- **Backend (Remote):** Colab Linux VM with EnergyPlus v25.1.0 installed at `/eplus`.
+- **Data Lake (GCS):** `eplus-colab-cloud-data` bucket organized into folders:
+  - `models/`: Building models (`.idf`).
+  - `weather/`: Weather data (`.epw`).
+  - `resultados/` (results): Outputs organized by timestamp (e.g., `simulacao_vscode_20260502_181059`).
 
-1. Install the **"Google Colab"** extension in VS Code within your Codespace.
+#### 🔄 Execution Flow (Pipeline)
+1. **Authentication:** ADC credential configuration and GCP project binding.
+2. **Stage-In:** Automatic download of input files from the bucket to the VM's `/tmp` directory.
+3. **Simulation:** Execution of the EnergyPlus engine via the official Python API.
+4. **Stage-Out:** Selective upload of results (excluding inputs) to the bucket, with a direct GCS Browser link.
+
+### How to Configure the Colab Extension in Codespaces
+
+1. Install the **"Google Colab"** extension in VS Code within your Codespaces environment.
 2. Log in to [colab.research.google.com](https://colab.research.google.com) in your browser.
-3. In VS Code, open the `EnergyPlus_API_Colab.ipynb` file.
+3. In VS Code, open the `EnergyPlus_VS_Code_Colab.ipynb` file.
 4. Click **"Select Kernel"** (Top right corner) > **"Existing Jupyter Server"** or select the detected remote Colab kernel.
 5. GCP authentication will be inherited from your browser session.
 
@@ -100,7 +111,7 @@ The `EnergyPlus_API_Colab.ipynb` notebook implements the complete simulation cyc
 Intensive 1-week leveling program to set up infrastructure (Windows/Python/EnergyPlus) and master core skills (Git, Pandas, Cloud) required for Phase 0.
 
 - **[🇬🇧 English Version](Bootcamp%20Express/Bootcamp_Expresso_Google.md)**
-- **[🇧🇷 Versão em Português](Bootcamp%20Express/Bootcamp_Expresso_Google_PT.md)**
+- **[🇧🇷 Portuguese Version](Bootcamp%20Express/Bootcamp_Expresso_Google_PT.md)**
 
 ## 📄 Literature Review Package (April 2026)
 
@@ -371,14 +382,14 @@ Months 7-12: SCALING + EXPANSION
 | **Literature Review Manuscript** | LaTeX source + PDF + Markdown + bibliography | [Literature Review folder](Literature%20Alignment/Literature%20Review/) |
 | **Student Profile** | Readiness assessment | [STUDENT_PROFILE.md](STUDENT_PROFILE.md) |
 | **Prerequisites** | Detailed requirements | [PREREQUISITES.md](PREREQUISITES.md) |
-| **Portuguese Version** | Currículo original em português | [_legacy/Scientific_AI_Engineering_Curriculum_PT.md](_legacy/Scientific_AI_Engineering_Curriculum_PT.md) |
+| **Portuguese Version** | Original curriculum in Portuguese | [_legacy/Scientific_AI_Engineering_Curriculum_PT.md](_legacy/Scientific_AI_Engineering_Curriculum_PT.md) |
 
 ### 📁 Month-by-Month Deliverables
 
 | Month | Topic | Status | Location |
 |-------|-------|--------|----------|
 | 0 | Infrastructure Setup | ✅ | [Exercicios_Fase_0_Infraestrutura.md](Science%20AI%20Engineering/Exercicios_Fase_0_Infraestrutura.md) |
-| 1 | EnergyPlus | ✅ | [EnergyPlus_API_Colab.ipynb](EnergyPlus_API_Colab.ipynb) & [Exercicios_Mes_1_EnergyPlus.md](Science%20AI%20Engineering/Exercicios_Mes_1_EnergyPlus.md) |
+| 1 | EnergyPlus | ✅ | [EnergyPlus_VS_Code_Colab.ipynb](EnergyPlus_VS_Code_Colab.ipynb) & [Exercicios_Mes_1_EnergyPlus.md](Science%20AI%20Engineering/Exercicios_Mes_1_EnergyPlus.md) |
 | 2 | Software Engineering | ✅ | [Exercicios_Mes_2_Engenharia_Software.md](Science%20AI%20Engineering/Exercicios_Mes_2_Engenharia_Software.md) |
 | 3 | Big Data | ✅ | [Exercicios_Mes_3_Big_Data.md](Science%20AI%20Engineering/Exercicios_Mes_3_Big_Data.md) |
 | 4 | PIML & Surrogates | ✅ | [Exercicios_Mes_4_PIML_Surrogates.md](Science%20AI%20Engineering/Exercicios_Mes_4_PIML_Surrogates.md) |
@@ -445,7 +456,7 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-The pinned `requirements.txt` covers the scientific stack (numpy, pandas, scipy, scikit-learn, xgboost, matplotlib, seaborn, plotly), the optimization/simulation tools (deap, eppy), and the production module deps (FastAPI, uvicorn, pydantic, OpenTelemetry, prometheus-client) plus testing.
+The `requirements.txt` file currently uses minimum version constraints (`>=`) and covers the scientific stack (numpy, pandas, scipy, scikit-learn, xgboost, matplotlib, seaborn, plotly), the optimization/simulation tools (deap, eppy), and the production module dependencies (FastAPI, uvicorn, pydantic, OpenTelemetry, prometheus-client), plus testing.
 
 ### Quick Commands for Continuity
 
