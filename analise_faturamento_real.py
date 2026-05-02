@@ -5,7 +5,7 @@ from google.api_core.exceptions import NotFound
 # Configurações extraídas do seu console
 PROJECT_ID = "gen-lang-client-0464475716"
 DATASET_ID = "faturamento_v1"
-# Este é o padrão de nome para a exportação detalhada que o Google criará[cite: 4]
+# Atualize esta linha com o ID real da sua imagem
 TABLE_ID = "gcp_billing_export_resource_v1_018BDF_F25C35_6646B4"
 
 client = bigquery.Client(project=PROJECT_ID)
