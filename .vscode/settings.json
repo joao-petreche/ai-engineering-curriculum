@@ -10,7 +10,7 @@
 
   // --- INTERPRETADOR PYTHON ---
   // Opção 1: Windows Local (Ativa agora)
-  "python.defaultInterpreterPath": ".venv\\Scripts\\python.exe",
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
 
   // Opção 2: Codespaces / Linux (Comentada)
   // "python.defaultInterpreterPath": "/workspaces/AI-Engineering-Curriculum/.venv/bin/python",
