@@ -1,6 +1,6 @@
 param(
     [string]$VenvDir = ".venv",
-    [string]$RequirementsFile = "requirements.txt",
+    [string]$RequirementsFile = "config/requirements.txt",
     [string]$ExpectedMajorMinor = "3.10",
     [string]$GCPProject = "gen-lang-client-0464475716",
     [switch]$SkipGCP = $false
@@ -73,10 +73,10 @@ function Test-ADCCredentials {
 
 function Run-BillingReport {
     Write-Step "Relatorio Financeiro..."
-    if (Test-Path "analise_faturamento_real.py") {
+    if (Test-Path "scripts/analise_faturamento_real.py") {
         $pyPath = Join-Path $VenvDir "Scripts\python.exe"
         try {
-            & $pyPath analise_faturamento_real.py 2>&1
+            & $pyPath scripts/analise_faturamento_real.py 2>&1
         } catch {
             Write-Host "    [!] Erro ao rodar relatorio." -ForegroundColor Yellow
         }
