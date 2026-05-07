@@ -68,6 +68,23 @@ O repositório evoluiu significativamente desde a auditoria original. **8 dos 10
 - ⚠️ **Parciais:** 6 (3, 9, 12, 13, 14, 16)
 - 🔴 **Abertos:** 6 (8, 11, 17, 18, 19, 20)
 
+### Gaps Adicionais Descobertos (Revisão Maio 2026)
+
+Revisão de profundidade da auditoria original em maio/2026 identificou 6 gaps adicionais não capturados nos 20 itens P0/P1 originais:
+
+| # | Gap Adicional | Severidade | Status | Estimativa |
+|---|---|---|---|---|
+| 21 | [Mês 10] LLM cost tracker com hard limit | 🔴 ALTO | Ausente | 2-3h |
+| 22 | [Mês 11] Uncertainty propagation em sensitivity analysis | 🔴 ALTO | Ausente | 2-3h |
+| 23 | [Mês 12] Statistical power analysis para A/B testing | 🔴 ALTO | Ausente | 2-3h |
+| 24 | [Mês 5/6] SDK Gemini desatualizado + incompatibilidade `vertexai` vs `google-genai` | 🔴 ALTO | Desatualizado | 3-4h |
+| 25 | [Mês 10] Flower/TensorFlow Federated (listados no curriculo, ausentes da implementação) | ⚠️ MÉDIO | Parcial | 2-3h |
+| 26 | [Infraestrutura] Dataset `/data/` pré-populado para uso em sala (evita wait times) | ⚠️ MÉDIO | Ausente | 3-5h |
+
+**Contexto:** Os gaps 21-26 foram identificados durante análise de relevância técnica e consistência entre o currículo declarado e a implementação real. Enquanto os gaps 1-20 focavam em completude de código, os gaps 21-26 focam em qualidade técnica (versões desatualizadas, arquitetura inconsistente de stack, defasagem para 2026).
+
+**Prioridade relativa:** Os gaps 21-24 têm prioridade alta (bloqueiam usabilidade); 25-26 são de segunda geração (melhorias de qualidade/experiência do aluno).
+
 ---
 
 ## 2. Pendências técnicas residuais (~45h)
@@ -144,8 +161,9 @@ A continuação do trabalho está estruturada em quatro fases:
 | Fase | Objetivo | Esforço | Marco | Status |
 |---|---|---|---|---|
 | **F1. Diagnóstico** | Re-auditar e documentar pendências reais | — | 2026-05-01 | ✅ Concluído (este documento) |
-| **F2. Revisão técnica + dry-run + kit alunos** | Fechar pendências dos Blocos A–D, repo "student-ready" | ~64h | 2026-08-15 | Pendente |
-| **F3. Instructor enablement** | Criar camada de material do professor (guia, gabaritos, slides, FAQ, dry-run, roteiro de onboarding) | ~62h | 2026-12-15 | Pendente |
+| **F1 Residual** | Resolver inconsistências documentais, atualizar datas internas, documentar limitações técnicas | ~102h | 2026-12-31 | Pendente |
+| **F2. Revisão técnica + dry-run + kit alunos** | Fechar pendências dos Blocos A–D, repo "student-ready" | ~191h | 2027-08-15 | Pendente |
+| **F3. Instructor enablement** | Criar camada de material do professor (guia, gabaritos, slides, FAQ, dry-run, roteiro de onboarding) | ~70h | 2027-12-15 | Pendente |
 
 ### Programação detalhada
 
@@ -154,10 +172,10 @@ A programação semana-a-semana de F2 e F3, com tarefas, entregáveis, marcos e 
 👉 **[PROGRAMACAO_F2_F3.md](PROGRAMACAO_F2_F3.md)**
 
 Parâmetros consolidados:
-- **Onboarding alunos:** 2026-08-15
-- **Material do instrutor pronto:** 2026-12-15 (onboarding professores logo após)
-- **Disponibilidade:** 3h/sem (Mai–Jun) → 8h/sem (Jul–Ago) → 4h/sem (Ago–Dez)
-- **Orçamento total:** ~78h para F2 + ~70h para F3
+- **Onboarding alunos:** 2027-08-15 (fim de F2)
+- **Material do instrutor pronto:** 2027-12-15 (fim de F3; onboarding professores logo após)
+- **Disponibilidade:** 3h/sem (Mai–Dez 2026 / F1 Residual) → 3–8h/sem (Jan–Ago 2027 / F2) → 4h/sem (Set–Dez 2027 / F3)
+- **Orçamento total:** ~102h para F1 Residual + ~191h para F2 + ~70h para F3
 
 ---
 

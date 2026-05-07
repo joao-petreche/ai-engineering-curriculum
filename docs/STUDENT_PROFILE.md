@@ -1,13 +1,15 @@
 # 🎯 Student Profile & Readiness Assessment
 
-**Last Updated:** January 17, 2026  
-**Curriculum Status:** ✅ 100% Complete (12 months, 600+ hours)
+**Last Updated:** May 7, 2026  
+**Curriculum Status:** 🟡 Pre-Onboarding (~80% complete); [See April 2026 audit for gap list](AUDITORIA_2026_04_REVISAO.md)
+
+**Mission:** Train Scientific AI Engineers capable of bridging Building Physics and Generative AI with scientific rigor and production-grade software safety.
 
 ---
 
 ## 📋 Executive Summary
 
-This **Scientific AI Engineering Curriculum** is a production-ready, open-source educational resource designed for intermediate to advanced learners who want to master the intersection of Physics-Informed Machine Learning, Building Performance Simulation, and Production AI Systems.
+This **Scientific AI Engineering Curriculum** is a comprehensive 12-month open-source training program designed for intermediate to advanced learners who want to master the intersection of Physics-Informed Machine Learning, Building Performance Simulation, and Production AI Systems. The curriculum is currently in **pre-onboarding state** — ~80% complete with residual technical gaps and instructor enablement materials pending.
 
 **Who This Curriculum Is For:**
 - 🎓 Graduate students (Master's/PhD) in Engineering, CS, or Architecture
@@ -547,6 +549,6 @@ The curriculum is **challenging but achievable**. It won't be easy, but it will 
 
 ---
 
-**Last Updated:** January 17, 2026  
-**Curriculum Version:** 1.0 (Complete)  
-**Next Update:** Based on community feedback
+**Last Updated:** May 7, 2026  
+**Curriculum Status:** 🟡 Pre-Onboarding (~80% complete)  
+**Next Milestone:** F2 — Student-ready by August 15, 2026. [See PROGRAMACAO_F2_F3.md](PROGRAMACAO_F2_F3.md)
