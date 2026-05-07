@@ -7,6 +7,18 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+
+# Resolve repositório raiz (script está em config/, sobe 1 nível para raiz)
+$RepoRoot = Split-Path -Parent $PSScriptRoot
+
+# Converte caminhos relativos para absolutos (evita alterar CWD da sessão)
+if (-not [System.IO.Path]::IsPathRooted($VenvDir)) {
+    $VenvDir = Join-Path $RepoRoot $VenvDir
+}
+if (-not [System.IO.Path]::IsPathRooted($RequirementsFile)) {
+    $RequirementsFile = Join-Path $RepoRoot $RequirementsFile
+}
+
 $script:StepCount = 0
 $TotalSteps = 8
 
@@ -73,13 +85,16 @@ function Test-ADCCredentials {
 
 function Run-BillingReport {
     Write-Step "Relatorio Financeiro..."
-    if (Test-Path "scripts/analise_faturamento_real.py") {
+    $billingScript = Join-Path $RepoRoot "scripts\analise_faturamento_real.py"
+    if (Test-Path $billingScript) {
         $pyPath = Join-Path $VenvDir "Scripts\python.exe"
         try {
-            & $pyPath scripts/analise_faturamento_real.py 2>&1
+            & $pyPath $billingScript 2>&1
         } catch {
             Write-Host "    [!] Erro ao rodar relatorio." -ForegroundColor Yellow
         }
+    } else {
+        Write-Host "    [!] Script de faturamento não encontrado em $billingScript" -ForegroundColor Yellow
     }
 }
 
@@ -112,6 +127,12 @@ function New-OrUpdateVenv {
 function Install-Dependencies {
     $pyExec = Join-Path $VenvDir "Scripts\python.exe"
     Write-Step "Instalando Dependencias..."
+
+    if (-not (Test-Path $RequirementsFile)) {
+        Write-Host "    [!] Arquivo não encontrado: $RequirementsFile" -ForegroundColor Yellow
+        return
+    }
+
     & $pyExec -m pip install --upgrade pip
     & $pyExec -m pip install -r $RequirementsFile
 }
