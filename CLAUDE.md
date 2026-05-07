@@ -16,7 +16,7 @@
 - Capstone: ✅ Complete (Jan 2026, 7.09% optimization, $350K/year savings)
 - Instructor enablement: 🔴 Not started (~40–80h)
 
-**Key Reference:** [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md) — April 2026 re-audit with verified gap list (20 priority items, residual ~45h technical + ~40–80h instructor material)
+**Key Reference:** [docs/AUDITORIA_2026_04_REVISAO.md](docs/AUDITORIA_2026_04_REVISAO.md) — April 2026 re-audit with verified gap list (20 priority items, residual ~45h technical + ~40–80h instructor material)
 
 ---
 
@@ -40,22 +40,22 @@
 - **Apr–Aug:** Advanced topics (Blocos B, C) + full end-to-end dry-run + student kit
 - **Target:** Student-ready repo by 2027-08-15
 
-**Resource:** [PROGRAMACAO_F2_F3.md](PROGRAMACAO_F2_F3.md) — Week-by-week execution plan with checkboxes and hour allocations.
+**Resource:** [docs/PROGRAMACAO_F2_F3.md](docs/PROGRAMACAO_F2_F3.md) — Week-by-week execution plan with checkboxes and hour allocations.
 
 ---
 
 ## 📂 Key Files & Directories
 
-### Documentation (Root Level)
+### Documentation
 | File | Purpose | Last Updated |
 |------|---------|--------------|
 | [README.md](README.md) | Main project landing page | May 7, 2026 |
-| [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md) | April 2026 audit with 20 priority gaps + timeline revision | May 7, 2026 |
-| [PROGRAMACAO_F2_F3.md](PROGRAMACAO_F2_F3.md) | F1 Residual/F2/F3 execution plan (week-by-week) | May 7, 2026 |
-| [Scientific_AI_Engineering_Curriculum.md](Scientific_AI_Engineering_Curriculum.md) | 12-month master curriculum (50 pages) | May 7, 2026 |
-| [STUDENT_PROFILE.md](STUDENT_PROFILE.md) | Readiness assessment + prep guide | May 7, 2026 |
-| [PREREQUISITES.md](PREREQUISITES.md) | Technical & academic requirements | May 7, 2026 |
-| [CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](CURRICULUM_FAPESP_ALIGNMENT_REPORT.md) | Research project alignment (98/100) | Maintained (separate scope) |
+| [docs/AUDITORIA_2026_04_REVISAO.md](docs/AUDITORIA_2026_04_REVISAO.md) | April 2026 audit with 20 priority gaps + timeline revision | May 7, 2026 |
+| [docs/PROGRAMACAO_F2_F3.md](docs/PROGRAMACAO_F2_F3.md) | F1 Residual/F2/F3 execution plan (week-by-week) | May 7, 2026 |
+| [docs/Scientific_AI_Engineering_Curriculum.md](docs/Scientific_AI_Engineering_Curriculum.md) | 12-month master curriculum (50 pages) | May 7, 2026 |
+| [docs/STUDENT_PROFILE.md](docs/STUDENT_PROFILE.md) | Readiness assessment + prep guide | May 7, 2026 |
+| [docs/PREREQUISITES.md](docs/PREREQUISITES.md) | Technical & academic requirements | May 7, 2026 |
+| [docs/CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](docs/CURRICULUM_FAPESP_ALIGNMENT_REPORT.md) | Research project alignment (98/100) | Maintained (separate scope) |
 
 ### Curriculum Content
 | Path | Content | Status |
@@ -69,9 +69,9 @@
 ### Infrastructure
 | File | Purpose |
 |------|---------|
-| [setup_env.ps1](setup_env.ps1) | Windows PowerShell environment setup (Python venv, dependencies) |
-| [setup_gcp_env.sh](setup_gcp_env.sh) | GCP/FinOps validation (RAM, Cloud SDK, project cost) |
-| [requirements.txt](requirements.txt) | Python dependencies (currently uses `>=` ranges, needs pinning) |
+| [config/setup_env.ps1](config/setup_env.ps1) | Windows PowerShell environment setup (Python venv, dependencies) |
+| [config/setup_gcp_env.sh](config/setup_gcp_env.sh) | GCP/FinOps validation (RAM, Cloud SDK, project cost) |
+| [config/requirements.txt](config/requirements.txt) | Python dependencies (currently uses `>=` ranges, needs pinning) |
 | [.devcontainer/](devcontainer%20/) | GitHub Codespaces dev container config |
 | [.vscode/settings.json](.vscode/settings.json) | VSCode workspace settings + extension recommendations |
 
@@ -85,7 +85,7 @@
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1  # Windows PowerShell
 source .venv/bin/activate      # Linux/Mac
-pip install -r requirements.txt
+pip install -r config/requirements.txt
 
 # Run capstone quick test (edit rounds for speed)
 cd "Science AI Engineering/mes12_capstone"
@@ -94,11 +94,11 @@ python capstone_week2_optimization.py  # ~2 min with reduced rounds
 
 ### Making Documentation Changes
 - **Status updates:** Update dates in headers + [README.md](README.md) timestamp
-- **Audit references:** Link new findings to [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md)
-- **Timeline changes:** Update [PROGRAMACAO_F2_F3.md](PROGRAMACAO_F2_F3.md) week-by-week table
+- **Audit references:** Link new findings to [docs/AUDITORIA_2026_04_REVISAO.md](docs/AUDITORIA_2026_04_REVISAO.md)
+- **Timeline changes:** Update [docs/PROGRAMACAO_F2_F3.md](docs/PROGRAMACAO_F2_F3.md) week-by-week table
 
 ### Code Changes Requiring Commits
-- **Requirements pinning:** `requirements.txt` — currently uses `>=`, needs `==`
+- **Requirements pinning:** `config/requirements.txt` — currently uses `>=`, needs `==`
 - **Physics validators:** [Science AI Engineering/mes7_physics/physics_violation_validator_complete.py](Science%20AI%20Engineering/mes7_physics/physics_violation_validator_complete.py) — missing 3-4 validators
 - **FedAvg stragglers:** [Science AI Engineering/mes10_federated_learning/](Science%20AI%20Engineering/mes10_federated_learning/) — needs timeout + async handling
 - **Test suites:** Months 1-7, 9-12 lack pytest files (only Months 4, 8 have coverage)
@@ -118,7 +118,7 @@ python capstone_week2_optimization.py  # ~2 min with reduced rounds
 - Gap 20: Operations runbook — **not implemented**
 
 **P1 (Important) — 6 partial:**
-- Gaps 3, 9, 12, 13, 14, 16 — See [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md) Table (lines 42-63) for details
+- Gaps 3, 9, 12, 13, 14, 16 — See [docs/AUDITORIA_2026_04_REVISAO.md](docs/AUDITORIA_2026_04_REVISAO.md) Table (lines 42-63) for details
 
 ### Residual Work Estimate
 - **Technical (Blocos A–D):** ~45 hours
@@ -140,22 +140,25 @@ python capstone_week2_optimization.py  # ~2 min with reduced rounds
 4. **No infrastructure bloat:** Avoid new dependencies unless critical (check `requirements.txt` first)
 
 ### File Organization
-- **Root:** Main docs (README, audit, program)
+- **Root:** README.md, CLAUDE.md, CONTRIBUTING.md, LICENSE
+- **docs/:** Project documentation (audit, program, curriculum, prerequisites, student profile, reports)
+- **config/:** Setup scripts and requirements (setup_env.ps1, setup_gcp_env.sh, requirements.txt)
+- **scripts/:** Utility scripts and notebooks (test_gemini.py, validate_phase0.py, etc.)
 - **Science AI Engineering/:** Curriculum content (Months 0-12)
 - **Literature Alignment/:** Academic references (separate track, not blocking F2/F3)
 - **Bootcamp Express/:** 1-week prep (language variants in same folder)
-- **results_archive/:** Historical cleanup logs (can be deleted after F2)
+- **.github/, .vscode/, .devcontainer/:** Configuration and CI/CD
 
 ---
 
 ## 🚀 Next Steps (Week of May 7, 2026 — F1 Residual)
 
 **Priority this week:**
-- Timeline audit completion: Verify no remaining instances of "2026-08-15" or "2026-12-15" in repository
+- Timeline audit completion: Verify no remaining instances of "2026-08-15" or "2026-12-15" in repository ✅
 - Document Python 3.10 EOL impact (October 2026) on remaining F1 Residual work
-- Confirm F2/F3 phase structure in [PROGRAMACAO_F2_F3.md](PROGRAMACAO_F2_F3.md) with 2027 dates
+- Confirm F2/F3 phase structure in [docs/PROGRAMACAO_F2_F3.md](docs/PROGRAMACAO_F2_F3.md) with 2027 dates ✅
 
-**Execution:** See [PROGRAMACAO_F2_F3.md](PROGRAMACAO_F2_F3.md) F1 Residual section for week-by-week task breakdown.
+**Execution:** See [docs/PROGRAMACAO_F2_F3.md](docs/PROGRAMACAO_F2_F3.md) F1 Residual section for week-by-week task breakdown.
 
 ---
 

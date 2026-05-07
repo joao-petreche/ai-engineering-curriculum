@@ -8,13 +8,13 @@
 [![Content: ~80%](https://img.shields.io/badge/Content-~80%25-yellow.svg)](https://github.com/joao-petreche/ai-engineering-curriculum)
 [![GitHub stars](https://img.shields.io/github/stars/joao-petreche/ai-engineering-curriculum?style=social)](https://github.com/joao-petreche/ai-engineering-curriculum/stargazers)
 
-> **Status:** ⚠️ **PRE-ONBOARDING** — Curriculum content substantially complete (~80%); residual technical gaps and instructor enablement materials pending. See [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md) for the verified gap list.
+> **Status:** ⚠️ **PRE-ONBOARDING** — Curriculum content substantially complete (~80%); residual technical gaps and instructor enablement materials pending. See [docs/AUDITORIA_2026_04_REVISAO.md](docs/AUDITORIA_2026_04_REVISAO.md) for the verified gap list.
 >
 > **Curriculum Content:** 600+ hours of material delivered, 60,000+ lines of code. Months 0–9 substantially complete; Months 10–12 have residual gaps (stragglers handling, conflict detection, operations runbook).
 >
 > **Capstone Project:** ✅ Delivered with 7.09% optimization improvement, $350K/year savings, academic publication-ready
 >
-> **FAPESP Alignment:** 98/100 score (Jan/2026) — see [CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](CURRICULUM_FAPESP_ALIGNMENT_REPORT.md) (scope: research project alignment, distinct from instructor-readiness)
+> **FAPESP Alignment:** 98/100 score (Jan/2026) — see [docs/CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](docs/CURRICULUM_FAPESP_ALIGNMENT_REPORT.md) (scope: research project alignment, distinct from instructor-readiness)
 >
 > **📝 Literature Review (April 2026):** Manuscript package refreshed (metadata sync, duplicate cleanup, bibliography normalization)
 >
@@ -23,15 +23,15 @@
 ---
 
 ## 🚀 Quick Start
-**👉 [START HERE: Scientific_AI_Engineering_Curriculum.md](Scientific_AI_Engineering_Curriculum.md)** - Complete 12-month program guide (English, 50 pages)
+**👉 [START HERE: Scientific_AI_Engineering_Curriculum.md](docs/Scientific_AI_Engineering_Curriculum.md)** - Complete 12-month program guide (English, 50 pages)
 
 **📘 Reference Guide:** [Science AI Engineering/docs/guia_referencia_completo.md](Science%20AI%20Engineering/docs/guia_referencia_completo.md) - Complete workflows, phase diagrams, and technical glossary (Portuguese)
 
 ### ⚙️ Environment Setup (Windows PowerShell)
 
-- **Automated setup script:** [setup_env.ps1](setup_env.ps1)
-- **What it does:** validates Python 3.10.x, creates/updates `.venv`, installs dependencies from `requirements.txt`, and activates the virtual environment.
-- **Run:** `./setup_env.ps1`
+- **Automated setup script:** [config/setup_env.ps1](config/setup_env.ps1)
+- **What it does:** validates Python 3.10.x, creates/updates `.venv`, installs dependencies from `config/requirements.txt`, and activates the virtual environment.
+- **Run:** `./config/setup_env.ps1`
 
 ## 🛠️ Development Environment Setup (GitHub Codespaces)
 
@@ -52,7 +52,7 @@ source .venv/bin/activate
 With the environment active, install the necessary libraries for data processing and Google Cloud integration:
 
 ```bash
-pip install -r requirements.txt
+pip install -r config/requirements.txt
 ```
 
 3. **Automation (GCP Setup):**
@@ -60,8 +60,8 @@ pip install -r requirements.txt
 You can also use the automation script that manages the environment lifecycle, enables necessary APIs in BigQuery, and validates billing:
 
 ```bash
-chmod +x setup_gcp_env.sh
-./setup_gcp_env.sh
+chmod +x config/setup_gcp_env.sh
+./config/setup_gcp_env.sh
 ```
 
 > Tip: In GitHub Codespaces, the terminal is already available within the remote environment. If `python3` is not automatically located, use `which python3` or `python --version` to confirm the activated interpreter path.
@@ -70,12 +70,12 @@ chmod +x setup_gcp_env.sh
 
 For heavy EnergyPlus simulations without consuming local Codespaces resources:
 
-- **Notebook:** [EnergyPlus_VS_Code_Colab.ipynb](EnergyPlus_VS_Code_Colab.ipynb)
+- **Notebook:** [scripts/EnergyPlus_VS_Code_Colab.ipynb](scripts/EnergyPlus_VS_Code_Colab.ipynb)
 - **Workflow:** Execute the remote Colab kernel directly within VS Code using the official extension.
 - **Advantage:** Automated installation of EnergyPlus v25.1.0 on Google's VM and optimized pipeline for parallel processing of multiple `.idf` files.
 - **Requirement:** Active Google account with Colab access.
 
-📊 **For FAPESP Research Project:** Review [CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](CURRICULUM_FAPESP_ALIGNMENT_REPORT.md) - Validation that curriculum is 98% sufficient for 48-month research execution
+📊 **For FAPESP Research Project:** Review [docs/CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](docs/CURRICULUM_FAPESP_ALIGNMENT_REPORT.md) - Validation that curriculum is 98% sufficient for 48-month research execution
 
 ## 🌡️ EnergyPlus & Cloud Integration
 
@@ -83,7 +83,7 @@ The curriculum now supports execution in a hybrid cloud environment, optimizing 
 
 ### 📄 Notebook Documentation: Hybrid Simulation
 
-This notebook (`EnergyPlus_VS_Code_Colab.ipynb`) automates the complete lifecycle of a thermal simulation, combining Google Colab's processing power with the convenience of VS Code.
+This notebook (`scripts/EnergyPlus_VS_Code_Colab.ipynb`) automates the complete lifecycle of a thermal simulation, combining Google Colab's processing power with the convenience of VS Code.
 
 #### 🏗️ System Architecture
 The workflow is designed to be fully stateless locally, using Google Cloud Storage (GCS) as the single persistence layer:
@@ -105,7 +105,7 @@ The workflow is designed to be fully stateless locally, using Google Cloud Stora
 
 1. Install the **"Google Colab"** extension in VS Code within your Codespaces environment.
 2. Log in to [colab.research.google.com](https://colab.research.google.com) in your browser.
-3. In VS Code, open the `EnergyPlus_VS_Code_Colab.ipynb` file.
+3. In VS Code, open the `scripts/EnergyPlus_VS_Code_Colab.ipynb` file.
 4. Click **"Select Kernel"** (Top right corner) > **"Existing Jupyter Server"** or select the detected remote Colab kernel.
 5. GCP authentication will be inherited from your browser session.
 
@@ -135,7 +135,7 @@ An **open-source curriculum** for advanced training in Scientific AI Engineering
 | **Curriculum Content (Months 10–12)** | ⚠️ **Partial** | Code present; gaps: stragglers handling, conflict detection, operations runbook |
 | **FAPESP Alignment** | ✅ **98/100 Score** | Validated Jan/2026 (scope: research project alignment) |
 | **Capstone Project** | ✅ **Delivered** | 4,050 lines, 3,750 pages |
-| **Code Base** | 🟡 **Beta (~80%)** | Verified pending items in [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md) |
+| **Code Base** | 🟡 **Beta (~80%)** | Verified pending items in [docs/AUDITORIA_2026_04_REVISAO.md](docs/AUDITORIA_2026_04_REVISAO.md) |
 | **Test Coverage** | 🔴 **Sparse** | Months 4 & 8 have pytest; Months 1–3, 5–7, 9–12 lack automated tests |
 | **Reproducibility** | ⚠️ **Partial** | `requirements.txt` uses version ranges, not pinned versions |
 | **Documentation (student-facing)** | ✅ **Comprehensive** | 4,000+ pages |
@@ -151,15 +151,15 @@ This repository is in **pre-onboarding state**. While core technical content is 
 - **Reproducibility** — `requirements.txt` uses version ranges (`>=`) instead of pinned versions
 - **Instructor enablement** — instructor guide, answer keys, slides, dry-run, and onboarding script are not yet created
 
-📋 **Full diagnostic:** [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md) — Re-audit (Apr/2026) with verified status of 20 priority gaps and ~45h technical + 40–80h instructor enablement residual workload.
+📋 **Full diagnostic:** [docs/AUDITORIA_2026_04_REVISAO.md](docs/AUDITORIA_2026_04_REVISAO.md) — Re-audit (Apr/2026) with verified status of 20 priority gaps and ~45h technical + 40–80h instructor enablement residual workload.
 
 ### 📚 Documentation
 
-- **[Scientific_AI_Engineering_Curriculum.md](Scientific_AI_Engineering_Curriculum.md)** - ⭐ **START HERE** - Complete 12-month master program (English, 50 pages)
+- **[docs/Scientific_AI_Engineering_Curriculum.md](docs/Scientific_AI_Engineering_Curriculum.md)** - ⭐ **START HERE** - Complete 12-month master program (English, 50 pages)
 - **[Science AI Engineering/docs/guia_referencia_completo.md](Science%20AI%20Engineering/docs/guia_referencia_completo.md)** - Reference guide with architecture, workflow diagrams, and consolidated glossary (Portuguese)
-- **[CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](CURRICULUM_FAPESP_ALIGNMENT_REPORT.md)** - 48-month FAPESP research project alignment (98/100 score)
-- **[STUDENT_PROFILE.md](STUDENT_PROFILE.md)** - Readiness assessment with 15-question quiz
-- **[PREREQUISITES.md](PREREQUISITES.md)** - Detailed technical requirements with roadmaps
+- **[docs/CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](docs/CURRICULUM_FAPESP_ALIGNMENT_REPORT.md)** - 48-month FAPESP research project alignment (98/100 score)
+- **[docs/STUDENT_PROFILE.md](docs/STUDENT_PROFILE.md)** - Readiness assessment with 15-question quiz
+- **[docs/PREREQUISITES.md](docs/PREREQUISITES.md)** - Detailed technical requirements with roadmaps
 
 ### 🏆 Key Achievements
 
@@ -375,15 +375,15 @@ Months 7-12: SCALING + EXPANSION
 
 | Document | Purpose | Location |
 |----------|---------|----------|
-| **Curriculum Master** | 🌟 **START HERE** - Complete 12-month program (English) | [Scientific_AI_Engineering_Curriculum.md](Scientific_AI_Engineering_Curriculum.md) |
+| **Curriculum Master** | 🌟 **START HERE** - Complete 12-month program (English) | [docs/Scientific_AI_Engineering_Curriculum.md](docs/Scientific_AI_Engineering_Curriculum.md) |
 | **Curriculum Index** | Navigate all 12 months (Portuguese) | [CURRICULUM_INDEX.md](Science%20AI%20Engineering/CURRICULUM_INDEX.md) |
-| **FAPESP Alignment Report** | 98/100 score alignment with research project | [CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](CURRICULUM_FAPESP_ALIGNMENT_REPORT.md) |
+| **FAPESP Alignment Report** | 98/100 score alignment with research project | [docs/CURRICULUM_FAPESP_ALIGNMENT_REPORT.md](docs/CURRICULUM_FAPESP_ALIGNMENT_REPORT.md) |
 | **Capstone Checkpoint** | Current project state | [mes12_capstone/_CHECKPOINT_RESUMO.md](Science%20AI%20Engineering/mes12_capstone/_CHECKPOINT_RESUMO.md) |
 | **Continuity Options** | 6 detailed next steps | [mes12_capstone/_POS_CAPSTONE_OPCOES.md](Science%20AI%20Engineering/mes12_capstone/_POS_CAPSTONE_OPCOES.md) |
 | **Literature Alignment** | 30+ scientific papers | [Literature Alignment.md](Literature%20Alignment/Literature%20Alignment.md) |
 | **Literature Review Manuscript** | LaTeX source + PDF + Markdown + bibliography | [Literature Review folder](Literature%20Alignment/Literature%20Review/) |
-| **Student Profile** | Readiness assessment | [STUDENT_PROFILE.md](STUDENT_PROFILE.md) |
-| **Prerequisites** | Detailed requirements | [PREREQUISITES.md](PREREQUISITES.md) |
+| **Student Profile** | Readiness assessment | [docs/STUDENT_PROFILE.md](docs/STUDENT_PROFILE.md) |
+| **Prerequisites** | Detailed requirements | [docs/PREREQUISITES.md](docs/PREREQUISITES.md) |
 | **Portuguese Version** | Original curriculum in Portuguese | [_legacy/Scientific_AI_Engineering_Curriculum_PT.md](_legacy/Scientific_AI_Engineering_Curriculum_PT.md) |
 
 ### 📁 Month-by-Month Deliverables
@@ -391,7 +391,7 @@ Months 7-12: SCALING + EXPANSION
 | Month | Topic | Status | Location |
 |-------|-------|--------|----------|
 | 0 | Infrastructure Setup | ✅ | [Exercicios_Fase_0_Infraestrutura.md](Science%20AI%20Engineering/Exercicios_Fase_0_Infraestrutura.md) |
-| 1 | EnergyPlus | ✅ | [EnergyPlus_VS_Code_Colab.ipynb](EnergyPlus_VS_Code_Colab.ipynb) & [Exercicios_Mes_1_EnergyPlus.md](Science%20AI%20Engineering/Exercicios_Mes_1_EnergyPlus.md) |
+| 1 | EnergyPlus | ✅ | [scripts/EnergyPlus_VS_Code_Colab.ipynb](scripts/EnergyPlus_VS_Code_Colab.ipynb) & [Exercicios_Mes_1_EnergyPlus.md](Science%20AI%20Engineering/Exercicios_Mes_1_EnergyPlus.md) |
 | 2 | Software Engineering | ✅ | [Exercicios_Mes_2_Engenharia_Software.md](Science%20AI%20Engineering/Exercicios_Mes_2_Engenharia_Software.md) |
 | 3 | Big Data | ✅ | [Exercicios_Mes_3_Big_Data.md](Science%20AI%20Engineering/Exercicios_Mes_3_Big_Data.md) |
 | 4 | PIML & Surrogates | ✅ | [Exercicios_Mes_4_PIML_Surrogates.md](Science%20AI%20Engineering/Exercicios_Mes_4_PIML_Surrogates.md) |
@@ -410,7 +410,7 @@ Months 7-12: SCALING + EXPANSION
 
 ### For New Students
 
-1. **Check Prerequisites:** Review [STUDENT_PROFILE.md](STUDENT_PROFILE.md) for readiness assessment and [PREREQUISITES.md](PREREQUISITES.md) for detailed requirements
+1. **Check Prerequisites:** Review [docs/STUDENT_PROFILE.md](docs/STUDENT_PROFILE.md) for readiness assessment and [docs/PREREQUISITES.md](docs/PREREQUISITES.md) for detailed requirements
 2. **Start Month 0:** Begin with [Exercicios_Fase_0_Infraestrutura.md](Science%20AI%20Engineering/Exercicios_Fase_0_Infraestrutura.md)
 3. **Progress Sequentially:** Follow months 0-12 in order
 4. **Track Progress:** Use Git to commit your work regularly
@@ -455,7 +455,7 @@ python -m venv .venv
 # source .venv/Scripts/activate
 
 # Install all curriculum dependencies
-pip install -r requirements.txt
+pip install -r config/requirements.txt
 ```
 
 The `requirements.txt` file currently uses minimum version constraints (`>=`) and covers the scientific stack (numpy, pandas, scipy, scikit-learn, xgboost, matplotlib, seaborn, plotly), the optimization/simulation tools (deap, eppy), and the production module dependencies (FastAPI, uvicorn, pydantic, OpenTelemetry, prometheus-client), plus testing.
@@ -623,4 +623,4 @@ GitHub: [@joao-petreche](https://github.com/joao-petreche)
 
 **Last Updated:** May 7, 2026
 **Status:** 🟡 Pre-Onboarding · Content ~80% · Instructor Enablement Pending
-**Next Milestone:** F2 — Student-ready repo by 2027-08-15 — see [PROGRAMACAO_F2_F3.md](PROGRAMACAO_F2_F3.md) and [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md)
+**Next Milestone:** F2 — Student-ready repo by 2027-08-15 — see [docs/PROGRAMACAO_F2_F3.md](docs/PROGRAMACAO_F2_F3.md) and [docs/AUDITORIA_2026_04_REVISAO.md](docs/AUDITORIA_2026_04_REVISAO.md)
