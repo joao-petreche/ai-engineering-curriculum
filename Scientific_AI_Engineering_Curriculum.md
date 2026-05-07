@@ -9,7 +9,14 @@
 
 **Mission:** Train Scientific AI Engineers capable of bridging Building Physics and Generative AI with scientific rigor and production-grade software safety.
 
-**Target Profile:** Scientific AI Engineer specializing in Building Performance Simulation (BPS) and Physics-Informed Machine Learning (PIML).
+**Entry Profile (Who Should Apply):** 
+- Bachelor's degree in engineering, CS, architecture, or related STEM field
+- 6+ months of programming experience (Python preferred)
+- Basic understanding of calculus and linear algebra
+- Willingness to commit 12-15 hours/week for 12 months
+
+**Exit Profile (What You'll Become):** 
+Scientific AI Engineer specializing in Building Performance Simulation (BPS) and Physics-Informed Machine Learning (PIML) — capable of designing AI systems that respect physical constraints, deploy to production, and scale across distributed portfolios.
 
 **Program Metrics:**
 - **Duration:** 12 months (600-700 hours total)
@@ -28,7 +35,7 @@
 - ✅ **Month 11:** Advanced Analytics & Custom Metrics - COMPLETE
 - ✅ **Month 12:** Industry Capstone Project - COMPLETE
 
-**Strategic Design:** This curriculum implements a "**Training-First, Research-Second**" model, providing 12 months of intensive preparation BEFORE research execution. This eliminates the learning curve during critical project phases, validated through capstone completion with measurable business impact.
+**Strategic Design:** This curriculum is designed around a "**Training-First, Research-Second**" model, providing 12 months of intensive preparation BEFORE research execution. The capstone project (Month 12) validates the viability of this model through a complete end-to-end research cycle (7.09% optimization improvement, $350K/year cost savings) with production-ready code and publication-ready documentation. **For future cohorts:** this curriculum can serve as the complete 12-month preparation before a research project execution phase.
 
 ---
 

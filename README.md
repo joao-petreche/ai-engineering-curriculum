@@ -1,5 +1,7 @@
 # 🎓 Scientific AI Engineering Curriculum
-## 12-Month Training Program — Pre-Onboarding (Content ~80%, April 2026)
+## 12-Month Training Program — Pre-Onboarding (Content ~80%, May 2026)
+
+**Mission:** Train Scientific AI Engineers capable of bridging Building Physics and Generative AI with scientific rigor and production-grade software safety.
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Status: Pre-Onboarding](https://img.shields.io/badge/Status-Pre--Onboarding-yellow.svg)](https://github.com/joao-petreche/ai-engineering-curriculum)
