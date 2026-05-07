@@ -7,7 +7,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
 WORKDIR /app
 
 # Install build dependencies
-COPY requirements.txt .
+COPY ../../config/requirements.txt .
 RUN pip install --no-cache-dir --user -r requirements.txt
 
 # Stage 2: Runtime (distroless for security)

@@ -58,7 +58,7 @@ source .venv/bin/activate
 echo "    - Ambiente virtual (.venv) ativo."
 
 echo "==> [6/8] Sincronizando bibliotecas (requirements.txt)..."
-pip install -q -r requirements.txt
+pip install -q -r config/requirements.txt
 
 echo "==> [7/8] Verificação de Credenciais de Aplicação (ADC)..."
 if [ ! -f ~/.config/gcloud/application_default_credentials.json ]; then
@@ -70,7 +70,7 @@ fi
 echo "==> [8/8] Relatório Financeiro e Observabilidade..."
 echo "------------------------------------------------------------"
 # Executa a análise de faturamento real via BigQuery[cite: 4, 5]
-if python3 analise_faturamento_real.py; then
+if python3 scripts/analise_faturamento_real.py; then
     echo -e "\n✅ Infraestrutura validada: RAM estável e Custo Líquido R$ 0.00."[cite: 3]
 else
     echo -e "\n⚠️ Dados de faturamento em processamento (aguarde 24h)."[cite: 4]

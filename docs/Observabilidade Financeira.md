@@ -20,8 +20,8 @@ Para evitar surpresas no cartão de crédito e garantir o uso eficiente do saldo
 ## 3. Monitoramento Programático
 O controle é realizado via scripts Python executados no ambiente isolado `.venv`[cite: 1]:
 
-*   **`check_billing.py`**: Valida o status das contas e o saldo residual de créditos[cite: 3].
-*   **`analise_faturamento_real.py`**: Realiza consultas SQL no BigQuery para calcular o **Custo Líquido** (Gasto Bruto - Créditos).
+*   **`scripts/check_billing.py`**: Valida o status das contas e o saldo residual de créditos[cite: 3].
+*   **`scripts/analise_faturamento_real.py`**: Realiza consultas SQL no BigQuery para calcular o **Custo Líquido** (Gasto Bruto - Créditos).
 
 ### Execução do Relatório
 ```bash
@@ -29,7 +29,7 @@ O controle é realizado via scripts Python executados no ambiente isolado `.venv
 source .venv/bin/activate
 
 # Rodar a análise detalhada
-python analise_faturamento_real.py
+python scripts/analise_faturamento_real.py
 ```
 
 ## 4. Gestão de Créditos Promocionais
