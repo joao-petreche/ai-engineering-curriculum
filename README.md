@@ -623,4 +623,4 @@ GitHub: [@joao-petreche](https://github.com/joao-petreche)
 
 **Last Updated:** May 7, 2026
 **Status:** 🟡 Pre-Onboarding · Content ~80% · Instructor Enablement Pending
-**Next Milestone:** F2 — Student-ready repo by 2026-08-15 — see [PROGRAMACAO_F2_F3.md](PROGRAMACAO_F2_F3.md) and [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md)
+**Next Milestone:** F2 — Student-ready repo by 2027-08-15 — see [PROGRAMACAO_F2_F3.md](PROGRAMACAO_F2_F3.md) and [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md)

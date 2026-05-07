@@ -1,7 +1,7 @@
-# 📅 PROGRAMAÇÃO F2 & F3 — Conclusão do Currículo + Material do Instrutor
+# 📅 PROGRAMAÇÃO F1 Residual, F2 & F3 — Conclusão do Currículo + Material do Instrutor
 
 **Data de criação:** 2026-05-01  
-**Última atualização:** 2026-05-07 (Week 1 checkpoint + removals)  
+**Última atualização:** 2026-05-07 (Revisão de timeline — F1 residual mai–dez/2026; F2 jan–ago/2027; F3 set–dez/2027)  
 **Autor responsável:** João Petreche  
 **Documento de origem:** [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md)  
 **Tipo:** Plano de execução com checkpoints semanais
@@ -23,79 +23,101 @@
 
 ---
 
-## 🎯 Parâmetros do plano
+## 🎯 Parâmetros do plano (Timeline Revisada)
 
 | Parâmetro | Valor |
 |---|---|
-| **Marco F2 — Onboarding alunos** | 2026-08-15 |
-| **Marco F3 — Material do instrutor pronto** | 2026-12-15 |
-| **Disponibilidade Mai–Jun (fim de semestre)** | 3h/semana |
-| **Disponibilidade Jul–15-Ago** | 8h/semana |
-| **Disponibilidade 16-Ago → 15-Dez** | 4h/semana |
+| **Marco F1 Residual — Conclusão** | 2026-12-31 |
+| **Marco F2 — Onboarding alunos** | 2027-08-15 |
+| **Marco F3 — Material do instrutor pronto** | 2027-12-15 |
+| **Disponibilidade F1 Residual (Mai–Dez 2026)** | 3h/semana |
+| **Disponibilidade F2 início (Jan–Mar 2027)** | 3h/semana |
+| **Disponibilidade F2 peak (Apr–Aug 2027)** | 8h/semana |
+| **Disponibilidade F3 (Set–Dez 2027)** | 4h/semana |
 
 ---
 
-## 💰 Orçamento de horas
+## 💰 Orçamento de horas (Revisado)
 
-| Período | Semanas | h/sem | **Disponível** |
-|---|---|---|---|
-| 2026-05-01 → 2026-06-30 | ~9 | 3h | **~26h** |
-| 2026-07-01 → 2026-08-15 | ~6.5 | 8h | **~52h** |
-| **F2 total (até onboarding alunos)** | | | **~78h** |
-| 2026-08-16 → 2026-12-15 | ~17.5 | 4h | **~70h** |
-| **F3 total (até material instrutor pronto)** | | | **~70h** |
+| Período | Fase | Semanas | h/sem | **Disponível** |
+|---|---|---|---|---|
+| 2026-05-07 → 2026-12-31 | F1 Residual | ~34 | 3h | **~102h** |
+| 2027-01-01 → 2027-03-31 | F2 início | ~13 | 3h | **~39h** |
+| 2027-04-01 → 2027-08-15 | F2 peak | ~19 | 8h | **~152h** |
+| **F2 total (até onboarding alunos)** | | | | **~191h** |
+| 2027-08-16 → 2027-12-15 | F3 | ~17.5 | 4h | **~70h** |
+| **F3 total (até material instrutor pronto)** | | | | **~70h** |
 
 ---
 
-## 🎓 F2 — Material para alunos
+## 🎓 F1 Residual — Resolução de Inconsistências (Mai–Dez 2026)
 
-**Objetivo:** repositório "student-ready" até 15-Ago — todos os gaps técnicos da auditoria de 2026-04 fechados, dry-run completo realizado, kit de boas-vindas pronto.
+**Objetivo:** resolver inconsistências documentais descobertas na revisão de objetivos de maio/2026. Atualizar datas internas, eliminar contradições entre documentos, documentar limitações técnicas conhecidas (Python 3.10, SDK Gemini, etc.).
 
-**Carga estimada:** ~64h (contra ~78h disponíveis = ~14h de folga para imprevistos).
+**Carga estimada:** ~102h (contra ~102h disponíveis).
+
+---
+
+## 🎓 F2 — Material para alunos (Jan–Ago 2027)
+
+**Objetivo:** repositório "student-ready" até 15-Ago/2027 — todos os gaps técnicos da auditoria de 2026-04 fechados, dry-run completo realizado, kit de boas-vindas pronto.
+
+**Carga estimada:** ~191h (contra ~191h disponíveis = margens justas; priorizar Blocos A-D).
 
 ### Estratégia de alocação
 
 - **Tarefas curtas e isoladas** (Bloco A + Bloco D) → período 3h/sem
 - **Tarefas pesadas com alto contexto** (Bloco B testes, Bloco C tópicos avançados, dry-run) → período 8h/sem
 
-### Fase Maio–Junho (3h/sem, ~26h)
+### Fase Janeiro–Março/2027 (3h/sem, ~39h)
 
 | Sem | Janela | Tarefa | h | ☐ |
 |---|---|---|---|---|
-| 1 | 05-01 → 05-07 | A11 — Pinar [requirements.txt](requirements.txt) (`>=` → `==`) | 1 | ☐ |
-| 1 | 05-01 → 05-07 | A8 — Iniciar `technical_examples_library.json` (50 exemplos físicos) | 2 | ☐ |
-| 2 | 05-08 → 05-14 | A8 — Finalizar JSON (validação WWR/U-value) | 1 | ☐ |
-| 2 | 05-08 → 05-14 | A14 — Retry 3x em batch failures (try/except + log) | 2 | ☐ |
-| 3 | 05-15 → 05-21 | A13 — Exercício 2.0 "Intro pytest" (5 testes simples) | 2 | ☐ |
-| 3 | 05-15 → 05-21 | D12 — Iniciar guia direcionado de leitura do IDD PDF | 1 | ☐ |
-| 4 | 05-22 → 05-28 | D12 — Finalizar guia IDD (~50 perguntas direcionadas) | 2 | ☐ |
-| 4 | 05-22 → 05-28 | B16 — Hallucination 3ª camada (cross-validation) | 1 | ☐ |
-| 5 | 05-29 → 06-04 | B16 — Finalizar 3ª camada | 2 | ☐ |
-| 5 | 05-29 → 06-04 | B3 — Iniciar suíte pytest GuardrailValidator | 1 | ☐ |
-| 6 | 06-05 → 06-11 | B3 — Testes pytest GuardrailValidator (target: 15+ testes) | 3 | ☐ |
-| 7 | 06-12 → 06-18 | B17 — Physics validators faltantes (energy balance, 2ª lei, conservação massa) | 3 | ☐ |
-| 8 | 06-19 → 06-25 | B17 — Finalizar physics validators + integração ao detector | 3 | ☐ |
-| 9 | 06-26 → 06-30 | Buffer / fechamento Bloco B parcial | 2 | ☐ |
+| 1 | 01-03 → 01-09 | A11 — Pinar [requirements.txt](requirements.txt) (`>=` → `==`) + SDK Gemini atualização | 2 | ☐ |
+| 1 | 01-03 → 01-09 | A8 — Iniciar `technical_examples_library.json` (50 exemplos físicos) | 2 | ☐ |
+| 2 | 01-10 → 01-16 | A8 — Finalizar JSON (validação WWR/U-value) | 1 | ☐ |
+| 2 | 01-10 → 01-16 | A14 — Retry 3x em batch failures (try/except + log) | 2 | ☐ |
+| 3 | 01-17 → 01-23 | A13 — Exercício 2.0 "Intro pytest" (5 testes simples) | 2 | ☐ |
+| 3 | 01-17 → 01-23 | D12 — Iniciar guia direcionado de leitura do IDD PDF | 1 | ☐ |
+| 4 | 01-24 → 01-30 | D12 — Finalizar guia IDD (~50 perguntas direcionadas) | 2 | ☐ |
+| 4 | 01-24 → 01-30 | B16 — Hallucination 3ª camada (cross-validation) | 1 | ☐ |
+| 5 | 01-31 → 02-06 | B16 — Finalizar 3ª camada | 2 | ☐ |
+| 5 | 01-31 → 02-06 | B3 — Iniciar suíte pytest GuardrailValidator | 1 | ☐ |
+| 6 | 02-07 → 02-13 | B3 — Testes pytest GuardrailValidator (target: 15+ testes) | 3 | ☐ |
+| 7 | 02-14 → 02-20 | B17 — Physics validators faltantes (energy balance, 2ª lei, conservação massa) | 3 | ☐ |
+| 8 | 02-21 → 02-27 | B17 — Finalizar physics validators + integração ao detector | 3 | ☐ |
+| 9 | 02-28 → 03-06 | B3 (continuação) — Integração suíte pytest com testes existentes | 2 | ☐ |
+| 10 | 03-07 → 03-13 | Revisão Bloco A + D + B início (checkpoint) | 2 | ☐ |
+| 11 | 03-14 → 03-20 | Buffer / ajustes finais Blocos A–D | 2 | ☐ |
+| 12 | 03-21 → 03-31 | PyTorch adição a requirements.txt + LangChain pinagem + validação | 2 | ☐ |
 
-**Marco 30/Jun:** Blocos A + D completos · Bloco B ~70% (faltam testes E2E do CoSim) · ~25h investidas.
+**Marco 31/Mar/2027:** Blocos A + D completos · Bloco B ~70% (faltam testes E2E do CoSim) · ~39h investidas.
 
-### Fase Julho–Agosto (8h/sem, ~52h)
+### Fase Abril–Agosto/2027 (8h/sem, ~152h)
 
 | Sem | Janela | Tarefa | h | ☐ |
 |---|---|---|---|---|
-| 10 | 07-01 → 07-07 | B9 — Testes E2E CoSimulationManager (3 casos: surrogate-only, EnergyPlus-only, hybrid loop) | 6 | ☐ |
-| 10 | 07-01 → 07-07 | Revisão final Bloco B + integração com testes existentes | 2 | ☐ |
-| 11 | 07-08 → 07-14 | C18 — Stragglers/timeout no FedAvg (timeout dinâmico, async aggregation) | 6 | ☐ |
-| 11 | 07-08 → 07-14 | Planning detalhado C19 + C20 | 2 | ☐ |
-| 12 | 07-15 → 07-21 | C19 — Conflict detection: correlation matrix + threshold alerts (Mês 11) | 4 | ☐ |
-| 12 | 07-15 → 07-21 | C20 — Operations runbook (Mês 12, sem workshop) | 4 | ☐ |
-| 13 | 07-22 → 07-28 | C20 — Finalizar runbook | 1 | ☐ |
-| 13 | 07-22 → 07-28 | Dry-run como aluno: validate_phase0 → Mês 1 (anotar tempo, bugs, fricções) | 7 | ☐ |
-| 14 | 07-29 → 08-04 | Dry-run continuação: Meses 2–6 | 8 | ☐ |
-| 15 | 08-05 → 08-11 | Dry-run continuação: Meses 7–12 + correção de bugs encontrados | 8 | ☐ |
-| 16 | 08-12 → 08-15 | Kit boas-vindas alunos (welcome message, primeiro-dia checklist, canal de suporte) + atualização final do README | 4 | ☐ |
+| 13 | 04-04 → 04-10 | B9 — Testes E2E CoSimulationManager (3 casos: surrogate-only, EnergyPlus-only, hybrid loop) | 8 | ☐ |
+| 14 | 04-11 → 04-17 | B9 (continuação) — Finalizar e integrar testes E2E | 6 | ☐ |
+| 14 | 04-11 → 04-17 | Revisão final Bloco B + validação com código existente | 2 | ☐ |
+| 15 | 04-18 → 04-24 | C18 — Stragglers/timeout no FedAvg (timeout dinâmico, async aggregation) | 8 | ☐ |
+| 16 | 04-25 → 05-01 | C19 — Conflict detection: correlation matrix + threshold alerts (Mês 11) | 8 | ☐ |
+| 17 | 05-02 → 05-08 | C19 (continuação) + C20 — Operations runbook (Mês 12) | 8 | ☐ |
+| 18 | 05-09 → 05-15 | C20 — Finalizar runbook + documentação operacional | 8 | ☐ |
+| 19 | 05-16 → 05-22 | Dry-run como aluno: validate_phase0 → Mês 2 (anotar tempo, bugs, fricções) | 8 | ☐ |
+| 20 | 05-23 → 05-29 | Dry-run continuação: Meses 3–6 | 8 | ☐ |
+| 21 | 05-30 → 06-05 | Dry-run continuação: Meses 7–9 | 8 | ☐ |
+| 22 | 06-06 → 06-12 | Dry-run continuação: Meses 10–12 + correção de bugs encontrados | 8 | ☐ |
+| 23 | 06-13 → 06-19 | Correções pós-dry-run (bugs críticos, fricções documentadas) | 8 | ☐ |
+| 24 | 06-20 → 06-26 | Kit boas-vindas alunos (welcome message, primeiro-dia checklist, canal de suporte) | 8 | ☐ |
+| 25 | 06-27 → 07-03 | Atualização final do README pós-F2 + consolidação de pendências | 8 | ☐ |
+| 26 | 07-04 → 07-10 | Buffer — resolução de issues não-críticas encontradas no dry-run | 8 | ☐ |
+| 27 | 07-11 → 07-17 | Validação final: todos os exercícios do Mês 0 ao Mês 12 executáveis | 8 | ☐ |
+| 28 | 07-18 → 07-24 | Preparação do repositório final student-ready: tags, release notes, documentação | 8 | ☐ |
+| 29 | 07-25 → 07-31 | Buffer final / checkpoint pré-08-15 | 8 | ☐ |
+| 30 | 08-01 → 08-15 | Polimento final + validação com checklist F2 | 8 | ☐ |
 
-**Marco 15/Ago:** ☐ Repo "student-ready" — todos os gaps técnicos fechados, dry-run feito, kit pronto. F2 concluída.
+**Marco 15/Ago/2027:** ☐ Repo "student-ready" — todos os gaps técnicos fechados, dry-run feito, kit pronto. F2 concluída.
 
 ### Escopo F2 — explícito
 
@@ -128,7 +150,7 @@ Construir em ondas mensais, cada onda entregando algo utilizável. Validar com 1
 
 ### Plano mês-a-mês (4h/sem)
 
-#### 🗓️ Setembro/2026 (08-16 → 09-15, ~17h)
+#### 🗓️ Setembro/2027 (08-16 → 09-15, ~17h)
 
 **Foco:** Guia do instrutor + cronograma de aplicação.
 
@@ -139,9 +161,9 @@ Construir em ondas mensais, cada onda entregando algo utilizável. Validar com 1
 | Guia do instrutor — Meses 5–9 (1h por mês: 5h) | 5 | ☐ |
 | Cronograma de aplicação (modos presencial 12 meses vs. assíncrono; carga semanal sugerida) | 2 | ☐ |
 
-**Marco 15/Set:** ☐ Guia do instrutor cobrindo Fase 0 → Mês 9 + cronograma pronto.
+**Marco 15/Set/2027:** ☐ Guia do instrutor cobrindo Fase 0 → Mês 9 + cronograma pronto.
 
-#### 🗓️ Outubro/2026 (09-16 → 10-15, ~17h)
+#### 🗓️ Outubro/2027 (09-16 → 10-15, ~17h)
 
 **Foco:** Gabaritos + FAQ docente + finalizar guia do instrutor.
 
@@ -152,9 +174,9 @@ Construir em ondas mensais, cada onda entregando algo utilizável. Validar com 1
 | Gabaritos — soluções escritas para exercícios sem código existente (Meses 7–12) | 4 | ☐ |
 | FAQ docente — 20+ perguntas com respostas estruturadas | 4 | ☐ |
 
-**Marco 15/Out:** ☐ Guia completo · Gabaritos cobrindo 12 meses · FAQ pronto. **Convidar 1 professor-piloto** para revisar.
+**Marco 15/Out/2027:** ☐ Guia completo · Gabaritos cobrindo 12 meses · FAQ pronto. **Convidar 1 professor-piloto** para revisar.
 
-#### 🗓️ Novembro/2026 (10-16 → 11-15, ~17h)
+#### 🗓️ Novembro/2027 (10-16 → 11-15, ~17h)
 
 **Foco:** Slides + iteração com feedback do professor-piloto.
 
@@ -166,20 +188,20 @@ Construir em ondas mensais, cada onda entregando algo utilizável. Validar com 1
 | Slide deck — Fase 3 (Meses 10–12, sistemas avançados) | 3 | ☐ |
 | Iteração com feedback do professor-piloto (correções no guia/gabaritos/FAQ) | 5 | ☐ |
 
-**Marco 15/Nov:** ☐ 4 decks de slides · Versão validada por professor-piloto.
+**Marco 15/Nov/2027:** ☐ 4 decks de slides · Versão validada por professor-piloto.
 
-#### 🗓️ Dezembro/2026 (11-16 → 12-15, ~17h)
+#### 🗓️ Dezembro/2027 (11-16 → 12-15, ~17h)
 
 **Foco:** Dry-run roteirizado + roteiro do onboarding + polimento.
 
 | Tarefa | h | ☐ |
 |---|---|---|
 | Dry-run roteirizado — selecionar mês-piloto e cronometrar aplicação real | 8 | ☐ |
-| Roteiro do onboarding — agenda da sessão Jun–Jul/2027, materiais, exercícios, Q&A | 5 | ☐ |
+| Roteiro do onboarding — agenda da sessão Jan–Fev/2028, materiais, exercícios, Q&A | 5 | ☐ |
 | Polimento final, README pós-F3, kit do instrutor consolidado | 2 | ☐ |
 | Buffer | 2 | ☐ |
 
-**Marco 15/Dez:** ☐ **Repo "instructor-ready"** — material do instrutor completo, validado, com roteiro de onboarding pronto. F3 concluída.
+**Marco 15/Dez/2027:** ☐ **Repo "instructor-ready"** — material do instrutor completo, validado, com roteiro de onboarding pronto. F3 concluída.
 
 ---
 
@@ -187,13 +209,14 @@ Construir em ondas mensais, cada onda entregando algo utilizável. Validar com 1
 
 | Data | Marco | Status |
 |---|---|---|
-| 2026-05-01 | F1 concluído (auditoria + atualização docs) | ✅ |
-| 2026-06-30 | Blocos A + D completos, B ~70% | ☐ |
-| 2026-08-15 | **F2 concluída — repo student-ready · Onboarding alunos pode acontecer** | ☐ |
-| 2026-09-15 | F3 onda 1 — guia do instrutor + cronograma | ☐ |
-| 2026-10-15 | F3 onda 2 — gabaritos + FAQ + convite professor-piloto | ☐ |
-| 2026-11-15 | F3 onda 3 — slides + iteração com feedback | ☐ |
-| 2026-12-15 | **F3 concluída — repo instructor-ready · Onboarding professores pode acontecer** | ☐ |
+| 2026-05-01 | F1 concluído (auditoria) | ✅ |
+| 2026-12-31 | **F1 Residual concluída** — inconsistências resolvidas, limitações técnicas documentadas | ☐ |
+| 2027-03-31 | Blocos A + D completos, B ~70% | ☐ |
+| 2027-08-15 | **F2 concluída — repo student-ready · Onboarding alunos pode acontecer** | ☐ |
+| 2027-09-15 | F3 onda 1 — guia do instrutor + cronograma | ☐ |
+| 2027-10-15 | F3 onda 2 — gabaritos + FAQ + convite professor-piloto | ☐ |
+| 2027-11-15 | F3 onda 3 — slides + iteração com feedback | ☐ |
+| 2027-12-15 | **F3 concluída — repo instructor-ready · Onboarding professores pode acontecer** | ☐ |
 
 ---
 

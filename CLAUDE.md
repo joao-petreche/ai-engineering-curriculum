@@ -20,14 +20,25 @@
 
 ---
 
-## 🎯 Current Phase: F2 (May–Aug 2026)
+## 🎯 Current Phase: F1 Residual (May–Dec 2026)
+
+**Objective:** Resolve documentation inconsistencies, update all internal timeline references, document technical limitations (Python 3.10 EOL, SDK conflicts, unpinned dependencies).
+
+**Timeline:**
+- **May–Jul:** Audit resolution + date updates across all 4 key files (README, CLAUDE, AUDITORIA, PROGRAMACAO)
+- **Aug–Dec:** Technical gap documentation + contingency planning for Python 3.10 end-of-life (Oct 2026)
+- **Target:** F1 Residual complete by 2026-12-31
+
+---
+
+## 🎯 Phase F2 (Jan–Aug 2027)
 
 **Objective:** Close residual technical gaps, dry-run curriculum as student, prepare instructor enablement materials.
 
 **Timeline:**
-- **May–Jun:** Quick wins (Bloco A) + documentation (Bloco D) + pytest suite start (Bloco B)
-- **Jul–Aug:** Advanced topics (Blocos B, C) + full end-to-end dry-run + student kit
-- **Target:** Student-ready repo by 2026-08-15
+- **Jan–Mar:** Quick wins (Bloco A) + documentation (Bloco D) + pytest suite start (Bloco B)
+- **Apr–Aug:** Advanced topics (Blocos B, C) + full end-to-end dry-run + student kit
+- **Target:** Student-ready repo by 2027-08-15
 
 **Resource:** [PROGRAMACAO_F2_F3.md](PROGRAMACAO_F2_F3.md) — Week-by-week execution plan with checkboxes and hour allocations.
 
@@ -39,8 +50,8 @@
 | File | Purpose | Last Updated |
 |------|---------|--------------|
 | [README.md](README.md) | Main project landing page | May 7, 2026 |
-| [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md) | April 2026 audit with 20 priority gaps | Apr 30, 2026 |
-| [PROGRAMACAO_F2_F3.md](PROGRAMACAO_F2_F3.md) | F2/F3 execution plan (week-by-week) | May 1, 2026 |
+| [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md) | April 2026 audit with 20 priority gaps + timeline revision | May 7, 2026 |
+| [PROGRAMACAO_F2_F3.md](PROGRAMACAO_F2_F3.md) | F1 Residual/F2/F3 execution plan (week-by-week) | May 7, 2026 |
 | [Scientific_AI_Engineering_Curriculum.md](Scientific_AI_Engineering_Curriculum.md) | 12-month master curriculum (50 pages) | May 7, 2026 |
 | [STUDENT_PROFILE.md](STUDENT_PROFILE.md) | Readiness assessment + prep guide | May 7, 2026 |
 | [PREREQUISITES.md](PREREQUISITES.md) | Technical & academic requirements | May 7, 2026 |
@@ -137,15 +148,14 @@ python capstone_week2_optimization.py  # ~2 min with reduced rounds
 
 ---
 
-## 🚀 Next Steps (Week of May 7, 2026)
+## 🚀 Next Steps (Week of May 7, 2026 — F1 Residual)
 
 **Priority this week:**
-- A11: Pin versions in `requirements.txt` (Gap 11)
-- A8: Generate and validate `technical_examples_library.json` (Gap 8)
-- Plan B3: pytest suite structure for GuardrailValidator
-- Plan B16: 3rd layer cross-validation for hallucination detector
+- Timeline audit completion: Verify no remaining instances of "2026-08-15" or "2026-12-15" in repository
+- Document Python 3.10 EOL impact (October 2026) on remaining F1 Residual work
+- Confirm F2/F3 phase structure in [PROGRAMACAO_F2_F3.md](PROGRAMACAO_F2_F3.md) with 2027 dates
 
-**Execution:** See [PROGRAMACAO_F2_F3.md](PROGRAMACAO_F2_F3.md) Week 1-2 rows for hour allocation and checkboxes.
+**Execution:** See [PROGRAMACAO_F2_F3.md](PROGRAMACAO_F2_F3.md) F1 Residual section for week-by-week task breakdown.
 
 ---
 
