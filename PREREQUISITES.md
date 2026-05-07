@@ -530,6 +530,44 @@ If you feel lost:
 
 ---
 
+## ⚠️ Known Technical Limitations (May 2026)
+
+As of the curriculum's pre-onboarding state (May 2026), students should be aware of the following technical constraints:
+
+### Environment & Versions
+
+| Limitation | Details | Workaround |
+|---|---|---|
+| **Python 3.10 Required** | BESOS library incompatible with Python 3.12+; 3.10 reaches EOL in October 2026 | Use `pyenv` or virtual environment to isolate Python 3.10 for this curriculum; recommend planning for Python 3.12+ post-curriculum |
+| **EnergyPlus 24.1.0** | Curriculum uses 24.1.0; version 25.1 available (Feb 2025) with API improvements | Code compatible with 25.1+, but some advanced features (pyenergyplus API) not covered in curriculum |
+| **Gemini 1.5-flash hardcoded** | Exercises use `gemini-1.5-flash` model; Gemini 2.5 released (Apr 2025) | API calls will work but at different pricing; update model references for current costs |
+| **SDK Conflicts** | Exercises use `vertexai.generative_models` (Vertex AI SDK) but `requirements.txt` lists `google-genai` (Google Generative AI SDK) with different API | Use **ONLY** `vertexai.generative_models` for this curriculum; `google-genai` is incompatible |
+
+### Dependencies with High Change Risk
+
+| Package | Issue | Status |
+|---|---|---|
+| **LangChain** | Unpinned in `requirements.txt`; breaking API changes between minor versions | High risk of code breakage; recommend pinning to LangChain 0.1.x or 0.2.x after testing |
+| **PyTorch** | Missing from `requirements.txt` despite extensive use in exercises | Add `torch>=2.2` to requirements.txt and test locally |
+| **Flower (flwr)** | Mentioned in curriculum, absent from implementation; exercises use Ray+OpenAI instead | Standard FL framework; using Ray is valid but creates inconsistency with literature |
+
+### Data & Infrastructure
+
+| Limitation | Details | Impact |
+|---|---|---|
+| **No Pre-populated `/data/` | Datasets generated on-demand during exercises | First runs take extra time (15-30 min for LHS sampling in Month 3); plan accordingly for classroom use |
+| **Chromadb/Pinecone RAG** | Basic implementations only; no advanced chunking or reranking | Works for learning; production deployments should add semantic chunking + cross-encoder reranking |
+
+### Expected Resolution Timeline
+
+- **Prioridade Alta (Bloqueia execução):** Python 3.10 + BESOS constraint → investigated during F2 (May–Aug 2026)
+- **Prioridade Alta (Bugs na execução):** Gemini SDK, LangChain pinning, PyTorch → fixes by August 15, 2026 (F2 milestone)
+- **Prioridade Média (Degradação de qualidade):** EnergyPlus versioning, Flower vs Ray inconsistency → addressed iteratively in post-F2 phases
+
+See [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md) and [PROGRAMACAO_F2_F3.md](PROGRAMACAO_F2_F3.md) for detailed resolution roadmap.
+
+---
+
 ## ✅ Conclusion
 
 **The 12-month training is accessible to any STEM bachelor's degree holder with determination.**

@@ -68,6 +68,23 @@ O repositório evoluiu significativamente desde a auditoria original. **8 dos 10
 - ⚠️ **Parciais:** 6 (3, 9, 12, 13, 14, 16)
 - 🔴 **Abertos:** 6 (8, 11, 17, 18, 19, 20)
 
+### Gaps Adicionais Descobertos (Revisão Maio 2026)
+
+Revisão de profundidade da auditoria original em maio/2026 identificou 6 gaps adicionais não capturados nos 20 itens P0/P1 originais:
+
+| # | Gap Adicional | Severidade | Status | Estimativa |
+|---|---|---|---|---|
+| 21 | [Mês 10] LLM cost tracker com hard limit | 🔴 ALTO | Ausente | 2-3h |
+| 22 | [Mês 11] Uncertainty propagation em sensitivity analysis | 🔴 ALTO | Ausente | 2-3h |
+| 23 | [Mês 12] Statistical power analysis para A/B testing | 🔴 ALTO | Ausente | 2-3h |
+| 24 | [Mês 5/6] SDK Gemini desatualizado + incompatibilidade `vertexai` vs `google-genai` | 🔴 ALTO | Desatualizado | 3-4h |
+| 25 | [Mês 10] Flower/TensorFlow Federated (listados no curriculo, ausentes da implementação) | ⚠️ MÉDIO | Parcial | 2-3h |
+| 26 | [Infraestrutura] Dataset `/data/` pré-populado para uso em sala (evita wait times) | ⚠️ MÉDIO | Ausente | 3-5h |
+
+**Contexto:** Os gaps 21-26 foram identificados durante análise de relevância técnica e consistência entre o currículo declarado e a implementação real. Enquanto os gaps 1-20 focavam em completude de código, os gaps 21-26 focam em qualidade técnica (versões desatualizadas, arquitetura inconsistente de stack, defasagem para 2026).
+
+**Prioridade relativa:** Os gaps 21-24 têm prioridade alta (bloqueiam usabilidade); 25-26 são de segunda geração (melhorias de qualidade/experiência do aluno).
+
 ---
 
 ## 2. Pendências técnicas residuais (~45h)
