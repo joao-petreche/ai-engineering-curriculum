@@ -1,7 +1,7 @@
 # **🎓 Scientific AI Engineering for Building Performance Simulation**
 ## **Complete 12-Month Master Curriculum**
 
-**Status**: ✅ **CURRICULUM 100% COMPLETE (12/12 MONTHS) - January 2026**
+**Status**: 🟡 **PRE-ONBOARDING** — Content substantially complete (~80%, May 2026); residual technical gaps and instructor enablement pending. [See audit](AUDITORIA_2026_04_REVISAO.md)
 
 ---
 

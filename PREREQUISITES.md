@@ -1,7 +1,7 @@
 # 📋 Prerequisites & Preparation Guide
 
-**Last Updated:** April 30, 2026  
-**Curriculum Status:** ✅ 100% Complete (12 months, 600-700 hours)  
+**Last Updated:** May 7, 2026  
+**Curriculum Status:** 🟡 Pre-Onboarding (~80% complete, content gaps pending); [See April 2026 audit](AUDITORIA_2026_04_REVISAO.md)  
 **Target Audience:** Scientific AI Engineers in Building Performance Simulation
 
 ---

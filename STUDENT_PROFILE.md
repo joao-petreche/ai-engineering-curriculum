@@ -1,7 +1,7 @@
 # 🎯 Student Profile & Readiness Assessment
 
-**Last Updated:** January 17, 2026  
-**Curriculum Status:** ✅ 100% Complete (12 months, 600+ hours)
+**Last Updated:** May 7, 2026  
+**Curriculum Status:** 🟡 Pre-Onboarding (~80% complete); [See April 2026 audit for gap list](AUDITORIA_2026_04_REVISAO.md)
 
 ---
 

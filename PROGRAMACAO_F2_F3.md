@@ -1,9 +1,25 @@
 # 📅 PROGRAMAÇÃO F2 & F3 — Conclusão do Currículo + Material do Instrutor
 
-**Data de criação:** 2026-05-01
-**Autor responsável:** João Petreche
-**Documento de origem:** [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md)
+**Data de criação:** 2026-05-01  
+**Última atualização:** 2026-05-07 (Week 1 checkpoint + removals)  
+**Autor responsável:** João Petreche  
+**Documento de origem:** [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md)  
 **Tipo:** Plano de execução com checkpoints semanais
+
+---
+
+## ⚠️ Notas de Atualização (2026-05-07)
+
+**Estado atual:** Semana 1 de maio em andamento (05-07)
+
+**Alterações realizadas:**
+- ✅ Removido `simulations/basic_zone/` (exemplo prático de simulação térmica)
+- ✅ Removido `curriculum/phase-01-foundation/module-1-1/modulo_1_1_onboarding_simulacao.md` (material de onboarding do Mês 1)
+- ✅ Mantido `test_gemini.md` para exploração de GenAI
+- ✅ Atualizada documentação base (README, STUDENT_PROFILE, PREREQUISITES, Scientific_AI_Engineering_Curriculum)
+- ✅ Criado `CLAUDE.md` para contexto persistente
+
+**Impacto no plano:** Semana 1 pode concentrar-se em **A11 + A8** sem complicações. A timeline original (Semanas 1-16) permanece válida.
 
 ---
 

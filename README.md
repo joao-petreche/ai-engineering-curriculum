@@ -134,7 +134,7 @@ An **open-source curriculum** for advanced training in Scientific AI Engineering
 | **FAPESP Alignment** | ✅ **98/100 Score** | Validated Jan/2026 (scope: research project alignment) |
 | **Capstone Project** | ✅ **Delivered** | 4,050 lines, 3,750 pages |
 | **Code Base** | 🟡 **Beta (~80%)** | Verified pending items in [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md) |
-| **Test Coverage** | 🔴 **Sparse** | 3 test files (Month 8 only); other months lack automated suites |
+| **Test Coverage** | 🔴 **Sparse** | Months 4 & 8 have pytest; Months 1–3, 5–7, 9–12 lack automated tests |
 | **Reproducibility** | ⚠️ **Partial** | `requirements.txt` uses version ranges, not pinned versions |
 | **Documentation (student-facing)** | ✅ **Comprehensive** | 4,000+ pages |
 | **Instructor Enablement** | 🔴 **Not Started** | Instructor guide, answer keys, slides, dry-run pending (~40–80h) |
@@ -619,6 +619,6 @@ GitHub: [@joao-petreche](https://github.com/joao-petreche)
 
 ---
 
-**Last Updated:** May 1, 2026
+**Last Updated:** May 7, 2026
 **Status:** 🟡 Pre-Onboarding · Content ~80% · Instructor Enablement Pending
 **Next Milestone:** F2 — Student-ready repo by 2026-08-15 — see [PROGRAMACAO_F2_F3.md](PROGRAMACAO_F2_F3.md) and [AUDITORIA_2026_04_REVISAO.md](AUDITORIA_2026_04_REVISAO.md)
