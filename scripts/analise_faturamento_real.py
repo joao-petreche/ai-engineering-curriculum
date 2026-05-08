@@ -1,6 +1,10 @@
+import sys
+import io
 from google.cloud import bigquery
 import pandas as pd
 from google.api_core.exceptions import NotFound
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 # Configurações extraídas do seu console
 PROJECT_ID = "gen-lang-client-0464475716"
@@ -38,7 +42,7 @@ if __name__ == "__main__":
     if dados is None:
         print(f"\n⏳ Aguardando processamento do Google Cloud...")
         print(f"O dataset '{DATASET_ID}' foi criado com sucesso em 01/05/2026.")
-        print("A tabela de uso detalhado leva até 24h para aparecer após a ativação[cite: 4].")
+        print("A tabela de uso detalhado leva até 24h para aparecer após a ativação.")
     elif dados.empty:
         print("\n✅ Tabela encontrada, mas ainda sem registros para os últimos 30 dias.")
     else:
