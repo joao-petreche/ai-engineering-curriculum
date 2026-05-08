@@ -1,7 +1,7 @@
 {
   "name": "Scientific AI Engineering",
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
-  "postCreateCommand": "sudo npm install -g @anthropic-ai/claude-code && [ -f \"$HOME/google-cloud-sdk/path.bash.inc\" ] && source \"$HOME/google-cloud-sdk/path.bash.inc\" || true",
+  "postCreateCommand": "sudo npm install -g @anthropic-ai/claude-code && [ -f \"$HOME/google-cloud-sdk/path.bash.inc\" ] && (grep -qF 'google-cloud-sdk/path.bash.inc' \"$HOME/.bashrc\" || echo '\\n# Google Cloud SDK\\n[ -f \"$HOME/google-cloud-sdk/path.bash.inc\" ] && source \"$HOME/google-cloud-sdk/path.bash.inc\"\\n[ -f \"$HOME/google-cloud-sdk/completion.bash.inc\" ] && source \"$HOME/google-cloud-sdk/completion.bash.inc\"' >> \"$HOME/.bashrc\") || true",
   "customizations": {
     "vscode": {
       "extensions": [
