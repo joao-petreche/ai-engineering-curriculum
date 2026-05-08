@@ -14,25 +14,25 @@ GENAI_PROJECT="gen-lang-client-0464475716"
 EPLUS_PROJECT="eplus-colab-cloud"
 
 echo "==> [1/8] Validando infraestrutura do Google Cloud..."
-# Verifica se o gcloud está instalado para garantir a comunicação com o BigQuery
-if ! command -v gcloud &> /dev/null; then
-    echo "    - Instalando Google Cloud SDK..."
-    curl https://sdk.cloud.google.com | bash -s -- --disable-prompts
-fi
-
-# Trecho para garantir que o gcloud esteja sempre no PATH
-GCLOUD_PATH_INC="/home/codespace/google-cloud-sdk/path.bash.inc"
+# Sourced early so 'gcloud' is in PATH before the install check
+GCLOUD_PATH_INC="$HOME/google-cloud-sdk/path.bash.inc"
 
 if [ -f "$GCLOUD_PATH_INC" ]; then
     if ! grep -q "$GCLOUD_PATH_INC" ~/.bashrc; then
         echo "    - Adicionando Google Cloud SDK ao PATH permanentemente..."
         echo "source $GCLOUD_PATH_INC" >> ~/.bashrc
     fi
-    # Carrega para a sessão atual do script
     source "$GCLOUD_PATH_INC"
     echo "    - Google Cloud SDK detectado e configurado."
+fi
+
+# Verifica se o gcloud está instalado para garantir a comunicação com o BigQuery
+if ! command -v gcloud &> /dev/null; then
+    echo "    - Instalando Google Cloud SDK..."
+    curl https://sdk.cloud.google.com | bash -s -- --disable-prompts
+    source "$HOME/google-cloud-sdk/path.bash.inc"
 else
-    echo "    ⚠️ Aviso: Arquivo de inicialização do SDK não encontrado em $GCLOUD_PATH_INC"
+    echo "    - Google Cloud SDK já instalado: $(gcloud version 2>/dev/null | head -1)"
 fi
 
 echo "==> [2/8] Diagnóstico de Recursos do Sistema (Hardware)..."
