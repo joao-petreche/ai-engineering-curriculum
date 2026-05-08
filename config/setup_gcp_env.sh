@@ -51,7 +51,13 @@ pkill -9 python 2>/dev/null || true
 echo "    - Processos Python reiniciados para otimização."
 
 echo "==> [4/8] Vinculando Projetos GCP..."
-gcloud config set project $GENAI_PROJECT --quiet
+CURRENT_PROJECT=$(gcloud config get-value project 2>/dev/null)
+if [ "$CURRENT_PROJECT" != "$GENAI_PROJECT" ]; then
+    gcloud config set project $GENAI_PROJECT --quiet
+    echo "    - Projeto configurado: $GENAI_PROJECT"
+else
+    echo "    - Projeto já configurado: $GENAI_PROJECT (sem alteração)"
+fi
 
 echo "==> [5/8] Gerenciando Ambiente Virtual (venv)..."
 # Resolve isolamento de bibliotecas como db-dtypes e pandas
