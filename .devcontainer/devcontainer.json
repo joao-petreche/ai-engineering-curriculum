@@ -13,7 +13,8 @@
         "anthropic.claude-code",
         "bigladder.energyplus-modelkit",
         "charliermarsh.ruff",
-        "ms-toolsai.datawrangler"
+        "ms-toolsai.datawrangler",
+        "google.colab"
       ]
     }
   }
