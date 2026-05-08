@@ -2,7 +2,7 @@
 
 # ==============================================================================
 # Configuração de Ambiente: Scientific AI Engineering (GCP/Codespaces)
-# Integração: Setup + FinOps + Hardware Health (v1.2.3)
+# Integração: Setup + FinOps + Hardware Health (v1.2.4)
 # ==============================================================================
 
 # Resolve repositório raiz (script está em config/, sobe 1 nível)
@@ -14,7 +14,8 @@ GENAI_PROJECT="gen-lang-client-0464475716"
 EPLUS_PROJECT="eplus-colab-cloud"
 
 echo "==> [1/8] Validando infraestrutura do Google Cloud..."
-# Verifica se o gcloud está instalado para garantir a comunicação com o BigQueryif ! command -v gcloud &> /dev/null; then
+# Verifica se o gcloud está instalado para garantir a comunicação com o BigQuery
+if ! command -v gcloud &> /dev/null; then
     echo "    - Instalando Google Cloud SDK..."
     curl https://sdk.cloud.google.com | bash -s -- --disable-prompts
 fi
@@ -45,14 +46,16 @@ if [ "$FREE_MEM" -lt 1024 ]; then
 fi
 
 echo "==> [3/8] Limpeza de Processos Zumbis..."
-# Encerra processos Python órfãos para liberar RAM antes de iniciarpkill -9 python 2>/dev/null
+# Encerra processos Python órfãos para liberar RAM antes de iniciar
+pkill -9 python 2>/dev/null || true
 echo "    - Processos Python reiniciados para otimização."
 
 echo "==> [4/8] Vinculando Projetos GCP..."
 gcloud config set project $GENAI_PROJECT --quiet
 
 echo "==> [5/8] Gerenciando Ambiente Virtual (venv)..."
-# Resolve isolamento de bibliotecas como db-dtypes e pandasif [ ! -d ".venv" ]; then
+# Resolve isolamento de bibliotecas como db-dtypes e pandas
+if [ ! -d ".venv" ]; then
     python3 -m venv .venv
 fi
 source .venv/bin/activate
@@ -88,4 +91,4 @@ else
 fi
 echo "------------------------------------------------------------"
 
-echo -e "\n[OK] Ambiente v1.2.3 pronto para Scientific AI Engineering."
+echo -e "\n[OK] Ambiente v1.2.4 pronto para Scientific AI Engineering."
